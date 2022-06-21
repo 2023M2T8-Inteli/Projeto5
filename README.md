@@ -37,8 +37,8 @@ Faça o mesmo para a documentação em formato DOCX.
 
 |--> documentos<br>
   &emsp;| --> outros <br>
-  &emsp;| T<b>(NUMERO_DA_TURMA)</b>_G<b>(NUMERO_DO_GRUPO)</b>_V<b>(VERSÃO)</b>_Web_application_document.pdf<br>
-  &emsp;| T<b>(NUMERO_DA_TURMA)</b>_G<b>(NUMERO_DO_GRUPO)</b>_V<b>(VERSÃO)</b>_Web_application_document.docx<br>
+  &emsp;| T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.pdf<br>
+  &emsp;| T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.docx<br>
 |--> imagens<br>
 |--> src<br>
   &emsp;|--> Backend<br>
