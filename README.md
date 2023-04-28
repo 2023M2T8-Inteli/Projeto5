@@ -6,16 +6,16 @@
 
 # Nome do projeto
 
-## Nome do grupo
+## Tech5
 
 ## Integrantes: 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 5</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 6</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 7</a>
+- <a href="https://www.linkedin.com/in/danielzular/">Daniel Zular</a>
+- <a href="https://www.linkedin.com/in/marina-ladeira-867159269/">Marina Buzin Ladeira</a>
+- <a href="https://www.linkedin.com/in/omatheusrsantos/">Matheus Ribeiro dos Santos</a> 
+- <a href="https://www.linkedin.com/in/mauricio-azevedo-neto/">Maurício de Azevedo Neto</a> 
+- <a href="https://www.linkedin.com/in/samuel-martins-lopes-nascimento-7a805526a/">Samuel Martins Lopes Nascimento</a>
+- <a href="#">Theo Albero Tosto</a> 
+- <a href="https://www.linkedin.com/in/thomasreitzfeld/">Thomas Reitzfeld</a>
 
 ## 📝 Descrição
 
