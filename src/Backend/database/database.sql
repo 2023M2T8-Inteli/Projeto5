@@ -5,7 +5,7 @@ CREATE TABLE empresas (
  );
 
 CREATE TABLE relatorios ( 
-	id_relatorio         INTEGER NOT NULL AUTOINCREMENT PRIMARY KEY  ,
+	id_relatorio         INTEGER NOT NULL PRIMARY KEY  ,
 	data_relatorio       DATE NOT NULL    ,
 	cnpj_empresa         VARCHAR(14)     ,
 	FOREIGN KEY ( cnpj_empresa ) REFERENCES empresas( cnpj_empresa )  
@@ -18,20 +18,20 @@ CREATE TABLE tecnicos_ipt (
  );
 
 CREATE TABLE vagoes ( 
-	id_vagao             INTEGER NOT NULL AUTOINCREMENT PRIMARY KEY  ,
+	id_vagao             INTEGER NOT NULL PRIMARY KEY  ,
 	tipo_vagao           VARCHAR(255) NOT NULL    ,
 	grafico_de_marcov_viagem BLOB     
  );
 
 CREATE TABLE viagens ( 
-	id_viagem            INTEGER NOT NULL AUTOINCREMENT PRIMARY KEY  ,
+	id_viagem            INTEGER NOT NULL PRIMARY KEY  ,
 	data_viagem          DATE NOT NULL    ,
 	id_relatorio         INTEGER     ,
 	FOREIGN KEY ( id_relatorio ) REFERENCES relatorios( id_relatorio )  
  );
 
 CREATE TABLE choques ( 
-	id_choque            INTEGER NOT NULL AUTOINCREMENT PRIMARY KEY  ,
+	id_choque            INTEGER NOT NULL PRIMARY KEY  ,
 	tipo_choque          VARCHAR(255) NOT NULL    ,
 	data_choque          DATE NOT NULL    ,
 	hora_choque          TIME NOT NULL    ,
@@ -49,7 +49,7 @@ CREATE TABLE choques (
  );
 
 CREATE TABLE vagao_x_viagem ( 
-	id_vagao_x_viagem    INTEGER NOT NULL AUTOINCREMENT PRIMARY KEY  ,
+	id_vagao_x_viagem    INTEGER NOT NULL PRIMARY KEY  ,
 	id_viagem            INTEGER     ,
 	id_vagao             INTEGER     ,
 	FOREIGN KEY ( id_viagem ) REFERENCES viagens( id_viagem )  ,
