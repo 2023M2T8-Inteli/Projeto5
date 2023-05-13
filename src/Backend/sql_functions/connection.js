@@ -1,5 +1,5 @@
 const sqlite3 = require("sqlite3").verbose();
-const DBPATH = "./database/database.db";
+const DBPATH = "src/Backend/database/database.db";
 
 function execSqlQquery(query, res) {
   var db = new sqlite3.Database(DBPATH);
