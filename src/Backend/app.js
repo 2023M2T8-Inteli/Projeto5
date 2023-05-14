@@ -16,6 +16,9 @@ app.use("/inserir-tecnico", inserirTecnico);
 const inserirRelatorio = require("./routes/inserir_relatorio");
 app.use("/inserir-relatorio", inserirRelatorio);
 
+const inserirViagem = require("./routes/inserir_viagem");
+app.use("/inserir-viagem", inserirViagem);
+
 app.listen(port, () => {
   console.log(`Servidor rodando em ${hostname}:${port}`);
 });
