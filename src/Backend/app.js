@@ -22,6 +22,9 @@ app.use("/inserir-viagem", inserirViagem);
 const inserirVagao = require("./routes/inserir_vagao");
 app.use("/inserir-vagao", inserirVagao);
 
+const inserirChoque = require("./routes/inserir_choque");
+app.use("/inserir-choque", inserirChoque);
+
 app.listen(port, () => {
   console.log(`Servidor rodando em ${hostname}:${port}`);
 });
