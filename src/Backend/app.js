@@ -28,6 +28,9 @@ app.use("/inserir-choque", inserirChoque);
 const getRelatoriosByCnpj = require("./routes/get_relatorio_by_cnpj");
 app.use("/get-relatorios-by-cnpj", getRelatoriosByCnpj);
 
+const getGraficoDeMarcovByVagaoId = require("./routes/get_grafico_de_marcov_by_id");
+app.use("/get-grafico-de-markov-by-vagao-id", getGraficoDeMarcovByVagaoId);
+
 app.listen(port, () => {
   console.log(`Servidor rodando em ${hostname}:${port}`);
 });
