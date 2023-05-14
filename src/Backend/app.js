@@ -25,6 +25,9 @@ app.use("/inserir-vagao", inserirVagao);
 const inserirChoque = require("./routes/inserir_choque");
 app.use("/inserir-choque", inserirChoque);
 
+const getRelatoriosByCnpj = require("./routes/get_relatorio_by_cnpj");
+app.use("/get-relatorios-by-cnpj", getRelatoriosByCnpj);
+
 app.listen(port, () => {
   console.log(`Servidor rodando em ${hostname}:${port}`);
 });
