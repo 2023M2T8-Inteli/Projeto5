@@ -34,6 +34,9 @@ app.use("/get-grafico-de-markov-by-vagao-id", getGraficoDeMarcovByVagaoId);
 const getChoquesByLatitudeELongitude = require("./routes/get_choques_by_latitude_e_longitude");
 app.use("/get-choques-by-latitude-e-longitude", getChoquesByLatitudeELongitude);
 
+const getViagensByIdRelatorio = require("./routes/get_viagens_by_id_relatorio");
+app.use("/get-viagens-by-id-relatorio", getViagensByIdRelatorio);
+
 app.listen(port, () => {
   console.log(`Servidor rodando em ${hostname}:${port}`);
 });
