@@ -31,6 +31,9 @@ app.use("/get-relatorios-by-cnpj", getRelatoriosByCnpj);
 const getGraficoDeMarcovByVagaoId = require("./routes/get_grafico_de_marcov_by_id");
 app.use("/get-grafico-de-markov-by-vagao-id", getGraficoDeMarcovByVagaoId);
 
+const getChoquesByLatitudeELongitude = require("./routes/get_choques_by_latitude_e_longitude");
+app.use("/get-choques-by-latitude-e-longitude", getChoquesByLatitudeELongitude);
+
 app.listen(port, () => {
   console.log(`Servidor rodando em ${hostname}:${port}`);
 });
