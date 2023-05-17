@@ -3,17 +3,18 @@
 <head>
   <title>Tela de Login</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="..\Backend\login.js"></script>
 </head>
 <body>
   <div class="container">
     <img src="C:\Users\Inteli\Downloads\INEW_LOGO.png" alt="">
     <form action="telahome.html">
       <h1>Login</h1>
-      <input type="text" placeholder="Usuário">
-      <input type="password" placeholder="Senha">
+      <input type="text" id="usuario" placeholder="Usuário">
+      <input type="password" id="senha" placeholder="Senha">
       <a href="esqueceuasenha.html" class="forgot-password">Esqueceu a senha?</a>
       <p></p>
-      <button type="submit">Entrar</button>
+      <button type="submit" onclick="verificar()">Entrar</button>
     </form>
   </div>
 </body>

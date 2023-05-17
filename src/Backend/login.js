@@ -1,18 +1,19 @@
-// Obtendo referência para o botão de entrada
-const btnEntrar = document.getElementById('btnEntrar');
+function verificar() {
+    var usuario = document.getElementById("usuario").value;
+    var senha = document.getElementById("senha").value;
+  
+    if (usuario === "tech5" && senha === "123") {
+      // Usuário e senha corretos, redireciona para a tela inicial
+      console.log("Foi")
 
-// Adicionando um evento de clique ao botão de entrada
-btnEntrar.addEventListener('click', function() {
-  // Obtendo os valores digitados pelo usuário
-  const usuario = document.getElementById('usuario').value;
-  const senha = document.getElementById('senha').value;
-
-  // Verificando as condições de usuário e senha
-  if (usuario === 'tech5' && senha === '123') {
-    // Redirecionando para a tela de login
-    window.location.href = 'login.html';
-  } else {
-    alert('Usuário ou senha inválidos. Tente novamente.');
+    //   window.location.href = "telahome.html";
+    } else {
+      // Exibe mensagem de erro
+      alert("Usuário e/ou senha incorretos.");
+      // Impede o envio do formulário
+      event.preventDefault();
+    }
   }
-});
+
+
 
