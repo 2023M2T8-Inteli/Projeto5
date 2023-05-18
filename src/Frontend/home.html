@@ -25,8 +25,15 @@
         <form class="form-mapa">
             <p>Mapa da viagem</p>
         </form>
-        <button class="help-button">?</button>
+        <button class="help-button" onclick="popupajuda()">?</button>
     </div> 
+
+    <script>
+        function popupajuda(){
+            // redirecionar para a ajuda
+            window.location.href="popupajuda.html";
+        }
+    </script>
     <div class="links">
         <a href="relatorios.html">Relatórios</a>
         <a href="analises.html">Análises</a>
@@ -60,7 +67,7 @@ text-align:center;
   }
 .informacoes-viagem {
 position: fixed;
- width: 700px;
+ width: 900px;
  height: 70px;
 top: 20%;
 left: 60%;
@@ -73,7 +80,7 @@ text-align: center;
   }
 .form-grafico {
 position: fixed;
-width: 700px;
+width: 900px;
 height: 150px;
 top: 42%;
 left: 60%;
@@ -86,10 +93,10 @@ text-align: center;
 }
 .form-mapa{
 position: fixed; 
-width: 700px;
+width: 900px;
 height: 55px;
 top: 78%;
-left: 31%;
+left: 23%;
 background-color: #c2c0c090;
 padding: 20px;
 border-radius: 5px;
@@ -107,11 +114,11 @@ p {
     font-size: 14px;
 }
 .help-button {
-position: fixed;
+    position: fixed;
 top: 20px;
-right: 20px;
-width: 30px;
-height: 30px;
+right: 40px;
+width: 50px;
+height: 50px;
 border-radius: 50%;
 background-color: rgba(2, 72, 115);
 color: #fff;

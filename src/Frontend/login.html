@@ -8,17 +8,18 @@
 <body>
   <div class="container">
     <img src="C:\Users\Inteli\Downloads\INEW_LOGO.png" alt="">
-    <form action="telahome.html">
+    <form action="home.html" onsubmit="verificar(event)">
       <h1>Login</h1>
       <input type="text" id="usuario" placeholder="Usuário">
       <input type="password" id="senha" placeholder="Senha">
       <a href="esqueceuasenha.html" class="forgot-password">Esqueceu a senha?</a>
       <p></p>
-      <button type="submit" onclick="verificar()">Entrar</button>
+      <button type="submit">Entrar</button>
     </form>
   </div>
 </body>
 </html>
+
 <style>
     body {
   font-family: Arial, sans-serif;

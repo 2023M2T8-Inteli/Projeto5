@@ -15,11 +15,19 @@
         <form class="form-informacoes">
             <p>Informações sobre categoria selecionada</p>
         </form>
-        <input type="text" id="pesquisa-duvidas" placeholder="Campo de pesquisa" >
-        <button class="exit-button" >X</button>
+        <input type="text" id="pesquisa-duvidas" placeholder="Campo de pesquisa">
+        <button class="exit-button" onclick="voltarParaHome()">X</button>
     </div>
+
+    <script>
+        function voltarParaHome() {
+            // Redirecionar para a página home.html
+            window.location.href = "home.html";
+        }
+    </script>
 </body>
 </html>
+
 <style>
 .form-duvidas{
 position: fixed;
@@ -60,7 +68,7 @@ input{
 .exit-button{
 position: fixed;
 top: 20px;
-right: 30px;
+right: 40px;
 width: 50px;
 height: 50px;
 border-radius: 50%;
