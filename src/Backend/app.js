@@ -37,6 +37,32 @@ app.use("/get-choques-by-latitude-e-longitude", getChoquesByLatitudeELongitude);
 const getViagensByIdRelatorio = require("./routes/get_viagens_by_id_relatorio");
 app.use("/get-viagens-by-id-relatorio", getViagensByIdRelatorio);
 
+app.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+app.get("/login", (req, res)=>{
+    res.sendFile(
+        path.resolve(__dirname + "/../frontend/login")
+
+)});
+
+app.get("/home", (req, res)=>{
+    res.sendFile(
+        path.resolve(__dirname + "/../frontend/home")
+)});
+
+app.get("/popupajuda", (req, res)=>{
+    res.sendFile(
+        path.resolve(__dirname + "/../frontend/popupajuda")
+)});
+
+app.get("/esqueceuasenha", (req, res)=>{
+    res.sendFile(
+        path.resolve(__dirname + "/../frontend/esqueceuasenha")
+
+)});
+
 app.listen(port, () => {
   console.log(`Servidor rodando em ${hostname}:${port}`);
 });

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ajuda</h1>
+        <form class="form-duvidas">
+            <p>Categoria de dúvidas</p>
+        </form>
+        <form class="form-informacoes">
+            <p>Informações sobre categoria selecionada</p>
+        </form>
+        <input type="text" id="pesquisa-duvidas" placeholder="Campo de pesquisa">
+        <button class="exit-button" onclick="voltarParaHome()">X</button>
+    </div>
+
+    <script>
+        function voltarParaHome() {
+            // Redirecionar para a página home.html
+            window.location.href = "home.html";
+        }
+    </script>
+</body>
+</html>
+
