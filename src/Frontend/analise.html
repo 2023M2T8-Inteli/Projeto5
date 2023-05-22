@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <script src="login.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Análise de dados</title>
 </head>
-<img src="C:\Users\Inteli\Downloads\INEW_LOGO.png" alt="">
 <body>
     <div class="container">
+        <img src="C:\Users\Inteli\Downloads\INEW_LOGO.png" alt="">
         <form class="form-calendario">
             <p>Calendário</p>
         </form>
@@ -22,8 +21,11 @@
         <form class="form-grafico">
             <p>Gráficos/Visualização de Dados</p>
         </form>
-        <form class="form-mapa">
-            <p>Mapa da viagem</p>
+        <form class="form-texto1">
+            <p>Texto</p>
+        </form>
+        <form class="form-texto2">
+            <p>Texto</p>
         </form>
         <button class="help-button">?</button>
     </div> 
@@ -35,7 +37,6 @@
 </body>
 </html>
 <style>
-    
 .form-calendario {
 position: fixed; width: 110px;
 height: 70px;
@@ -63,10 +64,10 @@ text-align:center;
 
 .informacoes-viagem {
 position: fixed;
- width: 700px;
- height: 70px;
+height: 70px;
+width: 950px;
 top: 20%;
-left: 60%;
+left: 55%;
 transform: translateX(-50%);
 background-color: #f2f2f2;
 padding: 20px;
@@ -77,10 +78,10 @@ text-align: center;
 
 .form-grafico {
 position: fixed;
-width: 700px;
-height: 150px;
-top: 42%;
-left: 60%;
+width: 400px;
+height: 200px;
+top: 265px;
+right: 450px;
 transform: translateX(-50%);
 background-color: #c2c0c090;
 padding: 20px;
@@ -89,17 +90,32 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 text-align: center;
 }
 
-.form-mapa{
-position: fixed; 
-width: 700px;
-height: 55px;
-top: 78%;
-left: 31%;
-background-color: #c2c0c090;
+.form-texto1{
+position: fixed;
+width: 400px;
+height: 200px;
+top: 265px;
+left: 1025px;
+transform: translateX(-50%);
+background-color: #f2f2f2;
 padding: 20px;
 border-radius: 5px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-text-align:center;
+text-align: center;
+}
+
+.form-texto2{
+position: fixed;
+width: 950px;
+height: 50px;
+top: 525px;
+left: 750px;
+transform: translateX(-50%);
+background-color: #f2f2f2;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+text-align: center;
 }
 
 img{
@@ -111,7 +127,7 @@ left: 0;
 }
 
 p {
-    font-size: 14px;
+font-size: 14px;
 }
 
 .help-button {
@@ -141,4 +157,4 @@ text-decoration: none;
 color: #000;
 font-weight: bold;
 }
-</style>
+    </style>
