@@ -1,0 +1,120 @@
+.form-calendario {
+    position: fixed; width: 110px;
+    height: 70px;
+    top: 20%;
+    left: 30px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align:center;
+    }
+    
+    .form-viagens {
+    position: fixed;
+    width: 110px;
+    height: 250px;
+    top: 45%;
+    left: 30px;
+    background-color: #c2c0c090;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align:center;
+    }
+    
+    .informacoes-viagem {
+    position: fixed;
+    height: 70px;
+    width: 950px;
+    top: 20%;
+    left: 55%;
+    transform: translateX(-50%);
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    }
+    
+    .filtro {
+    position: fixed;
+    height: 70px;
+    width: 950px;
+    top: 38%;
+    left: 55%;
+    transform: translateX(-50%);
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    }
+    
+    .form-grafico {
+    position: fixed;
+    width: 400px;
+    height: 275px;
+    top: 370px;
+    right: 450px;
+    transform: translateX(-50%);
+    background-color: #c2c0c090;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    }
+    
+    .form-texto1{
+    position: fixed;
+    width: 300px;
+    height: 275px;
+    top: 370px;
+    left: 1025px;
+    transform: translateX(-50%);
+    background-color: #c2c0c090;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    }
+    
+    img{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+    
+    p {
+    font-size: 14px;
+    }
+    
+    .help-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(2, 72, 115);
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    }
+    
+    .links {
+    margin-top: 40px;
+    display: flex;
+    position: fixed;    
+    gap: 20px;
+    left: 48%;
+    }
+    
+    .links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    }
