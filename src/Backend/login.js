@@ -6,7 +6,7 @@ function verificar(event) {
 
   if (usuario === "tech5" && senha === "123") {
     // Usuário e senha corretos, redireciona para a tela inicial
-    window.location.href = "home.html";
+    window.location.href = "home/home.html";
   } else {
     // Exibe mensagem de erro
     alert("Usuário e/ou senha incorretos.");
