@@ -73,7 +73,7 @@ p {
         font-size: 14px;
 }
 
-.help-button {
+.botao-ajuda {
     position: fixed;
     top: 20px;
     right: 40px;
@@ -102,7 +102,7 @@ p {
     font-weight: bold;
 }
 
-.lumi{
+.logotipo{
     
         width: 200px;
         height: 100px;
@@ -119,4 +119,7 @@ p {
     border-radius: 10px;
     padding: 3px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+body {
+    font-family: 'Poppins';
 }

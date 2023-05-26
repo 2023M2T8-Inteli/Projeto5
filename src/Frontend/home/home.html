@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <script src="login.js"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="icon" href="lumi.png" type="image/x-icon">
-    <style>
-        body {
-            font-family: 'Poppins';
-        }
-    </style>
-    <link rel="icon" href="lumi.png" type="image/x-icon">
-</head>
+    <head>
+        <!--Título da página-->
+        <title>home</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Imagem do logotipo "lumi" -->
+        <img src="lumi.png" alt="Logo" class="logotipo">
+        <!--Link do código css-->
+        <link href="style.css" rel="stylesheet">
+        <!--Link da tipografia do site (poppins) -->
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    </head>
+    
 <body>
-    <img src="lumi.png" alt="Logo" class="lumi">
     <div class="container">
         <form class="form-calendario">
             <p>Calendário</p>
@@ -37,12 +34,14 @@
         <button class="help-button" onclick="popupajuda()">?</button>
     </div> 
 
+<!--redirecionar para a ajuda--> 
     <script>
         function popupajuda(){
-            // redirecionar para a ajuda
             window.location.href="../ajuda/popupajuda.html";
         }
     </script>
+    
+    <!--Links do menu-->
     <div class="links">
         <a href="relatorios.html">Relatórios</a>
         <a href="analises.html">Análises</a>

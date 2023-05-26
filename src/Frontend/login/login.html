@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Tela de Login</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="..\Backend\login.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-  <link rel="icon" href="lumi.png" type="image/x-icon">
-  <style>
-      body {
-          font-family: 'Poppins';
-      }
-  </style>
+  <head>
+    <!--Título da página-->
+    <title>Comparação de dados</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Imagem do logotipo "lumi" -->
+    <img src="lumi.png" alt="Logo" class="logotipo">
+    <!--Link do código css-->
+    <link href="style.css" rel="stylesheet">
+    <!--Link da tipografia do site (poppins) -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
+
 <body>
   <div class="container">
-    <img src="lumi.png" alt="Logo" class="lumi">
     <form action="..\home\home.html" onsubmit="verificar(event)">
+      <!--Componentes do formulário-->
       <h1>Login</h1>
       <input type="text" id="usuario" placeholder="Usuário">
       <input type="password" id="senha" placeholder="Senha">
+      <!--Link dentro do botão que direciona o usuário para a página esqueceu a senha-->
       <a href="..\esqueceu a senha\esqueceuasenha.html" class="forgot-password">Esqueceu a senha?</a>
       <p></p>
       <button type="submit">Login</button>

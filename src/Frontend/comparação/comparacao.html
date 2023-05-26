@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparação de dados</title>
-    <link href="style.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="icon" href="lumi.png" type="image/x-icon">
-<style>
-    body {
-        font-family: 'Poppins';
-    }
-</style>
-</head>
+    <head>
+        <!--Título da página-->
+        <title>Comparação de dados</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Imagem do logotipo "lumi" -->
+        <img src="lumi.png" alt="Logo" class="logotipo">
+        <!--Link do código css-->
+        <link href="style.css" rel="stylesheet">
+        <!--Link da tipografia do site (poppins) -->
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    </head>
 <body>
-    <img src="lumi.png" alt="Logo" class="lumi">
     <div class="container">
         <form class="form-lista-viagens">
             <p>Lista de viagens</p>
@@ -34,19 +32,19 @@
         <form class="form-info2">
             <p>Informações B</p>
         </form>
-        <button class="help-button" onclick="popupajuda()">?</button>
+        <button class="botao-ajuda" onclick="popupajuda()">?</button>
     </div> 
     <div class="links">
         <a href="relatorios.html" onclick="relatorios()">Relatórios</a>
         <a href="analises.html" onclick="analises()">Análises</a>
         <a href="download.html" onclick="download()" class="download">Baixar Arquivos</a>
     </div>
+
+    <!--redirecionar para a ajuda-->
     <script>
         function popupajuda(){
-            // redirecionar para a ajuda
             window.location.href="../ajuda/popupajuda.html";
         }
     </script>
-        
 </body>
 </html>
