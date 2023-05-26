@@ -32,32 +32,32 @@
     left: 55%;
     transform: translateX(-50%);
     background-color: #f2f2f2;
+    background: #FFFFFF;
+    border: 1px solid #000000;
     padding: 1.5%;
-    border-radius: 2%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
+    border-radius: 10px;
     }
     
     .filtro {
     position: fixed;
     height: 10%;
-    width: 70%;
-    top: 35%;
+    width: 71%;
+    top: 38%;
     left: 55%;
     transform: translateX(-50%);
-    background-color: #f2f2f2;
-    padding: 1.5%;
-    border-radius: 2%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
+    padding: 1%;
+    border-radius: 10px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
     }
     
-    .form-grafico {
+    .form-imagens {
     position: fixed;
-    width: 400px;
-    height: 275px;
-    top: 370px;
-    right: 450px;
+    width: 30%;
+    height: 35%;
+    top: 55%;
+    right: 29%;
     transform: translateX(-50%);
     background-color: #c2c0c090;
     padding: 20px;
@@ -66,26 +66,18 @@
     text-align: center;
     }
     
-    .form-texto1{
+    .form-exportar{
     position: fixed;
-    width: 300px;
-    height: 275px;
-    top: 370px;
-    left: 1025px;
+    width: 20%;
+    height: 35%;
+    top: 55%;
+    right: 0%;
     transform: translateX(-50%);
     background-color: #c2c0c090;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-    }
-    
-    img{
-    width: 200px;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
     }
     
     p {
@@ -93,25 +85,26 @@
     }
     
     .help-button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgba(2, 72, 115);
-    color: #fff;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 40px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #4A67F0;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
     }
     
     .links {
-    margin-top: 40px;
-    display: flex;
-    position: fixed;    
-    gap: 20px;
-    left: 48%;
+        margin-top: 10px;
+        display: flex;
+        position: fixed;    
+        gap: 20px;
+        left: 42%;
+        justify-content: center;
     }
     
     .links a {
@@ -119,3 +112,21 @@
     color: #000;
     font-weight: bold;
     }
+    .lumi{
+    
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 1%;
+        border: none; 
+}
+
+.download {
+    margin-top: -2px;
+    background-color: rgba(0, 91, 144, 0.3); 
+    color: rgba(0, 91, 144, 1); 
+    border-radius: 10px;
+    padding: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}

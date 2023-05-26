@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparação de dados</title>
+    <link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<style>
+    body {
+        font-family: 'Poppins';
+    }
+</style>
+</head>
+<body>
+    <img src="lumi.png" alt="Logo" class="lumi">
+    <div class="container">
+        <form class="form-lista-viagens">
+            <p>Lista de viagens</p>
+            <p>&lt;a&gt;</p>
+            <p>&lt;a&gt;</p>
+        </form>
+        <form class="form-mapa1">
+            <p>Mapa A</p>
+        </form>
+        <form class="form-mapa2">
+            <p>Mapa B</p>
+        </form>
+        <form class="form-info1">
+            <p>Informações A</p>
+        </form>
+        <form class="form-info2">
+            <p>Informações B</p>
+        </form>
+        <button class="help-button" onclick="popupajuda()">?</button>
+    </div> 
+    <div class="links">
+        <a href="relatorios.html" onclick="relatorios()">Relatórios</a>
+        <a href="analises.html" onclick="analises()">Análises</a>
+        <a href="download.html" onclick="download()" class="download">Baixar Arquivos</a>
+    </div>
+    <script>
+        function popupajuda(){
+            // redirecionar para a ajuda
+            window.location.href="../ajuda/popupajuda.html";
+        }
+    </script>
+        
+</body>
+</html>

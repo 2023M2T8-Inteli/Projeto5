@@ -1,0 +1,72 @@
+.form-dados {
+    position: fixed; 
+    width: 9%;
+    height: 70%;
+    top: 20%;
+    left: 2%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align:center;
+    }
+.relatorio {
+    position: fixed;
+    width: 75%;
+    height: 70%;
+    top: 20%;
+    left: 58%;
+    transform: translateX(-50%);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    }
+p {
+        font-size: 14px;
+    }
+    .help-button {
+        position: fixed;
+        top: 20px;
+        right: 40px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #4A67F0;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+      }
+      .links {
+        margin-top: 40px;
+        display: flex;
+        position: fixed;    
+        gap: 20px;
+        left: 42%;
+        justify-content: center;
+      }
+.links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    }
+
+.lumi{
+    
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 1%;
+    border: none; 
+}
+
+.link-relatorio {
+    margin-top: -2px;
+    background-color: rgba(0, 91, 144, 0.3); 
+    color: rgba(0, 91, 144, 1); 
+    border-radius: 10px;
+    padding: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}

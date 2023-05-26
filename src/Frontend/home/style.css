@@ -1,96 +1,108 @@
 .form-calendario {
-    position: fixed; width: 110px;
-    height: 70px;
-    top: 20%;
-    left: 30px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align:center;
-    }
-    .form-viagens {
-    position: fixed;
-    width: 110px;
-    height: 250px;
-    top: 45%;
-    left: 30px;
-    background-color: #c2c0c090;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align:center;
-      }
-    .informacoes-viagem {
-    position: fixed;
-     width: 900px;
-     height: 70px;
-    top: 20%;
-    left: 60%;
-    transform: translateX(-50%);
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-      }
-    .form-grafico {
-    position: fixed;
-    width: 900px;
-    height: 150px;
-    top: 42%;
-    left: 60%;
-    transform: translateX(-50%);
-    background-color: #c2c0c090;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    }
-    .form-mapa{
-    position: fixed; 
-    width: 900px;
-    height: 55px;
-    top: 78%;
-    left: 23%;
-    background-color: #c2c0c090;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align:center;
-    }
-    img{
-    width: 200px;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    }
-    p {
-        font-size: 14px;
-    }
-    .help-button {
-        position: fixed;
-    top: 20px;
-    right: 40px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgba(2, 72, 115);
-    color: #fff;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-    }
-    .links {
-    margin-top: 40px;
-    display: flex;
-    position: fixed;    
-    gap: 20px;
-    left: 48%;
-    }
-    .links a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    }
+  position: fixed; 
+  width: 110px;
+  height: 70px;
+  top: 20%;
+  left: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  text-align:center;
+}
+
+.form-viagens{
+  position: fixed;
+  width: 110px;
+  height: 45%;
+  top: 40%;
+  left: 30px;
+  background-color: #c2c0c090;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align:center;
+}
+
+.informacoes-viagem {
+  position: fixed;
+  width: 900px;
+  height: 70px;
+  top: 20%;
+  left: 55%;
+  transform: translateX(-50%);
+  padding: 20px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  text-align: center;
+}
+
+.form-grafico {
+  position: fixed;
+  width: 900px;
+  height: 150px;
+  top: 40%;
+  left: 55%;
+  transform: translateX(-50%);
+  background-color: #c2c0c090;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.form-mapa{
+  position: fixed; 
+  width: 900px;
+  height: 20%;
+  top: 72%;
+  left: 20.5%;
+  background-color: #c2c0c090;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align:center;
+}
+
+p {
+  font-size: 14px;
+}
+
+.help-button {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4A67F0;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.links {
+  margin-top: 40px;
+  display: flex;
+  position: fixed;    
+  gap: 20px;
+  left: 42%;
+  justify-content: center;
+}
+
+.links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.lumi{
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 1%;
+  border: none; 
+}

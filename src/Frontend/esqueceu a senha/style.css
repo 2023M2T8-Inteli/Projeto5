@@ -13,7 +13,7 @@ body {
   }
   
   form {
-    background-color: rgba(2, 72, 115);
+    background-color: #4A67F0;
     padding: 80px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -53,10 +53,11 @@ body {
     margin-top: 10px;
     display: block;
   }
-  img{
-  width: 200px;
-  height: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  }
+  .lumi{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 1%;
+    border: none; 
+}
