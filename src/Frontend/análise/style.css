@@ -108,19 +108,19 @@ p {
     justify-content: center;
 }
     
-.links a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-}
-
-.lumi{
-    width: 200px;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 1%;
-    border: none; 
+    .links a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+    }
+    .logotipo{
+    
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 1%;
+        border: none; 
 }
 
 .analise {
@@ -130,4 +130,7 @@ p {
     border-radius: 10px;
     padding: 3px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+body {
+    font-family: 'Poppins';
 }
