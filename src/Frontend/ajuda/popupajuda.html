@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Inclusão do arquivo de estilo externo -->
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Metadados da página -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajuda</title>
+    
+    <!-- Inclusão de fonte externa -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    
+    <!-- Ícone da página -->
     <link rel="icon" href="lumi.png" type="image/x-icon">
+    
+    <!-- Guia de estilos inline que define a fonte para a página -->
     <style>
         body {
             font-family: 'Poppins';
@@ -16,23 +25,31 @@
 </head>
 <body>
     <div class="container">
+        <!-- Cabeçalho principal da página -->
         <h1>Ajuda</h1>
+        
+        <!-- Formulário de seleção de categoria de dúvidas -->
         <form class="form-duvidas">
             <p>Categoria de dúvidas</p>
         </form>
+        
+        <!-- Formulário para exibir informações sobre a categoria selecionada -->
         <form class="form-informacoes">
             <p>Informações sobre categoria selecionada</p>
         </form>
+        
+        <!-- Campo de pesquisa -->
         <input type="text" id="pesquisa-duvidas" placeholder="Campo de pesquisa">
+        
+        <!-- Botão de saída para voltar à Home -->
         <button class="exit-button" onclick="voltarParaHome()">X</button>
     </div>
 
     <script>
+        // Função para redirecionar o usuário para a home.html
         function voltarParaHome() {
-            // Redirecionar para a página home.html
             window.location.href = "../home/home.html";
         }
     </script>
 </body>
 </html>
-

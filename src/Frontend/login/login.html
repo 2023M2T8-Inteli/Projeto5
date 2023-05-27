@@ -2,10 +2,20 @@
 <html>
 <head>
   <title>Tela de Login</title>
+  
+  <!-- Inclusão do arquivo de estilo externo -->
   <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <!-- Inclusão do arquivo JavaScript -->
   <script src="..\Backend\login.js"></script>
+  
+  <!-- Inclusão de fonte externa -->
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  
+  <!-- Ícone da página -->
   <link rel="icon" href="lumi.png" type="image/x-icon">
+  
+  <!-- Estilos personalizados -->
   <style>
       body {
           font-family: 'Poppins';
@@ -14,16 +24,25 @@
 </head>
 <body>
   <div class="container">
+    <!-- Logotipo -->
     <img src="lumi.png" alt="Logo" class="lumi">
+    
     <form action="..\home\home.html" onsubmit="verificar(event)">
+      <!-- Título -->
       <h1>Login</h1>
+      
+      <!-- Campos de entrada -->
       <input type="text" id="usuario" placeholder="Usuário">
       <input type="password" id="senha" placeholder="Senha">
+      
+      <!-- Link "Esqueceu a senha?" -->
       <a href="..\esqueceu a senha\esqueceuasenha.html" class="forgot-password">Esqueceu a senha?</a>
+      
       <p></p>
+      
+      <!-- Botão de Login -->
       <button type="submit">Login</button>
     </form>
   </div>
 </body>
 </html>
-

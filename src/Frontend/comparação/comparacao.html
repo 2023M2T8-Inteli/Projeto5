@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Metadados da página -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparação de dados</title>
+    
+    <!-- Inclusão do arquivo de estilo externo -->
     <link href="style.css" rel="stylesheet">
+    
+    <!-- Inclusão de fonte -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    
+    <!-- Ícone da página -->
     <link rel="icon" href="lumi.png" type="image/x-icon">
-<style>
-    body {
-        font-family: 'Poppins';
-    }
-</style>
+
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Poppins';
+        }
+    </style>
 </head>
 <body>
+    <!-- Logotipo -->
     <img src="lumi.png" alt="Logo" class="lumi">
+    
     <div class="container">
+        <!-- Formulário da Lista de Viagens -->
         <form class="form-lista-viagens">
             <p>Lista de viagens</p>
-            <p>&lt;a&gt;</p>
-            <p>&lt;a&gt;</p>
+            <p>&lt;a&gt;</p> <!-- Exemplo de texto dentro do formulário -->
+            <p>&lt;a&gt;</p> <!-- Exemplo de texto dentro do formulário -->
         </form>
+        
+        <!-- Formulário do Mapa A -->
         <form class="form-mapa1">
             <p>Mapa A</p>
         </form>
+        
+        <!-- Formulário do Mapa B -->
         <form class="form-mapa2">
             <p>Mapa B</p>
         </form>
+        
+        <!-- Formulário de Informações A -->
         <form class="form-info1">
             <p>Informações A</p>
         </form>
+        
+        <!-- Formulário de Informações B -->
         <form class="form-info2">
             <p>Informações B</p>
         </form>
+        
+        <!-- Botão de Ajuda -->
         <button class="help-button" onclick="popupajuda()">?</button>
     </div> 
+    
+    <!-- Links para outras páginas -->
     <div class="links">
         <a href="relatorios.html" onclick="relatorios()">Relatórios</a>
         <a href="analises.html" onclick="analises()">Análises</a>
         <a href="download.html" onclick="download()" class="download">Baixar Arquivos</a>
     </div>
+    
     <script>
         function popupajuda(){
-            // redirecionar para a ajuda
+            // Função JavaScript para redirecionar o usuário para a página popupajuda.html
             window.location.href="../ajuda/popupajuda.html";
         }
     </script>
-        
 </body>
 </html>

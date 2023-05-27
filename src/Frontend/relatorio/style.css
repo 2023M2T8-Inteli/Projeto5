@@ -1,3 +1,5 @@
+/* Definição dos estilos para elementos da página*/
+
 .form-dados {
     position: fixed; 
     width: 9%;
@@ -22,38 +24,39 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
     }
+
 p {
         font-size: 14px;
-    }
-    .help-button {
-        position: fixed;
-        top: 20px;
-        right: 40px;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: #4A67F0;
-        color: #fff;
-        font-size: 20px;
-        border: none;
-        cursor: pointer;
-      }
-      .links {
-        margin-top: 40px;
-        display: flex;
-        position: fixed;    
-        gap: 20px;
-        left: 42%;
-        justify-content: center;
-      }
+}
+    
+.help-button {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4A67F0;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.links {
+    margin-top: 40px;
+    display: flex;
+    position: fixed;    
+    gap: 20px;
+    left: 42%;
+    justify-content: center;
+}
 .links a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
-    }
+}
 
 .lumi{
-    
     width: 200px;
     height: 100px;
     position: absolute;

@@ -1,3 +1,5 @@
+/* Definição dos estilos para elementos da página*/
+
 .form-calendario {
     position: fixed; 
     width: 9%;
@@ -9,9 +11,9 @@
     border-radius: 5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align:center;
-    }
+}
     
-    .form-viagens {
+.form-viagens {
     position: fixed;
     width: 9%;
     height: 40%;
@@ -22,9 +24,9 @@
     border-radius: 5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align:center;
-    }
+}
     
-    .informacoes-viagem {
+.informacoes-viagem {
     position: fixed;
     height: 10%;
     width: 70%;
@@ -37,9 +39,9 @@
     padding: 1.5%;
     text-align: center;
     border-radius: 10px;
-    }
+}
     
-    .filtro {
+.filtro {
     position: fixed;
     height: 10%;
     width: 71%;
@@ -50,9 +52,9 @@
     border-radius: 10px;
     background: #FFFFFF;
     border: 1px solid #000000;
-    }
+}
     
-    .form-imagens {
+.form-imagens {
     position: fixed;
     width: 30%;
     height: 35%;
@@ -64,9 +66,9 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-    }
+}
     
-    .form-exportar{
+.form-exportar{
     position: fixed;
     width: 20%;
     height: 35%;
@@ -78,48 +80,47 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-    }
+}
     
-    p {
+p {
     font-size: 14px;
-    }
+}
     
-    .help-button {
-        position: fixed;
-        top: 20px;
-        right: 40px;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: #4A67F0;
-        color: #fff;
-        font-size: 20px;
-        border: none;
-        cursor: pointer;
-    }
+.help-button {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4A67F0;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
     
-    .links {
-        margin-top: 10px;
-        display: flex;
-        position: fixed;    
-        gap: 20px;
-        left: 42%;
-        justify-content: center;
-    }
+.links {
+    margin-top: 10px;
+    display: flex;
+    position: fixed;    
+    gap: 20px;
+    left: 42%;
+    justify-content: center;
+}
     
-    .links a {
+.links a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
-    }
-    .lumi{
-    
-        width: 200px;
-        height: 100px;
-        position: absolute;
-        top: 0;
-        left: 1%;
-        border: none; 
+}
+.lumi{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 1%;
+    border: none; 
 }
 
 .download {
