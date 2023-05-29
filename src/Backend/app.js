@@ -38,10 +38,6 @@ app.use("/get-choques-by-latitude-e-longitude", getChoquesByLatitudeELongitude);
 const getViagensByIdRelatorio = require("./routes/get_viagens_by_id_relatorio");
 app.use("/get-viagens-by-id-relatorio", getViagensByIdRelatorio);
 
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
-
 app.get("/login", (req, res)=>{
     res.sendFile(
         path.resolve(__dirname + "/../frontend/login/login.html")
