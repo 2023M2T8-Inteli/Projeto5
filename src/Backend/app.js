@@ -3,6 +3,7 @@ const app = express();
 
 const hostname = "http://localhost";
 const port = 3000;
+const path = require ('path');
 
 app.use(express.json());
 
@@ -43,23 +44,23 @@ app.listen(port, hostname, () => {
 
 app.get("/login", (req, res)=>{
     res.sendFile(
-        path.resolve(__dirname + "/../frontend/login")
+        path.resolve(__dirname + "/../frontend/login/login.html")
 
 )});
 
 app.get("/home", (req, res)=>{
     res.sendFile(
-        path.resolve(__dirname + "/../frontend/home")
+        path.resolve(__dirname + "/../frontend/home/home.html")
 )});
 
 app.get("/popupajuda", (req, res)=>{
     res.sendFile(
-        path.resolve(__dirname + "/../frontend/popupajuda")
+        path.resolve(__dirname + "/../frontend/ajuda/popupajuda.html")
 )});
 
 app.get("/esqueceuasenha", (req, res)=>{
     res.sendFile(
-        path.resolve(__dirname + "/../frontend/esqueceuasenha")
+        path.resolve(__dirname + "/../frontend/esqueceuSenha/esqueceuasenha.html")
 
 )});
 
