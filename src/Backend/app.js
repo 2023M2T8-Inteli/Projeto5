@@ -41,7 +41,6 @@ app.use("/get-viagens-by-id-relatorio", getViagensByIdRelatorio);
 app.get("/login", (req, res)=>{
     res.sendFile(
         path.resolve(__dirname + "/../frontend/login/login.html")
-
 )});
 
 app.get("/home", (req, res)=>{
