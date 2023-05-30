@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-const getGraficoDeMarcovByVagaoId = require("../sql_functions/read/vagoes.get_grafico_de_markov_by_vagao_id");
+const getGraficoDeMarcovByVagaoId = require("../../sql_functions/read/vagoes.get_grafico_de_markov_by_vagao_id");
 
 router.get("/", (req, res) => {
   res.statusCode = 200;

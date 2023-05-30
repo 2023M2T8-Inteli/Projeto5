@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-const inserirTecnico = require("../sql_functions/create/tecnicos_ipt.inserir_tecnico");
+const inserirTecnico = require("../../sql_functions/create/tecnicos_ipt.inserir_tecnico");
 
 router.post("/", (req, res) => {
   res.statusCode = 200;

@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-const inserirRelatorio = require("./../sql_functions/create/relatorios.inserir_relatorio");
+const inserirRelatorio = require("../../sql_functions/create/relatorios.inserir_relatorio");
 
 router.post("/", (req, res) => {
   res.statusCode = 200;

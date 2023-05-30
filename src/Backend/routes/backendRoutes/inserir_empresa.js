@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-const inserirEmpresa = require("../sql_functions/create/empresas.inserir_empresa");
+const inserirEmpresa = require("../../sql_functions/create/empresas.inserir_empresa");
 
 router.post("/", (req, res) => {
   res.statusCode = 200;

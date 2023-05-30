@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-const inserirChoque = require("../sql_functions/create/choques.inserir_choques");
+const inserirChoque = require("../../sql_functions/create/choques.inserir_choques");
 
 router.post("/", (req, res) => {
   res.statusCode = 200;

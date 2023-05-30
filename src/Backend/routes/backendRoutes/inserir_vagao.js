@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-const inserirVagao = require("../sql_functions/create/vagoes.inserir_vagao");
+const inserirVagao = require("../../sql_functions/create/vagoes.inserir_vagao");
 
 router.post("/", (req, res) => {
   res.statusCode = 200;

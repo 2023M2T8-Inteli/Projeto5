@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-const getChoquesByLatitudeELongitude = require("../sql_functions/read/choques.get_choques_by_latitude_e_longitude");
+const getChoquesByLatitudeELongitude = require("../../sql_functions/read/choques.get_choques_by_latitude_e_longitude");
 
 router.get("/", (req, res) => {
   res.statusCode = 200;
