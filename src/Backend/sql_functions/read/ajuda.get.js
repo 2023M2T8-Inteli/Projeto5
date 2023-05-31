@@ -1,3 +1,5 @@
+//Essa rota não precisa acessar o DB
+
 const execSqlQquery = require("../connection");
 const express = require("express");
 const path = require("path");
