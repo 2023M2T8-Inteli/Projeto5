@@ -45,7 +45,9 @@ CREATE TABLE choques (
 	ACT_choque           VARCHAR(255) NOT NULL    ,
 	PEG_choque           VARCHAR(255) NOT NULL    ,
 	id_vagao             INTEGER     ,
-	FOREIGN KEY ( id_vagao ) REFERENCES vagoes( id_vagao )  
+	id_viagem			 INTEGER	 ,
+	FOREIGN KEY ( id_vagao ) REFERENCES vagoes( id_vagao )	,
+	FOREIGN KEY ( id_viagem ) REFERENCES viagens( id_viagem )  
  );
 
 CREATE TABLE vagao_x_viagem ( 
