@@ -38,25 +38,17 @@ app.use("/get-choques-by-latitude-e-longitude", getChoquesByLatitudeELongitude);
 const getViagensByIdRelatorio = require("./routes/backendRoutes/get_viagens_by_id_relatorio");
 app.use("/get-viagens-by-id-relatorio", getViagensByIdRelatorio);
 
-app.get("/login", (req, res)=>{
-    res.sendFile(
-        path.resolve(__dirname + "/../frontend/login/login.html")
+const home = require("./routes/frontendRoutes/get_home");
+app.use("/home", home)
 
-)});
+const ajuda = require("./routes/frontendRoutes/get_ajuda");
+app.use("/ajuda", ajuda)
 
-app.get("/home", (req, res)=>{
-    res.sendFile(
-        path.resolve(__dirname + "/../frontend/home/home.html")
-)});
+const analise = require("./routes/frontendRoutes/get_analise");
+app.use("/analise", analise)
 
-
-
-app.get("/esqueceuasenha", (req, res)=>{
-    res.sendFile(
-        path.resolve(__dirname + "/../frontend/esqueceuSenha/esqueceuasenha.html")
-
-)});
-
+const comparacao = require("./routes/frontendRoutes/get_comparacao");
+app.use("/comparacao", comparacao)
 
 app.listen(port, () => {
   console.log(`Servidor rodando em ${hostname}:${port}`);
