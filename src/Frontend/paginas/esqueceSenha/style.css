@@ -1,3 +1,4 @@
+/* Estilizando a tag <main> */
 main{
     height: 100vh;
     width: 100%;
@@ -11,6 +12,7 @@ main{
     font-weight: 400;
 }
 
+/* Estilizando a seção de recuperação de senha */
 #area-esqueci-senha{
     height: 100vh;
     display: flex;
@@ -20,6 +22,7 @@ main{
     margin-left: 50px;
 }
 
+/* Estilizando os inputs do formulário */
 #area-esqueci-senha form input{
     width:100%;
     background-color: transparent;
@@ -31,16 +34,19 @@ main{
     margin-bottom: 10px;
 }
 
+/* Estilizando o foco nos inputs do formulário */
 #area-esqueci-senha form input:focus{
     outline: none;
 }
 
+/* Estilizando o texto de placeholder dos inputs */
 #area-esqueci-senha form input::placeholder{
     font-weight: 400;
     color: #FFFFFF;
     font-size: 1rem;
 }
 
+/* Estilizando o botão de envio do formulário */
 #area-esqueci-senha form input[type="submit"]{
     background-color: #4A67F0;
     width: 50%;
@@ -49,16 +55,30 @@ main{
     font-size: 1rem;
 }
 
+/* Estilizando o hover do botão de envio do formulário */
 #area-esqueci-senha form input[type="submit"]:hover{
     background-color: #4AF0C7;
 }
 
+/* Estilizando o elemento <small> */
 small{
-    display: block;
-    width: 100%;
-    margin-bottom: 50px;
+    position: absolute;
+    width: 955px;
+    height: 27px;
+    left: 49px;
+    top: 430px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-decoration-line: underline;
+    
+    color: #FFFFFF;
 }
 
+/* Estilizando o link dentro do formulário */
 #area-esqueci-senha form a{
     text-decoration: none;
     color:#FFFFFF;
@@ -67,6 +87,7 @@ small{
     width: 100%;
 }
 
+/* Estilizando o titulo da página */
 h1{
     font-size: 4rem;
     font-weight: 800;
