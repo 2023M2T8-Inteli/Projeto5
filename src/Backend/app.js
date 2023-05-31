@@ -49,21 +49,13 @@ app.get("/home", (req, res)=>{
         path.resolve(__dirname + "/../frontend/home/home.html")
 )});
 
-//app.get("/popupajuda", (req, res)=>{
-   // res.sendFile(
-      //  path.resolve(__dirname + "./frontend/ajuda/popupajuda.html")
-//)});
+
 
 app.get("/esqueceuasenha", (req, res)=>{
     res.sendFile(
         path.resolve(__dirname + "/../frontend/esqueceuSenha/esqueceuasenha.html")
 
 )});
-
-//const { app: importedApp, execSqlQquery } = require("./routes/sql_functions/read/ajuda.get.js");
-
-//const teste = importedApp.locals.teste;
-
 
 
 app.listen(port, () => {
