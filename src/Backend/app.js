@@ -1,3 +1,7 @@
+const bodyParser = require('body-parser');
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
+const sqlite3 = require('sqlite3').verbose();
+
 const express = require("express");
 const app = express();
 
@@ -6,6 +10,7 @@ const port = 3000;
 const path = require ('path');
 
 app.use(express.json());
+app.use(express.static("public"));
 
 //Endpoints
 const inserirTecnico = require("./routes/backendRoutes/inserir_tecnico");
@@ -37,6 +42,9 @@ app.use("/get-choques-by-latitude-e-longitude", getChoquesByLatitudeELongitude);
 
 const getViagensByIdRelatorio = require("./routes/backendRoutes/get_viagens_by_id_relatorio");
 app.use("/get-viagens-by-id-relatorio", getViagensByIdRelatorio);
+
+const main = require("./routes/frontendRoutes/get_main");
+app.use("/", main)
 
 const home = require("./routes/frontendRoutes/get_home");
 app.use("/home", home)
