@@ -12,15 +12,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/bootstrap-icons.min.css" rel="stylesheet">
     <style>
         /* CSS personalizado para centralizar os elementos do nav */
-        .navbar-nav {
+      .navbar-nav {
             margin: 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        nav{
+      nav{
           margin-right: 151px;
         }
+      h1{
+        font-weight: 800;
+      };
+
+      button{
+        top: 50px;
+      }
+
         
     </style>
     <title>Tela de análise</title>
@@ -51,6 +59,8 @@
                         <a class="nav-link" href="#">Relatório</a>
                     </li>
                 </ul>
+              <img src="../../../Servidor/public/assets/sair (3) 1.svg  " alt="logout">
+              <button id="button-interogacao">?</button>
             </div>
         </div>
     </nav>
@@ -96,6 +106,12 @@
 
         <button class="btn btn-secondary ms-3">Aplicar</button>
     </div>
+    <div>Gráfico 1</div>
+    <div>Gráfico 2</div>
+    <div>Trajeto</div>
+    <button>Compare duas viagens</button>
+    <img src="../../../Servidor/public/assets/docorrencias.png" alt="legenda" height="28px" width="663px">
+    <img src="../../../Servidor/public/assets/forcas.png" alt="legenda" height="32px" width="32px">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
