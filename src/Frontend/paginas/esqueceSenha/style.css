@@ -119,3 +119,30 @@ h1{
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+  
+  /* Media queries para desktop */
+@media screen and (min-width: 1024px) {
+    /* Seu código CSS específico para desktop aqui */
+    main {
+      /* Exemplo de alteração para desktop */
+      height: 100%;
+    }
+  }
+  
+  /* Media queries para tablet */
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Seu código CSS específico para tablet aqui */
+    main {
+      /* Exemplo de alteração para tablet */
+      height: 60vh;
+    }
+  }
+  
+  /* Media queries para celular */
+  @media screen and (max-width: 767px) {
+    /* Seu código CSS específico para celular aqui */
+    main {
+      /* Exemplo de alteração para celular */
+      height: auto;
+    }
+  }
