@@ -1,0 +1,145 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+  }  
+
+/* 
+
+
+main{
+    height: 100vh;
+    width: 100%;
+    background: hsla(230, 85%, 62%, 1);
+    background: linear-gradient(360deg, hsla(230, 85%, 62%, 1) 0%, hsla(198, 72%, 61%, 1) 50%, hsla(168, 77%, 60%, 1) 100%);
+    background: -moz-linear-gradient(360deg, hsla(230, 85%, 62%, 1) 0%, hsla(198, 72%, 61%, 1) 50%, hsla(168, 77%, 60%, 1) 100%);
+    background: -webkit-linear-gradient(360deg, hsla(230, 85%, 62%, 1) 0%, hsla(198, 72%, 61%, 1) 50%, hsla(168, 77%, 60%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4A67F0", endColorstr="#52B7E3", GradientType=1 );
+    display: flex;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+section{
+    width: 50%;
+}
+
+#area-login{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 7%;
+}
+
+#area-login form input{
+    width:100%;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    height: 50px;
+    border-bottom: 1px solid #FFFFFF;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+#area-login form input:focus{
+    outline: none;
+}
+
+#area-login form input::placeholder{
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size: 1rem;
+}
+
+#area-login form input[type="submit"]{
+    background-color: #4A67F0;
+    width: 50%;
+    border: 0;
+    border-radius: 16px;
+    font-size: 1rem;
+}
+
+#area-login form input[type="submit"]:hover{
+    background-color: #4AF0C7;
+}
+
+small{
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#area-login form a{
+    text-decoration: none;
+    color:#FFFFFF;
+    margin-left: 10px;
+    font-size: 0.7rem;
+    width: 100%;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: 800;
+    justify-self: flex-start;
+    margin-bottom: 50px;
+}
+
+#area-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+#area-logo{
+    line-height: 1.5rem;
+    padding-bottom: 200px;
+}
+
+#area-logo p{
+    width: 60%;
+    font-size: 1.1rem;
+}
+
+#logo{
+    width: 80%;
+}
+
+#logo img{
+    width: 100%;
+}
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: 
+  #ffffff;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: 
+  #fbfbfb;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  } */

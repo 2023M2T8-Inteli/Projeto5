@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./../../fonts/poppins.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        /* CSS personalizado para centralizar os elementos do nav */
+        .navbar-nav {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav{
+          margin-right: 151px;
+        }
+        
+    </style>
+    <title>Tela de análise</title>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="../../../../imagens/lumi.png" alt="logotipo" width="151" height="72.73">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Análises</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Relatório</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-center">Análise das viagens</h1>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="dropdown text-center">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Viagem <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <a class="dropdown-item" href="#">Viagem 1</a>
+                <a class="dropdown-item" href="#">Viagem 2</a>
+                <a class="dropdown-item" href="#">Viagem 3</a>
+                <a class="dropdown-item" href="#">Viagem 4</a>
+                <a class="dropdown-item" href="#">Viagem 5</a>
+            </div>
+        </div>
+
+        <div class="dropdown text-center ms-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tipo de Engate <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <a class="dropdown-item" href="#">Engate E</a>
+                <a class="dropdown-item" href="#">Engate F</a>
+            </div>
+        </div>
+
+        <div class="dropdown text-center ms-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Viagem <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                <a class="dropdown-item" href="#">Choque 0 (pico)</a>
+                <a class="dropdown-item" href="#">Choque 1</a>
+                <a class="dropdown-item" href="#">Choque 2</a>
+            </div>
+        </div>
+
+        <button class="btn btn-secondary ms-3">Aplicar</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
