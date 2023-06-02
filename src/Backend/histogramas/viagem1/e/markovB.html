@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markov Força B - V1 E</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #histogram-chart {
+            width: 25vw;
+            height: 25vh;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="histogram-chart"></canvas>
+    <script>
+        var canvas = document.getElementById('histogram-chart');
+        var xLabels = [ 0, 200, 400, ];
+        var xValues = [0, 0, 0, 0, 0, 0, 0, 10, 30, 60, 90, 110, 140, 160, 170, 175, 200, 200, 210, 240, 280, 270, 270, 255, 240, 220, 160, 140, 120, 110, 90, 70, 30, 20, 15, 10, 7, 5, 3, 0, 10, 0];
+        var yValues = [-185, -170, -160, -150, -140, -130, -120, -110, -105, -90, -80, -70, -60, -50, -40, -35, -20, -15, -10, 5, 10, 20, 25, 30, 40, 50, 60, 65, 70, 90, 100, 110, 120, 130, 145, 150, 155, 165, 170, 180, 185, 190]; 
+
+        var config = {
+            type: "line",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    label: 'Markov - V1 E',
+                    data: yValues,
+                    backgroundColor: 'rgba(0, 123, 255, 0.7)', // Adjust the color as desired
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return xLabels[index];
+                            }
+                        }, 
+                        title: {
+                            display: true, 
+                            text: 'Força (tf)'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title:{
+                            display: true, 
+                            text: 'Quantidade de ocorrências'
+                        }
+                    }
+                }
+            }
+        };
+
+        var histogramChart = new Chart(canvas, config);
+    </script>
+</body>
+</html>
