@@ -83,6 +83,5 @@ header .topo .ajuda{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 100vh;
     flex-wrap: wrap;
 }

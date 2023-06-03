@@ -6,7 +6,7 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
     padding: 0 2%;
     box-sizing: border-box;
 }
@@ -17,6 +17,7 @@ header .topo .logo{
 
 header .topo .logo img {
     width: 100%;
+    cursor: pointer;
 }
 
 nav{
@@ -65,7 +66,8 @@ header .topo .icone-logout img{
     font-weight: 800;
 }
 
-header .topo .ajuda{
+header 
+    .topo .ajuda{
     background-color: #52B7E3;
     border-radius: 50%;
     width: 4%;
@@ -90,6 +92,56 @@ header .topo .ajuda{
 button{
     top: 50px;
 };
+
+/* Estilo para a seção */
+section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Estilo para a div da esquerda */
+  div.esquerda {
+    margin: 1% 5%;
+    float: left;
+  }
+  
+  /* Estilo para o mapa */
+  div.esquerda img {
+    width: auto; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+  }
+  
+  /* Estilo para a div da direita */
+  div.direita {
+    margin: 1% 0;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilo para o histograma */
+  div.direita .histograma img,
+  div.direita .markov img {
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+  }
+  
+  /* Estilo para o botão */
+  button.compare-viagens {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button.compare-viagens:hover {
+    background-color: #45a049;
+  }  
 
 /* .nav {
     display: flex;
