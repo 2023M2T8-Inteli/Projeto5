@@ -7,63 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/fonts/poppins.css">
-    <link rel="stylesheet" href="/styles/telaAnalise.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/bootstrap-icons.min.css" rel="stylesheet">
-    <style>
-        /* CSS personalizado para centralizar os elementos do nav */
-        .navbar-nav {
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        nav{
-            margin-right: 151px;
-        }
-        h1{
-            font-weight: 800;
-        };
-
-        button{
-            top: 50px;
-        };
-
-        
-    </style>
-    <title>Tela de análise</title>
-    
+    <link rel="stylesheet" href="../../../public/fonts/poppins.css">
+    <link rel="stylesheet" href="../../../public/styles/telaAnalise.css">
+    <title>Tela de análise das viagens</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <img src="../../../../../imagens/lumi.png" alt="logotipo" width="151" height="72.73">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Análises</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Relatório</a>
-                    </li>
-                </ul>
-              <img src="../../../../Servidor/public/assets/sair (3) 1.svg  " alt="logout">
-              <button id="button-interogacao">?</button>
+<body>    
+    <header>
+        <div class="topo">
+            <div class="logo">
+                <img src="../../../public/assets/logo_padrao.png" alt="Lumi (logo)">
             </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Análises</a></li>
+                    <li><a href="#">Relatórios</a></li>
+                </ul>
+            </nav>
+            <div class="icone-logout">
+                <img src="../../../public/assets/sairazul.svg" alt="Sair">
+            </div>
+            <span class="ajuda">?</span>
         </div>
-    </nav>
+    </header>
 
     <h1 class="text-center">Análise das viagens</h1>
     <div class="d-flex justify-content-center align-items-center">
@@ -95,7 +64,7 @@
         <div class="dropdown text-center ms-3">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3"
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Viagem <i class="bi bi-caret-down-fill"></i>
+                Tipo de choque <i class="bi bi-caret-down-fill"></i>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
                 <a class="dropdown-item" href="#">Choque 0 (pico)</a>
