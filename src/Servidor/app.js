@@ -1,13 +1,13 @@
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
-const sqlite3 = require('sqlite3').verbose();
+const sqlite3 = require("sqlite3").verbose();
 
 const express = require("express");
 const app = express();
 
 const hostname = "http://localhost";
 const port = 3000;
-const path = require ('path');
+const path = require("path");
 
 app.use(express.json());
 app.use(express.static("public"));
@@ -44,19 +44,19 @@ const getViagensByIdRelatorio = require("./Backend/routes/backendRoutes/get_viag
 app.use("/get-viagens-by-id-relatorio", getViagensByIdRelatorio);
 
 const main = require("./Backend/routes/frontendRoutes/get_main");
-app.use("/", main)
+app.use("/", main);
 
 const home = require("./Backend/routes/frontendRoutes/get_home");
-app.use("/home", home)
+app.use("/home", home);
 
 const ajuda = require("./Backend/routes/frontendRoutes/get_ajuda");
-app.use("/ajuda", ajuda)
+app.use("/ajuda", ajuda);
 
 const analise = require("./Backend/routes/frontendRoutes/get_analise");
-app.use("/analise", analise)
+app.use("/analise", analise);
 
 const comparacao = require("./Backend/routes/frontendRoutes/get_comparacao");
-app.use("/comparacao", comparacao)
+app.use("/comparacao", comparacao);
 
 app.listen(port, () => {
   console.log(`Servidor rodando em ${hostname}:${port}`);
