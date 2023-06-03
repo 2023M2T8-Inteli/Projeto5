@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../../styles/reset.css">
-    <link rel="stylesheet" href="./../../fonts/poppins.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./../../../public/styles/reset.css">
+    <link rel="stylesheet" href="./../../../public/fonts/poppins.css">
+    <link rel="stylesheet" href="./../../../public/styles/homepage.css">
     <title>Lumi - Homepage</title>
 </head>
 <body>
     <header>
         <div class="topo">
             <div class="logo">
-                <img src="./../../assets/logo_branco.png" alt="Lumi (logo)">
+                <img src="./../../../public/assets/logo_branco.png" alt="Lumi (logo)">
             </div>
             <nav>
                 <ul>
@@ -24,7 +24,7 @@
                 </ul>
             </nav>
             <div class="icone-logout">
-                <img src="./../../assets/icone_logout.svg" alt="Sair">
+                <img src="./../../../public/assets/icone_logout.svg" alt="Sair">
             </div>
         </div>
         <div class="headline">
@@ -32,7 +32,75 @@
         </div>
     </header>
     <main>
-        
+        <section class="apresentacao">
+            <div class="lado-esquerdo">
+                <div class="logo">
+                    <img src="./../../../public/assets/logo_preto.png" alt="Lumi">
+                </div>
+                <p>Experimente nossa plataforma e simplifique suas análises, otimize o sistema e garanta uma experiência de viagem <span>mais e ficiente!</span></p>
+            </div>
+            <div class="lado-direito">
+                <div class="imagem">
+                    <img src="./../../../public/assets/home_primeira_imagem.png" alt="análise">
+                </div>
+            </div>
+        </section>
+        <section class="o-que-nos-oferecemos">
+            <h2>O que nós <span>oferecemos?</span></h2>
+            <div class="servicos">
+                <div class="servico">
+                    <div class="imagem">
+                        <img src="./../../../public/assets/pc-mapas.png" alt="mapas">
+                    </div>
+                    <span>Mapas</span>
+                </div>
+                <div class="servico">
+                    <div class="imagem">
+                        <img src="./../../../public/assets/pc-graficos.png" alt="mapas">
+                    </div>
+                    <span>Gráficos</span>
+                </div>
+                <div class="servico">
+                    <div class="imagem">
+                        <img src="./../../../public/assets/pc-analises.png" alt="mapas">
+                    </div>
+                    <span>Análises</span>
+                </div>
+            </div>
+            <div class="informacoes">
+                <p>
+                    Oferecemos diversas formas de analisar o seu relatório de forma dinâmica!
+                </p>
+                <a href="#"><button>Ver análise</button></a>
+            </div>
+        </section>
+        <section class="compare-viagens">
+            <h2><span>Compare</span> as suas viagens!</h2>
+            <div class="informacoes">
+                <p>
+                    A seção “Compare viagens” permite que você analise as principais informações e os mapas com os pontos críticos de dois relatórios distintos.
+                </p>
+                <span><a href="#"><button>Ver análise</button></a></span>
+            </div>
+        </section>
+        <section class="entre-em-contato">
+            <div class="lado-esquerdo">
+                <h2>Entre em <span>Contato!</span></h2>
+                <div class="imagem">
+                    <img src="./../../../public/assets/entre-em-contato.png" alt="Homem falando ao celular">
+                </div>
+            </div>
+            <div class="lado-direito">
+                <form action="#" method="post">
+                    <input type="text" placeholder="Nome" name="nome" id="nome" required>
+                    <input type="email" placeholder="Email" name="email" id="email" required>
+                    <input type="tel" placeholder="Telefone" name="telefone" id="telefone" required>
+                    <textarea name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
     </main>
+    <footer>© 2023 Lümi Reports</footer>
 </body>
 </html>
