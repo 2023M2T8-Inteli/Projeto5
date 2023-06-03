@@ -85,3 +85,8 @@ header .topo .ajuda{
     align-items: flex-start;
     flex-wrap: wrap;
 }
+
+.direita, .esquerda {
+    float: left;
+    width: 50%;
+}

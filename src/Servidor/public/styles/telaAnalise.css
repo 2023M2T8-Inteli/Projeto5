@@ -129,18 +129,19 @@ section {
   
   /* Estilo para o botão */
   button.compare-viagens {
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 5px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    width: 500px;
+    height: 50px;
   }
   
   button.compare-viagens:hover {
-    background-color: #45a049;
+    background-color: #A1B3B3;
   }  
 
 /* .nav {
