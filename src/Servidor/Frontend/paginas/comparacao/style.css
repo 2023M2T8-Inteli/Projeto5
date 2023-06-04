@@ -96,16 +96,29 @@ nav ul li:not(:last-child):after {
   color: #fff;
 }
 
-.dropdown-menu.dropdown-menu-blue .dropdown-divider {
-  background-color: #52B7E3;
+.dropdown-menu.dropdown-menu-blue .dropdown-item:hover {
+  background-color: #0C92B5;
+  color: #fff;
+}
+.dropdown-viagem1,
+.dropdown-viagem2,
+.dropdown-engate,
+.dropdown-choque {
+  margin-bottom: 20px;
 }
 
-.dropdown-viagem1 .btn-primary,
-.dropdown-viagem2 .btn-primary {
-  display: flex;
-  justify-content: center;
+.dropdown-engate {
   margin-top: 10px;
 }
+
+.dropdown-menu.dropdown-menu-blue .dropdown-item {
+  color: #fff;
+  width: 100%;
+  white-space: normal;
+  text-align: left;
+}
+
+
 
 
 
