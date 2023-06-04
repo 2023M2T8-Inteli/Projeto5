@@ -28,6 +28,7 @@ nav ul{
     display: flex;
     justify-content: space-evenly;
     list-style: none;
+    margin: 0;
 }
 
 nav ul li a{
@@ -52,7 +53,7 @@ header .topo .icone-logout img{
     margin-right: 60%;
 }
 
-header .tittle{
+.title{
     width: 100%;
     text-align: center;
     font-weight: 600;
@@ -61,10 +62,7 @@ header .tittle{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-}
-
-header .tittle h1{
-    width: 60%;
+    font-weight: 800;
 }
 
 header .topo .ajuda{
@@ -81,9 +79,14 @@ header .topo .ajuda{
     margin-left: 0.5%;
 }
 
-body{
+.weadline{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.direita, .esquerda {
+    float: left;
+    width: 50%;
 }
