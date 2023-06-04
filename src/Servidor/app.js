@@ -1,62 +1,65 @@
+//Importação de módulos para o servidor funcionar
 const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const sqlite3 = require("sqlite3").verbose();
 
+//Configuração do servidor
 const express = require("express");
 const app = express();
-
 const hostname = "http://localhost";
 const port = 3000;
 const path = require("path");
 
+//Configuração de middlewares
 app.use(express.json());
 app.use(express.static("public"));
 
 //Endpoints do backend
-const inserirTecnico = require("./Backend/routes/backendRoutes/inserir_tecnico");
+const inserirTecnico = require("./Backend/routes/backendRoutes/inserir_tecnico.js");
 app.use("/inserir-tecnico", inserirTecnico);
 
-const inserirEmpresa = require("./Backend/routes/backendRoutes/inserir_empresa");
+const inserirEmpresa = require("./Backend/routes/backendRoutes/inserir_empresa.js");
 app.use("/inserir-empresa", inserirEmpresa);
 
-const inserirRelatorio = require("./Backend/routes/backendRoutes/inserir_relatorio");
+const inserirRelatorio = require("./Backend/routes/backendRoutes/inserir_relatorio.js");
 app.use("/inserir-relatorio", inserirRelatorio);
 
-const inserirViagem = require("./Backend/routes/backendRoutes/inserir_viagem");
+const inserirViagem = require("./Backend/routes/backendRoutes/inserir_viagem.js");
 app.use("/inserir-viagem", inserirViagem);
 
-const inserirVagao = require("./Backend/routes/backendRoutes/inserir_vagao");
+const inserirVagao = require("./Backend/routes/backendRoutes/inserir_vagao.js");
 app.use("/inserir-vagao", inserirVagao);
 
-const inserirChoque = require("./Backend/routes/backendRoutes/inserir_choque");
+const inserirChoque = require("./Backend/routes/backendRoutes/inserir_choque.js");
 app.use("/inserir-choque", inserirChoque);
 
-const getRelatoriosByCnpj = require("./Backend/routes/backendRoutes/get_relatorio_by_cnpj");
+//esta dando erro no código sqlite
+const getRelatoriosByCnpj = require("./Backend/routes/backendRoutes/get_relatorio_by_cnpj.js");
 app.use("/get-relatorios-by-cnpj", getRelatoriosByCnpj);
 
-const getGraficoDeMarcovByVagaoId = require("./Backend/routes/backendRoutes/get_grafico_de_marcov_by_id");
+const getGraficoDeMarcovByVagaoId = require("./Backend/routes/backendRoutes/get_grafico_de_marcov_by_id.js");
 app.use("/get-grafico-de-markov-by-vagao-id", getGraficoDeMarcovByVagaoId);
 
-const getChoquesByLatitudeELongitude = require("./Backend/routes/backendRoutes/get_choques_by_latitude_e_longitude");
+const getChoquesByLatitudeELongitude = require("./Backend/routes/backendRoutes/get_choques_by_latitude_e_longitude.js");
 app.use("/get-choques-by-latitude-e-longitude", getChoquesByLatitudeELongitude);
 
-const getViagensByIdRelatorio = require("./Backend/routes/backendRoutes/get_viagens_by_id_relatorio");
+const getViagensByIdRelatorio = require("./Backend/routes/backendRoutes/get_viagens_by_id_relatorio.js");
 app.use("/get-viagens-by-id-relatorio", getViagensByIdRelatorio);
 
 //Endpoints de páginas
-const main = require("./Backend/routes/frontendRoutes/get_main");
+const main = require("./Backend/routes/frontendRoutes/get_main.js");
 app.use("/", main);
 
-const home = require("./Backend/routes/frontendRoutes/get_home");
+const home = require("./Backend/routes/frontendRoutes/get_home.js");
 app.use("/home", home);
 
-const ajuda = require("./Backend/routes/frontendRoutes/get_ajuda");
+const ajuda = require("./Backend/routes/frontendRoutes/get_ajuda.js");
 app.use("/ajuda", ajuda);
 
-const analise = require("./Backend/routes/frontendRoutes/get_analise");
+const analise = require("./Backend/routes/frontendRoutes/get_analise.js");
 app.use("/analise", analise);
 
-const comparacao = require("./Backend/routes/frontendRoutes/get_comparacao");
+const comparacao = require("./Backend/routes/frontendRoutes/get_comparacao.js");
 app.use("/comparacao", comparacao);
 
 app.listen(port, () => {
