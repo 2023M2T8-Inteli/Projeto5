@@ -12,7 +12,7 @@ const path = require("path");
 app.use(express.json());
 app.use(express.static("public"));
 
-//Endpoints
+//Endpoints do backend
 const inserirTecnico = require("./Backend/routes/backendRoutes/inserir_tecnico");
 app.use("/inserir-tecnico", inserirTecnico);
 
@@ -43,6 +43,7 @@ app.use("/get-choques-by-latitude-e-longitude", getChoquesByLatitudeELongitude);
 const getViagensByIdRelatorio = require("./Backend/routes/backendRoutes/get_viagens_by_id_relatorio");
 app.use("/get-viagens-by-id-relatorio", getViagensByIdRelatorio);
 
+//Endpoints de páginas
 const main = require("./Backend/routes/frontendRoutes/get_main");
 app.use("/", main);
 
