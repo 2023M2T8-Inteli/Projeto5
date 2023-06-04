@@ -1,121 +1,94 @@
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .topo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 100px;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav ul li {
+      margin-left: 10px;
+    }
+
+    nav ul li a {
+      color: #52B7E3;
+      text-decoration: none;
+      padding: 0 5px;
+    }
+
+    nav ul li:not(:last-child):after {
+      content: "|";
+      margin-left: 5px;
+      margin-right: 5px;
+      color: #52B7E3;
+    }
+
+    .icone-logout img {
+      width: 30px;
+      height: auto;
+    }
+
+    .tittle {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left-section,
+    .right-section {
+      width: 48%;
+    }
+
+    .dropdown-viagem1,
+    .dropdown-viagem2 {
+      margin-bottom: 20px;
+    }
+
+    .mapa1,
+    .mapa2,
+    .informacoes-viagem1,
+    .informacoes-viagem2,
+    .grafico1,
+    .grafico2 {
+      border: 2px solid #52B7E3;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .bordered-box h3 {
+      margin: 0;
+    }
+
+
   
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 10% 10%;
-    border: 10% solid black;
-  }
-  
-  header {
-    width: 100%;
-  }
-  
-  .topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2%;
-  }
-  
-  .logo img {
-    width: 25%;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #52B7E3;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 20px;
-  }
-  
-  header .icone-logout img {
-    width: 15%;
-    margin-left: auto;
-    margin-right: 20px;
-  }
-  
-  .tittle {
-    text-align: center;
-    font-weight: 600;
-    font-size: 2.5rem;
-    font-family: 'Poppins', sans-serif;
-    color: #171919;
-    margin: 2% 0;
-  }
-  
-  .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-  .left-section {
-    width: 45%;
-  }
-  
-  .right-section {
-    width: 45%;
-  }
-  
-  .dropdown-viagem1,
-  .dropdown-viagem2 {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .dropdown-viagem1 .dropdown-toggle::after,
-  .dropdown-viagem2 .dropdown-toggle::after {
-    display: inline-block;
-    margin-left: 5px;
-    vertical-align: middle;
-    content: '';
-    border-top: 0.3em solid;
-    border-right: 0.3em solid transparent;
-    border-left: 0.3em solid transparent;
-  }
-  
-  form.mapa1,
-  form.mapa2,
-  form.informacoes-viagem1,
-  form.informacoes-viagem2,
-  form.graficos1,
-  form.graficos2 {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #52B7E3;;
-  }
-  
-  .right-section .dropdown-viagem2 {
-    margin-left: -10px;
-  }
-  
-  .button-help {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #52B7E3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-  }
+
 
   
