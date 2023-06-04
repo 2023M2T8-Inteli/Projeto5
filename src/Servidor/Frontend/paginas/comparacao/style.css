@@ -1,91 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-    .topo {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
 
-    .logo img {
-      width: 100px;
-      height: auto;
-    }
+.logo img {
+  width: 100px;
+  height: auto;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      font-family: 'Poppins', sans-serif;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+}
 
-    nav ul li {
-      margin-left: 10px;
-    }
+nav ul li {
+  margin-left: 10px;
+}
 
-    nav ul li a {
-      color: #52B7E3;
-      text-decoration: none;
-      padding: 0 5px;
-    }
+nav ul li a {
+  color: #52B7E3;
+  text-decoration: none;
+  padding: 0 5px;
+}
 
-    nav ul li:not(:last-child):after {
-      content: "|";
-      margin-left: 5px;
-      margin-right: 5px;
-      color: #52B7E3;
-    }
+nav ul li:not(:last-child):after {
+  content: "|";
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #52B7E3;
+}
 
-    .icone-logout img {
-      width: 30px;
-      height: auto;
-    }
+.icone-logout img {
+  width: 25px;
+  height: auto;
+}
 
-    .tittle {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+.tittle {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    .content {
-      display: flex;
-      justify-content: space-between;
-    }
+.content {
+  display: flex;
+  justify-content: space-between;
+}
 
-    .left-section,
-    .right-section {
-      width: 48%;
-    }
+.left-section,
+.right-section {
+  width: 48%;
+  margin-top: 5%;
+}
 
-    .dropdown-viagem1,
-    .dropdown-viagem2 {
-      margin-bottom: 20px;
-    }
+.dropdown-viagem1,
+.dropdown-viagem2 {
+  margin-bottom: 20px;
+}
 
-    .mapa1,
-    .mapa2,
-    .informacoes-viagem1,
-    .informacoes-viagem2,
-    .grafico1,
-    .grafico2 {
-      border: 2px solid #52B7E3;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
+.mapa1,
+.mapa2,
+.informacoes-viagem1,
+.informacoes-viagem2,
+.grafico1,
+.grafico2 {
+  border: 2px solid #52B7E3;
+  padding: 20px;
+  margin-bottom: 50px;
+}
 
-    .bordered-box h3 {
-      margin: 0;
-    }
+.bordered-box h3 {
+  margin: 0;
+}
+
+.dropdown-menu.dropdown-menu-blue {
+  background-color: #52B7E3;
+}
+
+.dropdown-menu.dropdown-menu-blue .dropdown-item {
+  color: #fff;
+}
+
+.dropdown-menu.dropdown-menu-blue .dropdown-divider {
+  background-color: #52B7E3;
+}
+
+.dropdown-viagem1 .btn-primary,
+.dropdown-viagem2 .btn-primary {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
 
 
   
