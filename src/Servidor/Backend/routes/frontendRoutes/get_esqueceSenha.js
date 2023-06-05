@@ -5,7 +5,7 @@ const path = require ('path');
 
 router.get("/", (req, res)=>{
     res.sendFile(
-        path.resolve(__dirname + "./../../../frontend/paginas/homepage/homepage.html")
+        path.resolve(__dirname + "./../../../frontend/paginas/esqueceSenha/esqueceSenha.html")
 )});
 
 module.exports = router;

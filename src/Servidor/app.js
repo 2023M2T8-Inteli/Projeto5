@@ -50,17 +50,20 @@ app.use("/get-viagens-by-id-relatorio", getViagensByIdRelatorio);
 const main = require("./Backend/routes/frontendRoutes/get_main.js");
 app.use("/", main);
 
+const comparacao = require("./Backend/routes/frontendRoutes/get_comparacao.js");
+app.use("/comparacao", comparacao);
+
 const home = require("./Backend/routes/frontendRoutes/get_home.js");
 app.use("/home", home);
-
-const ajuda = require("./Backend/routes/frontendRoutes/get_ajuda.js");
-app.use("/ajuda", ajuda);
 
 const analise = require("./Backend/routes/frontendRoutes/get_analise.js");
 app.use("/analise", analise);
 
-const comparacao = require("./Backend/routes/frontendRoutes/get_comparacao.js");
-app.use("/comparacao", comparacao);
+const relatorios = require("./Backend/routes/frontendRoutes/get_relatorios.js");
+app.use("/relatorios", relatorios);
+
+const esqueceSenha = require("./Backend/routes/frontendRoutes/get_esqueceSenha.js");
+app.use("/esqueceSenha", esqueceSenha);
 
 app.listen(port, () => {
   console.log(`Servidor rodando em ${hostname}:${port}`);
