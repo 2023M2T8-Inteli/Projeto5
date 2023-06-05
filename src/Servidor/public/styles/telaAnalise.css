@@ -59,15 +59,16 @@ header .topo .icone-logout img{
     text-align: center;
     font-weight: 600;
     font-size: 1.5rem;
-    color: #171919;
+    color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     font-weight: 800;
+    margin-top: 1rem;
 }
 
 header 
-    .topo .ajuda{
+    .topo .abreajuda{
     background-color: #52B7E3;
     border-radius: 50%;
     width: 4%;
@@ -79,6 +80,7 @@ header
     cursor: pointer;
     font-size: 1.6rem;
     margin-left: 0.5%;
+    border: 0rem;
 }
 
 .weadline{
@@ -144,147 +146,114 @@ section {
     background-color: #A1B3B3;
   }  
 
-/* .nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-  }
+  @import url(https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap);
+
+body {
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF;
+}
+
+.sidebar {
+  width: 45vh;
+  background-color: #4A67F0;
+  padding: 20px;
+  margin-left: auto; 
+  border-radius: 16px;
+  transition: all 0.3s;
+  z-index: 9999;
+
+}
+
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   
-  .nav-item {
-    margin: 0 10px;
-  }  
-
-
-
-main{
-    height: 100vh;
-    width: 100%;
-    background: hsla(230, 85%, 62%, 1);
-    background: linear-gradient(360deg, hsla(230, 85%, 62%, 1) 0%, hsla(198, 72%, 61%, 1) 50%, hsla(168, 77%, 60%, 1) 100%);
-    background: -moz-linear-gradient(360deg, hsla(230, 85%, 62%, 1) 0%, hsla(198, 72%, 61%, 1) 50%, hsla(168, 77%, 60%, 1) 100%);
-    background: -webkit-linear-gradient(360deg, hsla(230, 85%, 62%, 1) 0%, hsla(198, 72%, 61%, 1) 50%, hsla(168, 77%, 60%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4A67F0", endColorstr="#52B7E3", GradientType=1 );
-    display: flex;
-    color: #FFFFFF;
-    font-weight: 400;
 }
 
-section{
-    width: 50%;
+.dropdown-content {
+  display: none;
+  padding: 10px;
+  align-items: center;
 }
 
-#area-login{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+.dropdown-content p {
+  margin: 0;
+  color: #FFFFFF;
+  transition: display 3s ease-in-out;
+  text-align: center;
+}
+
+.dropdown-btn.active + .dropdown-content {
+  display: block;
+}
+
+.dropdown-btn {
+  background-color: #4A67F0;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: large;
+}
+
+.dropdown-btn svg {
+  margin-right: 10px;
+  fill: #FFFFFF;
+  flex-shrink: 0; 
+}
+
+hr{
+    width: 12rem;
+    height: 2rem;
+    border: 2px solid #FFFFFF;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 0 7%;
 }
 
-#area-login form input{
-    width:100%;
-    background-color: transparent;
-    border: none;
-    color: #FFFFFF;
-    height: 50px;
-    border-bottom: 1px solid #FFFFFF;
-    padding-left: 10px;
-    margin-bottom: 10px;
-}
-
-#area-login form input:focus{
-    outline: none;
-}
-
-#area-login form input::placeholder{
-    font-weight: 400;
-    color: #FFFFFF;
-    font-size: 1rem;
-}
-
-#area-login form input[type="submit"]{
+#sidebar {
     background-color: #4A67F0;
-    width: 50%;
-    border: 0;
-    border-radius: 16px;
-    font-size: 1rem;
-}
-
-#area-login form input[type="submit"]:hover{
-    background-color: #4AF0C7;
-}
-
-small{
-    display: block;
-    width: 100%;
-    margin-bottom: 50px;
-}
-
-#area-login form a{
-    text-decoration: none;
-    color:#FFFFFF;
-    margin-left: 10px;
-    font-size: 0.7rem;
-    width: 100%;
-}
-
-h1{
-    font-size: 4rem;
-    font-weight: 800;
-    justify-self: flex-start;
-    margin-bottom: 50px;
-}
-
-#area-logo{
-    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 5%;
-}
-
-#area-logo{
-    line-height: 1.5rem;
-    padding-bottom: 200px;
-}
-
-#area-logo p{
-    width: 60%;
-    font-size: 1.1rem;
-}
-
-#logo{
-    width: 80%;
-}
-
-#logo img{
-    width: 100%;
-}
-.hover-underline-animation {
-    display: inline-block;
-    position: relative;
-    color: 
-  #ffffff;
+    display: flex;
+    flex-direction: column;
+    transition: all 3s; /* You can use "all" to transition all properties */
   }
-  
-  .hover-underline-animation:after {
-    content: '';
+
+.sairajuda {
     position: absolute;
-    width: 120px;
-    transform: scaleX(0);
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: 
-  #fbfbfb;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+    top: 1rem;
+    margin-left: 1rem;
+    background-color: #4A67F0;
+    color: white;
+    align-items: center;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 2rem;
   }
   
-  .hover-underline-animation:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  } */
+  .contato{
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .contato-link {
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: auto;
+  }
