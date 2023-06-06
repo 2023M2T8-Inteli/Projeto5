@@ -9,6 +9,17 @@
     <link rel="stylesheet" type="text/css" href="/styles/homepage.css">
     <title>Lumi - Homepage</title>
 </head>
+<script>
+        window.onload = function() {
+        // Verifica se o parâmetro "scroll" está presente na URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var shouldScroll = urlParams.get('scroll');
+
+        if (shouldScroll === 'true') {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    };
+</script>
 <body>
     <header>
         <div class="topo">
@@ -18,7 +29,7 @@
             <nav>
                 <ul>
                     <li><a href="./home">Home</a></li>
-                    <li><a href="./home">Contato</a></li>
+                    <li><a href="./home?scroll=true">Contato</a></li>
                     <li><a href="./analise">Análises</a></li>
                     <li><a href="./relatorios">Relatórios</a></li>
                 </ul>
