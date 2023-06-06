@@ -125,14 +125,10 @@ button{
     height: 50px;
     color: white;
     font-weight: 600;
+    margin-left: 20px;
 
 }
 .botoes{
-    display: flex;
-    justify-content: space-around;
+    margin-left: 250px;
     margin-top: -80px;
-
 }
-.botoes button {
-    margin-right: -200px; /* Ajuste o valor conforme necessário */
-  }
