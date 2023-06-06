@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -11,6 +11,24 @@
     <link rel="stylesheet" href="../../../public/fonts/poppins.css">
     <link rel="stylesheet" href="../../../public/styles/relatorios.css">
     <title>Relatórios</title>
+    <script>
+        function baixarArquivo() {
+  // Criar um elemento <a> temporário
+  var link = document.createElement('a');
+  link.href = '../../../public/assets/logo_padrao.png'; // Substitua pelo caminho do arquivo desejado
+  link.download = 'teste1'; // Substitua pelo nome do arquivo desejado
+  link.target = '_blank';
+
+  // Adicionar o elemento <a> à página
+  document.body.appendChild(link);
+
+  // Simular o clique no elemento <a> para iniciar o download
+  link.click();
+
+  // Remover o elemento <a> temporário da página
+  document.body.removeChild(link);
+}
+    </script>
 </head>
 <body>    
     <header>
@@ -34,7 +52,59 @@
     </header>
     
     <h1 class="text-center">Relatórios</h1>
-    <section>
-        <div></div>
+    <section class="container">
+        <div class="retangulo">
+            <h2>Relatório 1</h2>
+            <p>Data: DD/MM/AAAA</p>
+            <p>Local: XXXXX XXXXX</p>
+        <div class="botoes">
+            <button>Acessar relatório</button>
+            <button onclick="baixarArquivo()">Baixar relatório</button>
+        </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="retangulo">
+            <h2>Relatório 2</h2>
+            <p>Data: DD/MM/AAAA</p>
+            <p>Local: XXXXX XXXXX</p>
+        <div class="botoes">
+            <button>Acessar relatório</button>
+            <button onclick="baixarArquivo()">Baixar relatório</button>
+        </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="retangulo">
+            <h2>Relatório 3</h2>
+            <p>Data: DD/MM/AAAA</p>
+            <p>Local: XXXXX XXXXX</p>
+        <div class="botoes">
+            <button>Acessar relatório</button>
+            <button onclick="baixarArquivo()">Baixar relatório</button>
+        </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="retangulo">
+            <h2>Relatório 4</h2>
+            <p>Data: DD/MM/AAAA</p>
+            <p>Local: XXXXX XXXXX</p>
+        <div class="botoes">
+            <button>Acessar relatório</button>
+            <button onclick="baixarArquivo()">Baixar relatório</button>
+        </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="retangulo">
+            <h2>Relatório 5</h2>
+            <p>Data: DD/MM/AAAA</p>
+            <p>Local: XXXXX XXXXX</p>
+        <div class="botoes">
+            <button>Acessar relatório</button>
+            <button onclick="baixarArquivo()">Baixar relatório</button>
+        </div>
+        </div>
     </section>
     
