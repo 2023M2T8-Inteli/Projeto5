@@ -35,6 +35,22 @@ header .topo .logo img {
     width: 100%;
 }
 
+header 
+    .abreajuda{
+    background-color: #52B7E3;
+    border-radius: 50%;
+    width: 4%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    font-size: 1.6rem;
+    margin-left: 0.5%;
+    border: 0rem;
+}
+
 nav{
     width: 100%;
 }
