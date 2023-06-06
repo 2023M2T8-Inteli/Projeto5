@@ -7,14 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../../public/fonts/poppins.css">
-    <link rel="stylesheet" type="text/css" href="../../../public/styles/relatorios.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/poppins.css">
+    <link rel="stylesheet" type="text/css" href="/styles/relatorios.css">
     <title>Relatórios</title>
     <script>
+        function acessarAnalise(){
+            var link = document.createElement('a');
+            link.href = './analise';
+            document.body.appendChild(link);
+
+// Simular o clique no elemento <a> para iniciar o download
+link.click();
+
+// Remover o elemento <a> temporário da página
+document.body.removeChild(link);
+        }
+
         function baixarArquivo() {
   // Criar um elemento <a> temporário
   var link = document.createElement('a');
-  link.href = '../../../public/assets/logo_padrao.png'; // Substitua pelo caminho do arquivo desejado
+  link.href = './assets/logo_padrao.png'; // Substitua pelo caminho do arquivo desejado
   link.download = 'teste1'; // Substitua pelo nome do arquivo desejado
   link.target = '_blank';
 
@@ -33,14 +45,14 @@
     <header>
         <div class="topo">
             <div class="logo">
-                <img src="./../../assets/logo_padrao.png" alt="Lumi (logo)">
+                <img src="./assets/logo_padrao.png" alt="Lumi (logo)">
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Análises</a></li>
-                    <li><a href="#">Relatórios</a></li>
+                    <li><a href="./home">Home</a></li>
+                    <li><a href="./home?scroll=true">Contato</a></li>
+                    <li><a href="./analise">Análises</a></li>
+                    <li><a href="./relatorios">Relatórios</a></li>
                 </ul>
             </nav>
             <div class="icone-logout">
@@ -57,8 +69,8 @@
             <p>Data: DD/MM/AAAA</p>
             <p>Local: XXXXX XXXXX</p>
         <div class="botoes">
-            <button>Acessar relatório</button>
-            <button onclick="baixarArquivo()">Baixar relatório</button>
+            <button onclick="acessarAnalise()"><img src="./../../assets/relatorio-de-lucro 2.svg">&nbsp&nbspAcessar relatório</button>
+            <button onclick="baixarArquivo()"><img src="./../../assets/botao-de-download 2.svg">&nbsp&nbspBaixar relatório</button>
         </div>
         </div>
     </section>
@@ -68,8 +80,8 @@
             <p>Data: DD/MM/AAAA</p>
             <p>Local: XXXXX XXXXX</p>
         <div class="botoes">
-            <button>Acessar relatório</button>
-            <button onclick="baixarArquivo()">Baixar relatório</button>
+            <button onclick="acessarAnalise()"><img src="./../../assets/relatorio-de-lucro 2.svg">&nbsp&nbspAcessar relatório</button>
+            <button onclick="baixarArquivo()"><img src="./../../assets/botao-de-download 2.svg">&nbsp&nbspBaixar relatório</button>
         </div>
         </div>
     </section>
@@ -79,8 +91,8 @@
             <p>Data: DD/MM/AAAA</p>
             <p>Local: XXXXX XXXXX</p>
         <div class="botoes">
-            <button>Acessar relatório</button>
-            <button onclick="baixarArquivo()">Baixar relatório</button>
+            <button onclick="acessarAnalise()"><img src="./../../assets/relatorio-de-lucro 2.svg">&nbsp&nbspAcessar relatório</button>
+            <button onclick="baixarArquivo()"><img src="./../../assets/botao-de-download 2.svg">&nbsp&nbspBaixar relatório</button>
         </div>
         </div>
     </section>
@@ -90,8 +102,8 @@
             <p>Data: DD/MM/AAAA</p>
             <p>Local: XXXXX XXXXX</p>
         <div class="botoes">
-            <button>Acessar relatório</button>
-            <button onclick="baixarArquivo()">Baixar relatório</button>
+            <button onclick="acessarAnalise()"><img src="./../../assets/relatorio-de-lucro 2.svg">&nbsp&nbspAcessar relatório</button>
+            <button onclick="baixarArquivo()"><img src="./../../assets/botao-de-download 2.svg">&nbsp&nbspBaixar relatório</button>
         </div>
         </div>
     </section>
@@ -101,8 +113,8 @@
             <p>Data: DD/MM/AAAA</p>
             <p>Local: XXXXX XXXXX</p>
         <div class="botoes">
-            <button>Acessar relatório</button>
-            <button onclick="baixarArquivo()">Baixar relatório</button>
+            <button onclick="acessarAnalise()"><img src="./../../assets/relatorio-de-lucro 2.svg">&nbsp&nbspAcessar relatório</button>
+            <button onclick="baixarArquivo()"><img src="./../../assets/botao-de-download 2.svg">&nbsp&nbspBaixar relatório</button>
         </div>
         </div>
     </section>
