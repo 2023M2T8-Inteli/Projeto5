@@ -1,6 +1,16 @@
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 0px;
+} */
+/* 
+::-webkit-scrollbar{
+    color: #4A67F0;
+    background-color: #171919;
 }
+
+
+::-webkit-scrollbar-track{
+    background: yellow;
+} */
 
 header{
     padding-top: 1%;
