@@ -92,31 +92,6 @@
     {
         L.marker([vetor[i][0],vetor[i][1]]).addTo(map).bindPopup(`<b>Lat: ${vetor[i][0]}</b><br><b>Longitude: ${vetor[i][1]}</b>.`).openPopup()
     };
-
-	// const marker1 = L.marker([-4.40455, -42.3426]).addTo(map)
-	// 	.bindPopup('<b>Latitude: -4.40455</b><br /><b>Longitude: -42.3426</b>.').openPopup();
-    
-    // const marker2 = L.marker([-5.40452, -41.3425]).addTo(map)
-	// 	.bindPopup('<b>Latitude: -4.40455</b><br /><b>Longitude: -42.3426</b>').openPopup();
-	// const circle = L.circle([51.508, -0.11], {
-	// 	color: 'red',
-	// 	fillColor: '#f03',
-	// 	fillOpacity: 0.5,
-	// 	radius: 500
-	// }).addTo(map).bindPopup('I am a circle.');
-
-	// const polygon = L.polygon([
-	// 	[51.509, -0.08],
-	// 	[51.503, -0.06],
-	// 	[51.51, -0.047]
-	// ]).addTo(map).bindPopup('I am a polygon.');
-
-
-	// const popup = L.popup()
-	// 	.setLatLng([51.513, -0.09])
-	// 	.setContent('I am a standalone popup.')
-	// 	.openOn(map);
-
 	function onMapClick(e) {
 		popup
 			.setLatLng(e.latlng)

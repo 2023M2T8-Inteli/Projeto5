@@ -84,10 +84,10 @@ header
     border: 0rem;
 }
 
-.title {
+.tittle {
   text-align: center;
   margin-bottom: 20px;
-  color: #FFFFFF;
+  color: black;
 }
 
 .content {
@@ -151,10 +151,7 @@ header
   text-align: left;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap);
-
 body {
-  display: flex;
   font-family: 'Poppins', sans-serif;
   color: #FFFFFF;
 }
@@ -170,21 +167,11 @@ body {
 
 }
 
-.title {
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 40px;
-}
-
-<<<<<<< HEAD
-
-=======
 .menu{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
->>>>>>> a2dc5043d05496f124199da28c878525c2b9ef3c
   
 }
 
@@ -260,5 +247,3 @@ body {
     color: #FFFFFF;
     margin-top: auto;
   }
-
-  
