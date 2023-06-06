@@ -13,6 +13,7 @@ const path = require("path");
 //Configuração de middlewares
 app.use(express.json());
 app.use(express.static("public"));
+app.use(express.static('Frontend/paginas/comparacao'));
 
 //Endpoints do backend
 const inserirTecnico = require("./Backend/routes/backendRoutes/inserir_tecnico.js");
