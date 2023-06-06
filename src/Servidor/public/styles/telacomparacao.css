@@ -69,7 +69,7 @@ header .topo .icone-logout img{
 }
 
 header 
-    .topo .ajuda{
+    .topo .abreajuda{
     background-color: #52B7E3;
     border-radius: 50%;
     width: 4%;
@@ -81,11 +81,13 @@ header
     cursor: pointer;
     font-size: 1.6rem;
     margin-left: 0.5%;
+    border: 0rem;
 }
 
 .tittle {
   text-align: center;
   margin-bottom: 20px;
+  color: black;
 }
 
 .content {
@@ -149,12 +151,99 @@ header
   text-align: left;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF;
+}
 
+.sidebar {
+  width: 45vh;
+  background-color: #4A67F0;
+  padding: 20px;
+  margin-left: auto; 
+  border-radius: 16px;
+  transition: all 0.3s;
+  z-index: 9999;
 
+}
 
-
-
+.menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   
+}
+
+.dropdown-content {
+  display: none;
+  padding: 10px;
+  align-items: center;
+}
+
+.dropdown-content p {
+  margin: 0;
+  color: #FFFFFF;
+  transition: display 3s ease-in-out;
+  text-align: center;
+}
+
+.dropdown-btn.active + .dropdown-content {
+  display: block;
+}
+
+.dropdown-btn {
+  background-color: #4A67F0;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: large;
+}
+
+.dropdown-btn svg {
+  margin-right: 10px;
+  fill: #FFFFFF;
+  flex-shrink: 0; 
+}
 
 
+#sidebar {
+    background-color: #4A67F0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: all 3s; /* You can use "all" to transition all properties */
+  }
+
+.sairajuda {
+    position: absolute;
+    top: 1rem;
+    margin-left: 1rem;
+    background-color: #4A67F0;
+    color: white;
+    align-items: center;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 2rem;
+  }
   
+  .contato{
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .contato-link {
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: auto;
+  }

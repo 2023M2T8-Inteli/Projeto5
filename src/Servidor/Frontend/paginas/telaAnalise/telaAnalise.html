@@ -5,32 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/fonts/poppins.css">
+    <link rel="stylesheet" type="text/css" href="/styles/telaAnalise.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link rel="stylesheet" href="../../../public/fonts/poppins.css">
     <link rel="stylesheet" href="../../../public/styles/telaAnalise.css">
     <title>Tela de análise das viagens</title>
 </head>
 
-<body>    
+<body>
+    <div id="main">  
     <header>
         <div class="topo">
             <div class="logo">
-                <img src="../../../public/assets/logo_padrao.png" alt="Lumi (logo)">
+                <img src="./../../assets/logo_padrao.png" alt="Lumi (logo)">
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="./home">Home</a></li>
                     <li><a href="#">Contato</a></li>
-                    <li><a href="#">Análises</a></li>
-                    <li><a href="#">Relatórios</a></li>
+                    <li><a href="./analise">Análises</a></li>
+                    <li><a href="./relatorios">Relatórios</a></li>
                 </ul>
             </nav>
             <div class="icone-logout">
-                <img src="../../../public/assets/sairazul.svg" alt="Sair">
+                <img src="./../../assets/sairazul.svg" alt="Sair">
             </div>
-            <span class="ajuda">?</span>
+            <button class="abreajuda" onclick="abrirajuda()">?</button>
         </div>
     </header>
 
@@ -85,21 +93,166 @@
             </div>
         </div>
         <div class="direita">
-            <img src="C:\Users\Inteli\Downloads\mapa.png" alt="mapa exemplo">
-            <button class="compare-viagens" onclick="window.location.href ='../../paginas/comparacao/comparacao.html'">Compare duas viagens</button>
+            <div id="mapa" style="width: 600px; height: 400px;"></div>
+            <button id='acessar-comparacao' class="compare-viagens" onclick="window.location.href ='./../comparacao/comparacao.html'">Compare duas viagens</button>
         </div>
     </section>
-    <!-- </div>
-    <div>Gráfico 1</div>
-    <div>Gráfico 2</div>
-    <div>Trajeto</div>
-    <button>Compare duas viagens</button>
-    <img src="../../../../Servidor/public/assets/docorrencias.png" alt="legenda" height="100px" width="663px" class="d-ocorrencias">
-    <img src="../../../../Servidor/public/assets/forcas.png" alt="legenda" height="100px" width="663px" class="forcas"> -->
+    </div>
+    
+<aside id="sidebar" style="display: none;">
+    <button class="sairajuda" onclick="sairajuda()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" class="bi bi-x-lg" viewBox="0 0 16 16">
+        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+    </svg>
+    </button>
+        <h2 class="title">Ajuda</h2>
+        <nav class="menu">
+            <hr>
+            <button class="dropdown-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+                Para que servem as informações disponíveis no site?</button>
+            <div class="dropdown-content">
+        
+                <p>
+                    As informações que você disponíveis na plataforma são referentes aos relatórios das viagens de vários tipos que foram realizadas. A análise das viagens pode ser utilizada para entender  o desempenho e poder agir para torná-las mais eficientes..</p>
+            </div>
+        <hr>
+        <button class="dropdown-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
+            Onde eu posso encontrar as informações que preciso?</button>
+        <div class="dropdown-content">
+            <p>
+                Todas as informações que você precisa para analisar o desempenho de suas viagens  se encontram nas seções “Análises” e “Relatórios”.  Navegando por essas seções, você pode filtrar suas viagens para ver  trajetos, gráficos e comparações.</p>
+        </div>
+        <hr>
+        <button class="dropdown-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
+            Como eu faço para interagir da melhor forma com o site?</button>
+        <div class="dropdown-content">
+            <p>
+            
+            Para interagir com o site da melhor forma, leia com calma as instruções de utilização das ferramentas de análise e, caso tenha dúvidas durante a navegação pela plataforma, clique no botão ajuda (?), que se encontra no canto superior direito das páginas..</p>
+        </div>
+        <hr>
+        <button class="dropdown-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
+            O que significa cada opção que encontro nos filtros de viagem, tipo de vagão e de choque?</button>
+        <div class="dropdown-content">
+            <p>
+            *ainda não sabemos a resposta, perguntaremos os detalhes nas próximas sprint reviews*
+            </p>
+        </div>
+        <hr>
+        </nav>
+
+        <div class="contato">
+            <a href="../../paginas/homepage/homepage.html" class="contato-link">Entrar em Contato</a>
+        </div>
+    
+  </aside>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-</body>
 
+    <script>
+        const vetor = [[-4.40454854,-42.3425765],
+           [-4.9222369,    -42.2352189],
+           [-6.42722606,   -40.3560105],
+           [-7.22741238,   -39.62835594],
+           [-7.93959814,   -38.02228738],
+           [-8.18542318,   -37.42076322],
+           [-8.23046498,   -37.36722534],
+           [-8.48100614,   -37.09700474],
+           [-9.06383622,   -36.11195302],
+           [-9.06383754,   -36.11195214],
+           [-9.4119969,    -35.7848307],
+           [-9.57475738,   -35.69146686],
+           [-10.13130358,  -35.11504166],
+           [-10.29969634,  -35.00558394],
+           [-10.3005781,   -35.0055779],
+           [-10.30058698,  -35.00557918],
+           [-10.83069726,  -34.8991453],
+           [-10.83070882,  -34.8991497],
+           [-10.83104918,  -34.89933346],
+           [-10.85503298,  -34.92201298],
+           [-11.1549513,   -34.87777426],
+           [-11.1549645,   -34.87776942],
+           [-11.45516976,  -34.49979841],
+           [-11.45518814,  -34.49978104],
+           [-11.45520652,  -34.49976367],
+           [-11.56322499,  -34.38360352],
+           [-11.56320155,  -34.38355992],
+           [-11.58443716,  -34.13372145],
+           [-11.64485254,  -34.16926454]];
+       
+           var somaLat=0;
+           var somaLon=0;
+           var medLat=0;
+           var medLon=0;
+       
+           for (i=0; i<vetor.length;i++)
+           {
+               somaLat += vetor[i][0];
+               somaLon += vetor[i][1];
+           };
+           
+           medLat = somaLat/vetor.length;
+           medLon = somaLon/vetor.length;
+           console.log(medLat, '\n');
+           console.log(medLon);
+       
+           const map = L.map('mapa').setView([medLat, medLon], 13);
+       
+           const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+               maxZoom: 19,
+               attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+       
+           for (var i=0; i<vetor.length; i++)
+           {
+               L.marker([vetor[i][0],vetor[i][1]]).addTo(map).bindPopup(`<b>Lat: ${vetor[i][0]}</b><br><b>Longitude: ${vetor[i][1]}</b>.`).openPopup()
+           };
+
+           function onMapClick(e) {
+               popup
+                   .setLatLng(e.latlng)
+                   .setContent(`You clicked the map at ${e.latlng.toString()}`)
+                   .openOn(map);
+           }
+       
+           map.on('click', onMapClick);
+       
+    </script>
+    <script>
+        const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+
+        dropdownBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+            });
+        })
+
+
+        function abrirajuda() {
+        document.getElementById("sidebar").style.width = "400px";
+        document.getElementById("sidebar").style.display = "block";
+        }
+
+        function sairajuda() {
+            $("#sidebar").hide();
+        }
+    </script>
+</body>
 </html>
+
+    
