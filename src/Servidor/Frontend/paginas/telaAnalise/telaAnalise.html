@@ -47,11 +47,11 @@
     <h1 class="text-center">Análise das viagens</h1>
     <div class="d-flex justify-content-center align-items-center">
         <div class="dropdown text-center">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownViagem"
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Viagem <i class="bi bi-caret-down-fill"></i>
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <div class="dropdown-menu" aria-labelledby="dropdownViagem">
                 <a class="dropdown-item" href="#">Viagem 1</a>
                 <a class="dropdown-item" href="#">Viagem 2</a>
                 <a class="dropdown-item" href="#">Viagem 3</a>
@@ -61,22 +61,22 @@
         </div>
 
         <div class="dropdown text-center ms-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownEngate"
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Engate <i class="bi bi-caret-down-fill"></i>
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+            <div class="dropdown-menu" aria-labelledby="dropdownEngate">
                 <a class="dropdown-item" href="#">Engate E</a>
                 <a class="dropdown-item" href="#">Engate F</a>
             </div>
         </div>
 
         <div class="dropdown text-center ms-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3"
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTipoChoque"
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Tipo de choque <i class="bi bi-caret-down-fill"></i>
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+            <div class="dropdown-menu" aria-labelledby="dropdownTipoChoque">
                 <a class="dropdown-item" href="#">Choque 0 (pico)</a>
                 <a class="dropdown-item" href="#">Choque 1</a>
                 <a class="dropdown-item" href="#">Choque 2</a>
@@ -95,7 +95,9 @@
             </div>
         </div>
         <div class="direita">
+            <p style="color:black">TOPO</p>
             <div id="mapa" style="width: 600px; height: 400px;"></div>
+            <p style="color:black">FUNDO</p>
             <button id='acessar-comparacao' class="compare-viagens" onclick="window.location.href ='./comparacao'">Compare duas viagens</button>
         </div>
     </section>
@@ -156,75 +158,67 @@
         </nav>
 
         <div class="contato">
-            <a href="#" onclick="contato()">Entrar em Contato</a>
+            <a href="#" onclick="contato()" style="color:white">Entrar em Contato</a>
         </div>
     
   </aside>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-        <script>
-
+    <script>
     
-        const vetor = [[-4.40454854,-42.3425765],
-           [-4.9222369,    -42.2352189],
-           [-6.42722606,   -40.3560105],
-           [-7.22741238,   -39.62835594],
-           [-7.93959814,   -38.02228738],
-           [-8.18542318,   -37.42076322],
-           [-8.23046498,   -37.36722534],
-           [-8.48100614,   -37.09700474],
-           [-9.06383622,   -36.11195302],
-           [-9.06383754,   -36.11195214],
-           [-9.4119969,    -35.7848307],
-           [-9.57475738,   -35.69146686],
-           [-10.13130358,  -35.11504166],
-           [-10.29969634,  -35.00558394],
-           [-10.3005781,   -35.0055779],
-           [-10.30058698,  -35.00557918],
-           [-10.83069726,  -34.8991453],
-           [-10.83070882,  -34.8991497],
-           [-10.83104918,  -34.89933346],
-           [-10.85503298,  -34.92201298],
-           [-11.1549513,   -34.87777426],
-           [-11.1549645,   -34.87776942],
-           [-11.45516976,  -34.49979841],
-           [-11.45518814,  -34.49978104],
-           [-11.45520652,  -34.49976367],
-           [-11.56322499,  -34.38360352],
-           [-11.56320155,  -34.38355992],
-           [-11.58443716,  -34.13372145],
-           [-11.64485254,  -34.16926454]];
-       
-           var somaLat=0;
-           var somaLon=0;
-           var medLat=0;
-           var medLon=0;
-       
-           for (i=0; i<vetor.length;i++)
-           {
-               somaLat += vetor[i][0];
-               somaLon += vetor[i][1];
-           };
-           
-           medLat = somaLat/vetor.length;
-           medLon = somaLon/vetor.length;
-           console.log(medLat, '\n');
-           console.log(medLon);
-       
-           const map = L.map('mapa').setView([medLat, medLon], 13);
-       
-           const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        // Define an empty array to store the fetched data
+        let vetor = [];
+        const map = L.map('mapa').setView([10, 10], 13);
+
+        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                maxZoom: 19,
                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
-       
-           for (var i=0; i<vetor.length; i++)
-           {
-               L.marker([vetor[i][0],vetor[i][1]]).addTo(map).bindPopup(`<b>Lat: ${vetor[i][0]}</b><br><b>Longitude: ${vetor[i][1]}</b>.`).openPopup()
-           };
+    
+        // Function to fetch data from the backend
+        async function fetchData() {
+            try {
+                
+                // Make an asynchronous request to the backend route
+                const response = await fetch('/get-choques-by-id-viagem?id_viagem=1');
+                
+                // Parse the response JSON
+                const data = await response.json();
+                
+                // Update the vetor array with the fetched data
+                vetor = data;
+                
+                // Call the function to update the map with the new data
+                updateMap();
+                
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+    
+        // Function to update the map with the updated data
+        function updateMap() {
+            // Clear existing markers from the map (if any)
+            map.eachLayer(function (layer) {
+                if (layer instanceof L.Marker) {
+                    map.removeLayer(layer);
+                }
+            });
+
+            // Add markers for each data point in vetor
+            for (let i = 0; i < vetor.length; i++) {
+                const latitude = parseFloat(vetor[i].latitude_choque.replace(',', '.'));
+                const longitude = parseFloat(vetor[i].longitude_choque.replace(',', '.'));
+                console.log(latitude, longitude)
+                L.marker([latitude, longitude]).addTo(map).bindPopup(`<b>Lat: ${latitude}</b><br><b>Longitude: ${longitude}</b>.`).openPopup();
+            }
+        }
+
+    
+        // Call the fetchData function to retrieve data from the backend
+        fetchData();
 
            function onMapClick(e) {
                popup
