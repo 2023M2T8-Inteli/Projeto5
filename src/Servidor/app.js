@@ -48,8 +48,8 @@ app.use("/get-choques-by-latitude-e-longitude", getChoquesByLatitudeELongitude);
 const getViagensByIdRelatorio = require("./Backend/routes/backendRoutes/get_viagens_by_id_relatorio.js");
 app.use("/get-viagens-by-id-relatorio", getViagensByIdRelatorio);
 
-const getChoquesByIdViagem = require("./Backend/routes/backendRoutes/get_choques_by_id_viagem.js");
-app.use("/get-choques-by-id-viagem", getChoquesByIdViagem);
+const getChoques = require("./Backend/routes/backendRoutes/get_choques.js");
+app.use("/get-choques", getChoques);
 
 //Endpoints de páginas
 const main = require("./Backend/routes/frontendRoutes/get_main.js");

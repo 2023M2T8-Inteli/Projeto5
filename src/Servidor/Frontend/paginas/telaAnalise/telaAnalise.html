@@ -47,45 +47,38 @@
     </header>
 
     <h1 class="text-center">Análise das viagens</h1>
-    <div class="d-flex justify-content-center align-items-center">
-        <div class="dropdown text-center">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownViagem"
-                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Viagem <i class="bi bi-caret-down-fill"></i>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownViagem">
-                <a class="dropdown-item" href="#">Viagem 1</a>
-                <a class="dropdown-item" href="#">Viagem 2</a>
-                <a class="dropdown-item" href="#">Viagem 3</a>
-                <a class="dropdown-item" href="#">Viagem 4</a>
-                <a class="dropdown-item" href="#">Viagem 5</a>
-            </div>
+    <div class="dropdown text-center">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownViagem"
+          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Viagem<i class="bi bi-caret-down-fill"></i></button>
+        <div class="dropdown-menu" aria-labelledby="dropdownViagem">
+          <a class="dropdown-item" href="#" onclick="selectDropdownItem(1, 'dropdownViagem')">Viagem 1</a>
+          <a class="dropdown-item" href="#" onclick="selectDropdownItem(2, 'dropdownViagem')">Viagem 2</a>
+          <a class="dropdown-item" href="#" onclick="selectDropdownItem(3, 'dropdownViagem')">Viagem 3</a>
+          <a class="dropdown-item" href="#" onclick="selectDropdownItem(4, 'dropdownViagem')">Viagem 4</a>
+          <a class="dropdown-item" href="#" onclick="selectDropdownItem(5, 'dropdownViagem')">Viagem 5</a>
         </div>
-
-        <div class="dropdown text-center ms-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownEngate"
-                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Engate <i class="bi bi-caret-down-fill"></i>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownEngate">
-                <a class="dropdown-item" href="#">Engate E</a>
-                <a class="dropdown-item" href="#">Engate F</a>
-            </div>
+      </div>
+      
+      <div class="dropdown text-center ms-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownEngate"
+          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Engate<i class="bi bi-caret-down-fill"></i></button>
+        <div class="dropdown-menu" aria-labelledby="dropdownEngate">
+          <a class="dropdown-item" href="#" onclick="selectDropdownItem('E', 'dropdownEngate')">Engate E</a>
+          <a class="dropdown-item" href="#" onclick="selectDropdownItem('F', 'dropdownEngate')">Engate F</a>
         </div>
-
-        <div class="dropdown text-center ms-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTipoChoque"
-                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Tipo de choque <i class="bi bi-caret-down-fill"></i>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownTipoChoque">
-                <a class="dropdown-item" href="#">Choque 0 (pico)</a>
-                <a class="dropdown-item" href="#">Choque 1</a>
-                <a class="dropdown-item" href="#">Choque 2</a>
-            </div>
+      </div>
+      
+      <div class="dropdown text-center ms-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTipoChoque"
+          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tipo de Choque<i class="bi bi-caret-down-fill"></i></button>
+        <div class="dropdown-menu" aria-labelledby="dropdownTipoChoque">
+          <a class="dropdown-item" href="#" onclick="selectDropdownItem(0, 'dropdownTipoChoque')">Choque 0 (pico)</a>
+          <a class="dropdown-item" href="#" onclick="selectDropdownItem(1, 'dropdownTipoChoque')">Choque 1</a>
+          <a class="dropdown-item" href="#" onclick="selectDropdownItem(2, 'dropdownTipoChoque')">Choque 2</a>
         </div>
-
-        <button class="btn btn-secondary ms-3">Aplicar</button>
+      </div>
+      
+        <button class="btn btn-secondary ms-3" onclick="applyFilters()">Aplicar</button>
     </div>
     <section>
         <div class="esquerda">
@@ -97,9 +90,7 @@
             </div>
         </div>
         <div class="direita">
-            <p style="color:black">TOPO</p>
             <div id="mapa" style="width: 600px; height: 400px;"></div>
-            <p style="color:black">FUNDO</p>
             <button id='acessar-comparacao' class="compare-viagens" onclick="window.location.href ='./comparacao'">Compare duas viagens</button>
         </div>
     </section>
@@ -186,8 +177,23 @@
             $("#sidebar").hide();
         }
 
-        
+        let viagemFilter = null;
+        let engateFilter = null;
+        let tipoChoqueFilter = null;
 
+        function selectDropdownItem(item, dropdownId) {
+            const dropdownBtn = document.getElementById(dropdownId);
+            dropdownBtn.textContent = item;
+
+            // Update the respective filter based on the dropdown
+            if (dropdownId === 'dropdownViagem') {
+                viagemFilter = item;
+            } else if (dropdownId === 'dropdownEngate') {
+                engateFilter = item;
+            } else if (dropdownId === 'dropdownTipoChoque') {
+                tipoChoqueFilter = item;
+            }
+        }
     </script>
     <script src="public/mapa.js"></script>
 </body>
