@@ -77,18 +77,23 @@ npm start
 
 ## 🗃 Histórico de lançamentos
 
-- 0.2.1 - 25/01/2022
-  - Atualização de documentos (código do módulo permanece inalterado).
-- 0.2.0 - 15/01/2022
-  - Remove `setDefaultXYZ()`
-  - Adiciona `init()`
-- 0.1.1 - 11/01/2022
-  - Crash quando chama `baz()`
-- 0.1.0 - 10/01/2022
-  - O primeiro lançamento adequado
-  - Renomeia `foo()` para `bar()`
-- 0.0.1 - 01/01/2022
-  - Trabalho em andamento
+- 1.1.1 - 24/04/2023
+  - Atualização do WAD com o entedimento do negócio
+- 2.1.1 - 11/05/2023
+  - Altera entedimento do negócio com base nos feedbacks dos artefatos
+- 2.1.2 - 11/05/2023
+  - Adiciona modelos conceitual e lógico do banco de dados
+- 2.1.3 - 14/05/2023
+  - Adiciona as primeiras rotas para acesso ao banco de dados (10 endpoints)
+- 3.1.1 - 28/05/2023
+  - Primeira versão do Front-End
+  - Atualização do guia de estilos no WAD
+- 3.2.1 - 30/05/2023
+  - Segunda versão do Front-End
+- 4.1.1 - 11/06/2023
+  - Versão final do Front-End
+  - Integração entre front e back para consulstar pontos críticos no mapa
+  - Inclusão dos registros de testes de usabilidades no WAD
 
 ## 📋 Licença/License
 
