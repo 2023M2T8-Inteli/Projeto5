@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Força (tf)', 'Choque Tipo 01', 'Choque Tipo 02', 'Pico'],
+          [-200, 10, 40, 20],
+          [70, 11, 46, 250],
+          [10, 66, 11, 30],
+          [200, 10, 5, 35]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Quantidades de choques - Viagem X',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+    <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
+  </body>
+</html>
