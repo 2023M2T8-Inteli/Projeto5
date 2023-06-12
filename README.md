@@ -6,7 +6,7 @@
 
 # Lumi
 
-<a href= "https://www.inteli.edu.br/"><img src="./imagens/lumi.png" border="0"></a>
+<p align="center"><a href= "https://www.inteli.edu.br/"><img src="./imagens/lumi.png" border="0"></a></p>
 
 ## Tech5
 
