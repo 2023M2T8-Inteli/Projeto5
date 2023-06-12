@@ -17,6 +17,16 @@ function applyFilters() {
     fetchData(viagemFilter, engateFilter, tipoChoqueFilter);
 }
 
+function clearFilters() {
+    // Get the selected filter values
+    const viagemFilter = 'null';
+    const engateFilter = 'null';
+    const tipoChoqueFilter = 'null';
+    
+    // Call the fetchData function with null values
+}
+
+
 // Function to fetch data from the backend
 async function fetchData(viagemSelected, engateSelected, tipoChoqueSelected) {
     try {
