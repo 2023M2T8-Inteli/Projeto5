@@ -68,6 +68,7 @@ app.use("/relatorios", relatorios);
 const esqueceSenha = require("./Backend/routes/frontendRoutes/get_esqueceSenha.js");
 app.use("/esqueceSenha", esqueceSenha);
 
+//Definindo a porta em que o servidor aguarda e processa as requisições
 app.listen(port, () => {
   console.log(`Servidor rodando em ${hostname}:${port}`);
 });
