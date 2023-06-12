@@ -68,12 +68,6 @@ app.use("/relatorios", relatorios);
 const esqueceSenha = require("./Backend/routes/frontendRoutes/get_esqueceSenha.js");
 app.use("/esqueceSenha", esqueceSenha);
 
-//Teste mapa
-const pontosNoMapa = require("./Backend/test-mapa/get_lat_long.js");
-app.use("/mapa", pontosNoMapa);
-
-
-
 app.listen(port, () => {
   console.log(`Servidor rodando em ${hostname}:${port}`);
 });
