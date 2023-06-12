@@ -17,7 +17,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link rel="stylesheet" href="../../../public/fonts/poppins.css">
     <link rel="stylesheet" href="../../../public/styles/telaAnalise.css">
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <title>Tela de análise das viagens</title>
 </head>
@@ -47,6 +47,7 @@
     </header>
 
     <h1 class="text-center">Análise das viagens</h1>
+    <div id="filtros" style="display: flex;justify-content: space-evenly;">
     <div class="dropdown text-center">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownViagem"
           data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Viagem<i class="bi bi-caret-down-fill"></i></button>
@@ -77,14 +78,16 @@
           <a class="dropdown-item" href="#" onclick="selectDropdownItem(2, 'dropdownTipoChoque')">Choque 2</a>
         </div>
       </div>
+    
       
         <button class="btn btn-secondary ms-3" onclick="applyFilters()">Aplicar</button>
         <button class="btn btn-secondary ms-3" onclick="clearFilters()">Limpar</button>
     </div>
+    </div>
     <section>
         <div class="esquerda">
             <div class="histograma">
-                <img src="C:\Users\Inteli\Downloads\histograma.png" alt="histograma exemplo">
+                <canvas id="histogram-chart"></canvas>
             </div>
             <div class="markov">
                 <img src="C:\Users\Inteli\Downloads\markov.png" alt="markov exemplo">
@@ -98,7 +101,7 @@
             
         </div>
     </section>
-    </div>
+</div>
     
 <aside id="sidebar" style="display: none;">
     <button class="sairajuda" onclick="sairajuda()">
@@ -198,6 +201,41 @@
                 tipoChoqueFilter = item;
             }
         }
+
+        var canvas = document.getElementById('histogram-chart');
+        var xLabels = [-200, -150, -100, -50, 0, 50, 100, 150, 200];
+        var xValues = [-170, -160, -110, -90, -80, -50, -40, -30, 40, 50, 60, 70, 80, 90, 140, 150];
+        var yValues = [1, 1, 1, 1, 4, 1, 1, 4, 1, 2, 1, 1, 3, 2, 1, 1, 2, 1]; // Example data, adjust according to your needs
+        var config = {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    label: 'Choque 1 - V1 E',
+                    data: yValues,
+                    backgroundColor: 'rgba(0, 123, 255, 0.7)', // Adjust the color as desired
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return xLabels[index];
+                            }
+                        }
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        var histogramChart = new Chart(canvas, config);
+
+
     </script>
     <script src="public/mapa.js"></script>
 </body>
