@@ -14,9 +14,8 @@ const path = require("path");
 app.use(express.json());
 app.use("/public", express.static('./public/'));
 app.use("/frontend", express.static('./Frontend/paginas/'));
-//app.use(express.static('Frontend/paginas/comparacao'));
 
-//Endpoints do backend
+//Endpoints do back-end
 const inserirTecnico = require("./Backend/routes/backendRoutes/inserir_tecnico.js");
 app.use("/inserir-tecnico", inserirTecnico);
 
@@ -35,7 +34,6 @@ app.use("/inserir-vagao", inserirVagao);
 const inserirChoque = require("./Backend/routes/backendRoutes/inserir_choque.js");
 app.use("/inserir-choque", inserirChoque);
 
-//esta dando erro no código sqlite
 const getRelatoriosByCnpj = require("./Backend/routes/backendRoutes/get_relatorio_by_cnpj.js");
 app.use("/get-relatorios-by-cnpj", getRelatoriosByCnpj);
 
@@ -51,7 +49,7 @@ app.use("/get-viagens-by-id-relatorio", getViagensByIdRelatorio);
 const getChoques = require("./Backend/routes/backendRoutes/get_choques.js");
 app.use("/get-choques", getChoques);
 
-//Endpoints de páginas
+//Endpoints do front-end
 const main = require("./Backend/routes/frontendRoutes/get_main.js");
 app.use("/", main);
 
