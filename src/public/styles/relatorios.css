@@ -120,7 +120,7 @@ h2{
     margin-left: 4%;
 }
 
-button{
+.btnrelatorio{
     background: #4A67F0;
     border: 1px solid #000000;
     border-radius: 16px;
@@ -139,7 +139,6 @@ button{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
   }
 
   
@@ -192,13 +191,10 @@ button{
   }
   
   .dropdown-btn {
-    position: flex;
     background-color: #4A67F0;
-    width: 100%;
     color: #FFFFFF;
     border: none;
     padding: 10px;
-    margin-bottom: 5px;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     display: flex;
