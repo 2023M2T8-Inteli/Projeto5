@@ -29,7 +29,7 @@
             <nav>
                 <ul>
                     <li><a href="./home">Home</a></li>
-                    <li><a href="./home?scroll=true">Contato</a></li>
+                    <li><a onclick="contato()">Contato</a></li>
                     <li><a href="./analise">Análises</a></li>
                     <li><a href="./relatorios">Relatórios</a></li>
                 </ul>
@@ -39,11 +39,70 @@
                 <img src="public/assets/icone_logout.svg" alt="sair"> 
                 </a>
             </div>
+            <button class="abreajuda" onclick="abrirajuda()">?</button>
         </div>
         <div class="headline">
             <h1>Desvende os trilhos com clareza e precisão!</h1>
         </div>
     </header>
+    <aside id="sidebar" style="display: none;">
+      <button class="sairajuda" onclick="sairajuda()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+      </svg>
+      </button>
+          <h2 class="title">Ajuda</h2>
+          <nav class="menu">
+              <hr>
+              <button class="dropdown-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+                  Para que servem as informações disponíveis no site?</button>
+              <div class="dropdown-content">
+          
+                  <p>
+                      As informações que você disponíveis na plataforma são referentes aos relatórios das viagens de vários tipos que foram realizadas. A análise das viagens pode ser utilizada para entender  o desempenho e poder agir para torná-las mais eficientes..</p>
+              </div>
+          <hr>
+          <button class="dropdown-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+              </svg>
+              Onde eu posso encontrar as informações que preciso?</button>
+          <div class="dropdown-content">
+              <p>
+                  Todas as informações que você precisa para analisar o desempenho de suas viagens  se encontram nas seções “Análises” e “Relatórios”.  Navegando por essas seções, você pode filtrar suas viagens para ver  trajetos, gráficos e comparações.</p>
+          </div>
+          <hr>
+          <button class="dropdown-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+              </svg>
+              Como eu faço para interagir da melhor forma com o site?</button>
+          <div class="dropdown-content">
+              <p>
+              
+              Para interagir com o site da melhor forma, leia com calma as instruções de utilização das ferramentas de análise e, caso tenha dúvidas durante a navegação pela plataforma, clique no botão ajuda (?), que se encontra no canto superior direito das páginas..</p>
+          </div>
+          <hr>
+          <button class="dropdown-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+              </svg>
+              O que significa cada opção que encontro nos filtros de viagem, tipo de vagão e de choque?</button>
+          <div class="dropdown-content">
+              <p>
+              *ainda não sabemos a resposta, perguntaremos os detalhes nas próximas sprint reviews*
+              </p>
+          </div>
+          <hr>
+          </nav>
+          <div class="contato">
+              <a href="#" onclick="contato()" style="color:white" id="linkcontato">Entrar em Contato</a>
+          </div>
+    </aside>
+
     <main>
         <section class="apresentacao">
             <div class="lado-esquerdo">
@@ -96,6 +155,7 @@
                 <span><a href="./comparacao"><button>Ver comparação</button></a></span>
             </div>
         </section>
+        
         <section class="entre-em-contato">
             <div class="lado-esquerdo">
                 <h2>Entre em <span>Contato!</span></h2>
@@ -115,5 +175,30 @@
         </section>
     </main>
     <footer>© 2023 Lümi Reports</footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+
+        dropdownBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+            });
+        })
+
+        function abrirajuda(){
+            document.getElementById('sidebar').style.width = "300px"
+            document.getElementById('sidebar').style.display = "block"
+        }
+
+        function sairajuda() {
+            $("#sidebar").hide();
+        }
+
+        function contato(){
+        event.preventDefault();
+        var contato = document.getElementById("contato");
+        contato.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
 </body>
 </html>

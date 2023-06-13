@@ -231,17 +231,6 @@ main{
     width: 80%;
 }
 
-button{
-    background-color: #4A67F0;
-    padding: 10px 0;
-    width: 50%;
-    border: 0;
-    border-radius: 16px;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #FFFFFF;
-    cursor: pointer;
-}
 
 button:hover{
     background-color: #4AF0C7;
@@ -344,3 +333,99 @@ footer{
     font-family: 'Poppis', sans-serif;
     font-weight: 600;
 }
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap);
+
+#sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #4A67F0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: all 3s; 
+  }
+
+.title {
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.dropdown-content {
+  display: none;
+  padding: 10px;
+  align-items: center;
+}
+
+.dropdown-content p {
+  margin: 0;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.dropdown-btn.active + .dropdown-content {
+  display: block;
+}
+
+.dropdown-btn {
+  background-color: #4A67F0;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: large;
+}
+
+.dropdown-btn svg {
+  margin-right: 10px;
+  fill: #FFFFFF;
+  flex-shrink: 0; 
+}
+
+hr{
+    width: 14rem;
+    border: 2px solid #FFFFFF;
+    align-items: center;
+    
+}
+
+.sairajuda {
+    margin-left: 1rem;
+    background-color: #4A67F0;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  
+  .contato{
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .contato-link {
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: auto;
+  }

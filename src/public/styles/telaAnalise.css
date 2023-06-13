@@ -148,22 +148,6 @@ section {
 
   @import url(https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap);
 
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #FFFFFF;
-}
-
-.sidebar {
-  width: 45vh;
-  background-color: #4A67F0;
-  padding: 20px;
-  margin-left: auto; 
-  border-radius: 16px;
-  transition: all 0.3s;
-  z-index: 9999;
-
-}
-
 .title {
   margin-bottom: 20px;
   text-align: center;
@@ -222,6 +206,9 @@ hr{
 }
 
 #sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
     background-color: #4A67F0;
     margin-top: 1rem;
     margin-bottom: 2rem;

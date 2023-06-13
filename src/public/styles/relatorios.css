@@ -66,6 +66,23 @@ header .topo .icone-logout img{
     font-weight: 800;
 }
 
+
+header 
+    .topo .abreajuda{
+    background-color: #52B7E3;
+    border-radius: 50%;
+    width: 4%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    font-size: 1.6rem;
+    margin-left: 0.5%;
+    border: 0rem;
+}
+
 header 
     .topo .ajuda{
     background-color: #52B7E3;
@@ -113,10 +130,11 @@ h2{
     margin-left: 4%;
     margin-top: 2%;
 }
-p{
+.texto{
     text-align: left;
     margin-left: 4%;
 }
+
 button{
     background: #4A67F0;
     border: 1px solid #000000;
@@ -125,31 +143,49 @@ button{
     height: 50px;
     color: white;
     font-weight: 600;
-    margin-left: 20px;
-
 }
+
 .botoes{
     margin-left: 250px;
     margin-top: -80px;
-}
-
-.sidebar {
-    width: 45vh;
-    background-color: #4A67F0;
-    padding: 20px;
-    margin-left: auto; 
-    border-radius: 16px;
-    transition: all 0.3s;
-    z-index: 9999;
-  
-  }
-  
+}  
   .menu{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     
+  }
+
+  
+  .dropdown-btn.active + .dropdown-content {
+    display: block;
+  }
+  
+  
+  
+  @import url(https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap);
+
+  #sidebar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #4A67F0;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 1rem;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      transition: all 3s; 
+    }
+  
+  .title {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
   }
   
   .dropdown-content {
@@ -161,8 +197,8 @@ button{
   .dropdown-content p {
     margin: 0;
     color: #FFFFFF;
-    transition: display 3s ease-in-out;
     text-align: center;
+    margin-top: 1rem;
   }
   
   .dropdown-btn.active + .dropdown-content {
@@ -170,7 +206,9 @@ button{
   }
   
   .dropdown-btn {
+    position: flex;
     background-color: #4A67F0;
+    width: 100%;
     color: #FFFFFF;
     border: none;
     padding: 10px;
@@ -187,26 +225,20 @@ button{
     fill: #FFFFFF;
     flex-shrink: 0; 
   }
-  
-  
-  #sidebar {
-      background-color: #4A67F0;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-      border-radius: 1rem;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      transition: all 3s; /* You can use "all" to transition all properties */
-    }
+
+  hr{
+    width: 12rem;
+    height: 2rem;
+    border: 2px solid #FFFFFF;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
   
   .sairajuda {
-      position: absolute;
-      top: 1rem;
       margin-left: 1rem;
       background-color: #4A67F0;
       color: white;
-      align-items: center;
       border: none;
       padding: 0.5rem;
       border-radius: 50%;
@@ -224,4 +256,3 @@ button{
       color: #FFFFFF;
       margin-top: auto;
     }
-  
