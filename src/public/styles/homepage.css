@@ -218,7 +218,7 @@ main{
 }
 
 .btnpagina{
-    background: #4A67F0;
+    background: #4A67F0;    
     border-radius: 16px;
     width: 26.8%;
     height: 50px;
@@ -424,4 +424,7 @@ hr{
     text-align: center;
     color: #FFFFFF;
     margin-top: auto;
+  }
+  .contato_cursor{
+    cursor: pointer;
   }

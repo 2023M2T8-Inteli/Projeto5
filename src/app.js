@@ -13,39 +13,31 @@ const path = require("path");
 //Configuração de middlewares
 app.use(express.json());
 app.use("/public", express.static('./public/'));
-app.use("/frontend", express.static('./Frontend/paginas/'));
 
 //Endpoints do back-end
+/* Inserção de dados no banco de dados */
 const inserirTecnico = require("./Backend/routes/backendRoutes/inserir_tecnico.js");
 app.use("/inserir-tecnico", inserirTecnico);
-
 const inserirEmpresa = require("./Backend/routes/backendRoutes/inserir_empresa.js");
 app.use("/inserir-empresa", inserirEmpresa);
-
 const inserirRelatorio = require("./Backend/routes/backendRoutes/inserir_relatorio.js");
 app.use("/inserir-relatorio", inserirRelatorio);
-
 const inserirViagem = require("./Backend/routes/backendRoutes/inserir_viagem.js");
 app.use("/inserir-viagem", inserirViagem);
-
 const inserirVagao = require("./Backend/routes/backendRoutes/inserir_vagao.js");
 app.use("/inserir-vagao", inserirVagao);
-
 const inserirChoque = require("./Backend/routes/backendRoutes/inserir_choque.js");
 app.use("/inserir-choque", inserirChoque);
 
+/* Pegando informações do banco de dados */
 const getRelatoriosByCnpj = require("./Backend/routes/backendRoutes/get_relatorio_by_cnpj.js");
 app.use("/get-relatorios-by-cnpj", getRelatoriosByCnpj);
-
 const getGraficoDeMarcovByVagaoId = require("./Backend/routes/backendRoutes/get_grafico_de_marcov_by_id.js");
 app.use("/get-grafico-de-markov-by-vagao-id", getGraficoDeMarcovByVagaoId);
-
 const getChoquesByLatitudeELongitude = require("./Backend/routes/backendRoutes/get_choques_by_latitude_e_longitude.js");
 app.use("/get-choques-by-latitude-e-longitude", getChoquesByLatitudeELongitude);
-
 const getViagensByIdRelatorio = require("./Backend/routes/backendRoutes/get_viagens_by_id_relatorio.js");
 app.use("/get-viagens-by-id-relatorio", getViagensByIdRelatorio);
-
 const getChoques = require("./Backend/routes/backendRoutes/get_choques.js");
 app.use("/get-choques", getChoques);
 
