@@ -425,3 +425,6 @@ hr{
     color: #FFFFFF;
     margin-top: auto;
   }
+  .contato_cursor{
+    cursor: pointer;
+  }
