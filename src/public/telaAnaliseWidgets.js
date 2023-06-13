@@ -21,12 +21,13 @@ function applyFilters() {
 }
 
 function clearFilters() {
-    // Get the selected filter values
-    const viagemFilter = 'null';
-    const engateFilter = 'null';
-    const tipoChoqueFilter = 'null';
-    
-    // Call the fetchData function with null values
+  // Reset the dropdown values to their initial text
+  document.getElementById('dropdownViagem').innerHTML = 'Viagem<i class="bi bi-caret-down-fill"></i>';
+  document.getElementById('dropdownEngate').innerHTML = 'Engate<i class="bi bi-caret-down-fill"></i>';
+  document.getElementById('dropdownTipoChoque').innerHTML = 'Tipo de Choque<i class="bi bi-caret-down-fill"></i>';
+
+  // Call the function to apply the filters (passing null to indicate no filters are selected)
+  applyFilters(null, null, null);
 }
 
 
