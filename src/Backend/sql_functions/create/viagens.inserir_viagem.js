@@ -1,9 +1,9 @@
-const execSqlQquery = require("../connection");
+const execSqlQuery = require("../connection");
 
 function inserirViagem(data_viagem, id_relatorio, res) {
   const query = `INSERT INTO viagens (data_viagem, id_relatorio) VALUES (date('${data_viagem}'), '${id_relatorio}')`;
 
-  execSqlQquery(query, res);
+  execSqlQuery(query, res);
 }
 
 module.exports = inserirViagem;
