@@ -1,14 +1,21 @@
-
-
 // Define an empty array to store the fetched data
 let filteredChoques = [];
 
-const map = L.map('mapa').setView([-11, -55], 4);
+const southWest = L.latLng(-26.731977, -72.581414);
+const northEast = L.latLng(1.497625, -32.042430);
+const bounds = L.latLngBounds(southWest, northEast);
+
+const map = L.map('mapa', {
+  maxBounds: bounds,
+  maxBoundsViscosity: 10.0,
+  minZoom: 4,
+  maxZoom: 19,
+}).setView([-11, -55], 4);
 
 const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+
 
 function applyFilters() {
     // Get the selected filter values
@@ -29,7 +36,6 @@ function clearFilters() {
   // Call the function to apply the filters (passing null to indicate no filters are selected)
   applyFilters(null, null, null);
 }
-
 
 // Function to fetch data from the backend
 async function fetchData(viagemSelected, engateSelected, tipoChoqueSelected) {
@@ -53,6 +59,7 @@ async function fetchData(viagemSelected, engateSelected, tipoChoqueSelected) {
         
         // Remove the trailing '&' character from the URL
         url = url.slice(0, -1);
+        console.log(url);
         
         // Make an asynchronous request to the backend route
         const response = await fetch(url);
@@ -63,10 +70,11 @@ async function fetchData(viagemSelected, engateSelected, tipoChoqueSelected) {
         // Update the data arrays with the fetched data
         filteredChoques = data;
         
-        // Call the function to update the map with the new data
+        // Call the function to update the widgets with the new data
         updateMap(filteredChoques);
         updateHist(filteredChoques);
         updateTable(filteredChoques);
+        updatePizza(filteredChoques);
         
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -87,7 +95,7 @@ function updateMap(data) {
         const choque = data[i];
         const latitude = parseFloat(choque.latitude_choque.replace(',', '.'));
         const longitude = parseFloat(choque.longitude_choque.replace(',', '.'));
-        L.marker([latitude, longitude]).addTo(map).bindPopup(`<b>Lat: ${latitude}</b><br><b>Long: ${longitude}</b>.`).openPopup();
+        L.marker([latitude, longitude]).addTo(map).bindPopup(`<b>Lat: ${latitude}</b><br><b>Long: ${longitude}</b>.`);
     }
 }
 
@@ -115,7 +123,9 @@ function updateHist(data) {
       // Set the options for the histogram
       var options = {
         title: 'Histograma Força Máxima',
-        legend: { position: 'none' },
+        legend: 'left',
+        height: 570,
+        width: 1050,
       };
   
       // Create a histogram chart
@@ -157,7 +167,6 @@ function updateTable(data) {
   console.log(tableData);
 
   function drawTable() {
-    console.log("aaa");
     var tabelaChoques = new google.visualization.DataTable();
 
     tabelaChoques.addColumn('number', 'ID Choque');
@@ -178,12 +187,13 @@ function updateTable(data) {
 
     tabelaChoques.addRows(tableData);
 
-    // Parameters to create table
     var options = {
-      title: 'Histograma Força Máxima',
+      title: 'Tabela de Choques',
       showRowNumber: true,
       width: '100%',
       height: '100%',
+      page: 'enable', // Enable pagination
+      pageSize: 30, // Number of rows to display per page
     };
 
     console.log(tabelaChoques);
@@ -195,8 +205,54 @@ function updateTable(data) {
 
   drawTable();
 }
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(updatePizza);
+
+function updatePizza(data) {
+  console.log("pizaaaaaa");
+  // Create an object to store track counts
+  const trackCounts = {};
+
+  // Count the occurrences of each track name
+  data.forEach(item => {
+    const trackName = item.trecho_choque;
+    if (trackCounts.hasOwnProperty(trackName)) {
+      trackCounts[trackName]++;
+    } else {
+      trackCounts[trackName] = 1;
+    }
+  });
+
+  // Create an array to store pizza data
+  const pizzaData = [
+    ['Trecho', 'Numero de Choques']
+  ];
+
+  // Iterate over the track counts object and populate the pizza data array
+  for (const trackName in trackCounts) {
+    if (trackCounts.hasOwnProperty(trackName)) {
+      pizzaData.push([trackName, trackCounts[trackName]]);
+    }
+  }
+
+    var data = google.visualization.arrayToDataTable(pizzaData);
+
+    // Set the options for the pie chart
+    var options = {
+      title: 'Numero de Choques por Trecho',
+      legend: 'left',
+      is3D: true,
+      height: 700,
+      width: 750,
+    };
+
+    // Create a pie chart
+    var chart = new google.visualization.PieChart(document.getElementById('pizza'));
+    chart.draw(data, options);
   
-  
+}
+
 // Function to handle the filter change event
 function handleFilterChange() {
     fetchData();

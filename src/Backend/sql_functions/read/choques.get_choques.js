@@ -16,7 +16,7 @@ function getChoques(id_viagem, tipo_engate, tipo_choque, res) {
     query += ` AND tipo_choque = '${tipo_choque}'`;
   }
 
-  query += ` LIMIT 100` // SOMENTE PARA TESTES [REMOVER DEPOIS]
+  query += ` LIMIT 120` // SOMENTE PARA TESTES [REMOVER DEPOIS]
 
   execSqlQuery(query, res);
 }
