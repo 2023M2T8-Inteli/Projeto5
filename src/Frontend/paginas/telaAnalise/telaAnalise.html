@@ -91,9 +91,33 @@
             <div class="histograma" id="histogram-chart" style="width: 700px; height: 450px;"></div>
               
           </div>
-          <!-- <div id="markov-container">
-            <img src="C:\Users\Inteli\Downloads\markov.png" alt="markov exemplo">
-          </div> -->
+          <div id="imageContainer"></div>
+          <script>
+                fetch('http://localhost:3000/get_grafico_de_markov_by_vagao_id')
+              .then(response => response.json())
+              .then(data => {
+                // Extract the Blob data from the data object
+                const blobData = data.blobData;
+        
+                // Create a Blob object from the extracted data
+                const blob = new Blob([blobData], { type: 'image/jpeg' });
+        
+                // Create a temporary URL for the Blob
+                const imageUrl = URL.createObjectURL(blob);
+        
+                // Create an <img> element and set its src attribute
+                const imageElement = document.createElement('img');
+                imageElement.src = imageUrl;
+        
+                // Append the <img> element to the image container div
+                document.getElementById('imageContainer').appendChild(imageElement);
+              })
+              .catch(error => {
+                // Handle any errors that occur during the request
+                console.error('Error:', error);
+                document.getElementById('imageContainer').innerText = "Error: Failed to fetch image";
+              });
+          </script>
         </div>
         <div class="direita">
             <div id="mapa-contanier">
