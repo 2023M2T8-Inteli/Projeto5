@@ -93,7 +93,7 @@
           </div>
           <div id="imageContainer"></div>
           <script>
-                fetch('http://localhost:3000/get_grafico_de_markov_by_vagao_id')
+                fetch('http://localhost:3000/get-grafico-de-markov-by-vagao-id?id_vagao=1')
               .then(response => response.json())
               .then(data => {
                 // Extract the Blob data from the data object
