@@ -24,7 +24,7 @@ main{
 
 /* Estilizando os inputs do formulário */
 #area-esqueci-senha form input{
-    width:100%;
+    width:80%;
     background-color: transparent;
     border: none;
     color: #FFFFFF;
@@ -62,19 +62,13 @@ main{
 
 /* Estilizando o elemento <small> */
 small{
-    position: absolute;
-    width: 955px;
-    height: 27px;
-    left: 49px;
-    top: 430px;
-    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     text-decoration-line: underline;
-    
+    margin-top: 10px;
     color: #FFFFFF;
 }
 
@@ -89,6 +83,7 @@ small{
 
 /* Estilizando o titulo da página */
 h1{
+    margin-bottom: 30px;
     font-size: 4rem;
     font-weight: 800;
     justify-self: center;
@@ -120,29 +115,15 @@ h1{
     transform-origin: bottom left;
   }
   
-  /* Media queries para desktop */
-@media screen and (min-width: 1024px) {
-    /* Seu código CSS específico para desktop aqui */
-    main {
-      /* Exemplo de alteração para desktop */
-      height: 100%;
-    }
-  }
-  
-  /* Media queries para tablet */
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    /* Seu código CSS específico para tablet aqui */
-    main {
-      /* Exemplo de alteração para tablet */
-      height: 60vh;
-    }
-  }
-  
   /* Media queries para celular */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 620px) {
     /* Seu código CSS específico para celular aqui */
     main {
-      /* Exemplo de alteração para celular */
-      height: auto;
+      justify-content: center;
+      text-align: center;
+    }
+
+    #area-esqueci-senha{
+      margin: 0;
     }
   }
