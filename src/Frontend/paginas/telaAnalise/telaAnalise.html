@@ -47,9 +47,10 @@
     </header>
 
     <h1 class="text-center">Análise das viagens</h1>
+    <h3 class="selecionar">Selecione os filtros para acessar os dados</h3>
     <div id="filtros" style="display: flex;justify-content: space-evenly;">
     <div class="dropdown text-center">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownViagem"
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownViagem" name="filtros"
           data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Viagem<i class="bi bi-caret-down-fill"></i></button>
         <div class="dropdown-menu" aria-labelledby="dropdownViagem">
           <a class="dropdown-item" href="#" onclick="selectDropdownItem(1, 'dropdownViagem')">Viagem 1</a>
@@ -80,8 +81,8 @@
       </div>
     
       
-        <button class="btn btn-secondary ms-3" onclick="applyFilters()">Aplicar</button>
-        <button class="btn btn-secondary ms-3" onclick="clearFilters()">Limpar</button>
+        <button class="btn btn-secondary ms-3" onclick="applyFilters()" id="btnfiltros">Aplicar</button>
+        <button class="btn btn-secondary ms-3" onclick="clearFilters()" id="btnfiltros">Limpar</button>
     </div>
     </div>
     <section>
@@ -125,7 +126,7 @@
             </div>
               <button id='acessar-comparacao' class="compare-viagens" onclick="window.location.href ='./comparacao'">Compare duas viagens</button>
             <div id="pizza-container">
-                <div id="pizza" style="width: 700px; height: 450px;"></div>
+                <div id="pizza" style="width: 900px; height: 450px;"></div>
             </div>
         </div>
         
@@ -192,7 +193,7 @@
         </nav>
 
         <div class="contato">
-            <a href="#" onclick="contato()" style="color:white">Entrar em Contato</a>
+            <a href="./home?scroll=true" style="color: white;">Entrar em contato</a>
         </div>    
   </aside>
 
