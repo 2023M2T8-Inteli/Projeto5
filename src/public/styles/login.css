@@ -110,21 +110,49 @@ h1{
   #ffffff;
   }
   
-  .hover-underline-animation:after {
-    content: '';
-    position: absolute;
-    width: 120px;
-    transform: scaleX(0);
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: 
-  #fbfbfb;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+.hover-underline-animation:after {
+content: '';
+position: absolute;
+width: 120px;
+transform: scaleX(0);
+height: 1px;
+bottom: 0;
+left: 0;
+background-color: 
+#fbfbfb;
+transform-origin: bottom right;
+transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+transform: scaleX(1);
+transform-origin: bottom left;
+}
+
+@media only screen and (max-width: 620px) {
+  main{
+    flex-wrap: wrap-reverse;
+    justify-content: center;
   }
-  
-  .hover-underline-animation:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+
+  #info{
+    align-items: center;
   }
+
+  #area-login, #area-logo{
+    padding-bottom: 0;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #area-logo p{
+    margin: 0 auto;
+  }
+
+  #logo{
+    margin: 0 auto;
+  }
+}
