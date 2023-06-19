@@ -120,7 +120,12 @@ button{
   flex: 1;
 }
 
+<<<<<<< Updated upstream
 #overlay {
+=======
+.overlay {
+  position: absolute;
+>>>>>>> Stashed changes
   flex: 1;
   top: 0;
   left: 0;

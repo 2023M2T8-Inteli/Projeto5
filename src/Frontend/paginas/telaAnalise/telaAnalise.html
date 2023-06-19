@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/bootstrap-icons.min.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="/fonts/poppins.css">
@@ -13,8 +14,10 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link rel="stylesheet" href="../../../public/fonts/poppins.css">
     <link rel="stylesheet" href="../../../public/styles/telaAnalise.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -23,29 +26,30 @@
 </head>
 
 <body>
-    <div id="main">  
-    <header>
-        <div class="topo">
-            <div class="logo">
-                <img src="public/assets/logo_padrao.png" alt="Lumi (logo)">
+    <div id="main">
+        <header>
+            <div class="topo">
+                <div class="logo">
+                    <img src="public/assets/logo_padrao.png" alt="Lumi (logo)">
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./home">Home</a></li>
+                        <li><a href="./home?scroll=true">Contato</a></li>
+                        <li><a href="./analise">Análises</a></li>
+                        <li><a href="./relatorios">Relatórios</a></li>
+                    </ul>
+                </nav>
+                <div class="icone-logout">
+                    <a href="./">
+                        <img src="public/assets/sairazul.svg" alt="Sair">
+                    </a>
+                </div>
+                <button class="abreajuda" onclick="abrirajuda()">?</button>
             </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="./home">Home</a></li>
-                    <li><a href="./home?scroll=true">Contato</a></li>
-                    <li><a href="./analise">Análises</a></li>
-                    <li><a href="./relatorios">Relatórios</a></li>
-                </ul>
-            </nav>
-            <div class="icone-logout">
-                <a href="./">
-                <img src="public/assets/sairazul.svg" alt="Sair">
-                </a>
-            </div>
-            <button class="abreajuda" onclick="abrirajuda()">?</button>
-        </div>
-    </header>
+        </header>
 
+<<<<<<< Updated upstream
     <h1 class="text-center">Análise das viagens</h1>
     <div id="filtros" style="display: flex;justify-content: space-evenly;">
     <div class="dropdown text-center">
@@ -94,109 +98,220 @@
           <!-- <div id="markov-container">
             <img src="C:\Users\Inteli\Downloads\markov.png" alt="markov exemplo">
           </div> -->
+=======
+        <h1 class="text-center">Análise das viagens</h1>
+        <h3 class="selecionar">Selecione os filtros para acessar os dados</h3>
+        <div id="filtros" style="display: flex;justify-content: space-evenly;">
+            <div class="dropdown text-center">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownViagem" name="filtros"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Viagem<i
+                        class="bi bi-caret-down-fill"></i></button>
+                <div class="dropdown-menu" aria-labelledby="dropdownViagem">
+                    <a class="dropdown-item" href="#" onclick="selectDropdownItem(1, 'dropdownViagem')">Viagem 1</a>
+                    <a class="dropdown-item" href="#" onclick="selectDropdownItem(2, 'dropdownViagem')">Viagem 2</a>
+                    <a class="dropdown-item" href="#" onclick="selectDropdownItem(3, 'dropdownViagem')">Viagem 3</a>
+                    <a class="dropdown-item" href="#" onclick="selectDropdownItem(4, 'dropdownViagem')">Viagem 4</a>
+                    <a class="dropdown-item" href="#" onclick="selectDropdownItem(5, 'dropdownViagem')">Viagem 5</a>
+                </div>
+            </div>
+
+            <div class="dropdown text-center ms-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownEngate"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Engate<i
+                        class="bi bi-caret-down-fill"></i></button>
+                <div class="dropdown-menu" aria-labelledby="dropdownEngate">
+                    <a class="dropdown-item" href="#" onclick="selectDropdownItem('E', 'dropdownEngate')">Engate E</a>
+                    <a class="dropdown-item" href="#" onclick="selectDropdownItem('F', 'dropdownEngate')">Engate F</a>
+                </div>
+            </div>
+
+            <div class="dropdown text-center ms-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTipoChoque"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tipo de Choque<i
+                        class="bi bi-caret-down-fill"></i></button>
+                <div class="dropdown-menu" aria-labelledby="dropdownTipoChoque">
+                    <a class="dropdown-item" href="#" onclick="selectDropdownItem(0, 'dropdownTipoChoque')">Choque 0
+                        (pico)</a>
+                    <a class="dropdown-item" href="#" onclick="selectDropdownItem(1, 'dropdownTipoChoque')">Choque 1</a>
+                    <a class="dropdown-item" href="#" onclick="selectDropdownItem(2, 'dropdownTipoChoque')">Choque 2</a>
+                </div>
+            </div>
+            <button class="btn btn-secondary ms-3" onclick="applyFilters(false)" id="btnfiltros">Aplicar</button>
+            <button class="btn btn-secondary ms-3" onclick="clearFilters(false)" id="btnfiltros">Limpar</button>
+        </div>
+    </div>
+    <section>
+        <div class="esquerda">
+            <div id="histograma-container">
+                <div class="overlay" style="width: 700px; height: 450px;">
+                    <p class="aviso">SELECIONE OS FILTROS PARA VISUALIZAR DADOS</p>
+                </div>
+                <div class="histograma" id="histogram-chart" style="width: 700px; height: 450px;"></div>
+            </div>
+            <div id="imageContainer"></div>
+            <script>
+                fetch('http://localhost:3000/get_grafico_de_markov_by_vagao_id')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Extract the Blob data from the data object
+                        const blobData = data.blobData;
+
+                        // Create a Blob object from the extracted data
+                        const blob = new Blob([blobData], { type: 'image/jpeg' });
+
+                        // Create a temporary URL for the Blob
+                        const imageUrl = URL.createObjectURL(blob);
+
+                        // Create an <img> element and set its src attribute
+                        const imageElement = document.createElement('img');
+                        imageElement.src = imageUrl;
+
+                        // Append the <img> element to the image container div
+                        document.getElementById('imageContainer').appendChild(imageElement);
+                    })
+                    .catch(error => {
+                        // Handle any errors that occur during the request
+                        console.error('Error:', error);
+                        document.getElementById('imageContainer').innerText = "Error: Failed to fetch image";
+                    });
+            </script>
+>>>>>>> Stashed changes
         </div>
         <div class="direita">
             <div id="mapa-contanier">
+                <div class="overlay" style="width: 700px; height: 450px;">
+                    <p class="aviso">SELECIONE OS FILTROS PARA VISUALIZAR DADOS</p>
+                </div>
                 <div id="mapa" style="width: 700px; height: 450px;"></div>
             </div>
+<<<<<<< Updated upstream
               <button id='acessar-comparacao' class="compare-viagens" onclick="window.location.href ='./comparacao'">Compare duas viagens</button>
+=======
+            <button id='acessar-comparacao' class="compare-viagens"
+                onclick="window.location.href ='./comparacao'">Compare duas viagens</button>
+            <div id="pizza-container">
+                <div id="pizza" style="width: 900px; height: 450px;"></div>
+            </div>
+>>>>>>> Stashed changes
         </div>
-        
+
     </section>
     <section class="tabela-section">
         <div class="tabela">
-        <div id="table-container">
-            <div id="table-div" style="width: 100%; height: 100%;"></div>
-        </div>
+            <div id="table-container">
+                <div id="table-div" style="width: 100%; height: 100%;"></div>
+            </div>
         </div>
     </section>
-<aside id="sidebar" style="display: none;">
-    <button class="sairajuda" onclick="sairajuda()">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" class="bi bi-x-lg" viewBox="0 0 16 16">
-        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-    </svg>
-    </button>
+    <aside id="sidebar" style="display: none;">
+        <button class="sairajuda" onclick="sairajuda()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+        </button>
         <h2 class="title">Ajuda</h2>
         <nav class="menu">
             <hr>
             <button class="dropdown-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                 </svg>
                 Para que servem as informações disponíveis no site?</button>
             <div class="dropdown-content">
-        
+
                 <p>
-                    As informações que você disponíveis na plataforma são referentes aos relatórios das viagens de vários tipos que foram realizadas. A análise das viagens pode ser utilizada para entender  o desempenho e poder agir para torná-las mais eficientes..</p>
+                    As informações que você disponíveis na plataforma são referentes aos relatórios das viagens de
+                    vários tipos que foram realizadas. A análise das viagens pode ser utilizada para entender o
+                    desempenho e poder agir para torná-las mais eficientes..</p>
             </div>
-        <hr>
-        <button class="dropdown-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-            </svg>
-            Onde eu posso encontrar as informações que preciso?</button>
-        <div class="dropdown-content">
-            <p>
-                Todas as informações que você precisa para analisar o desempenho de suas viagens  se encontram nas seções “Análises” e “Relatórios”.  Navegando por essas seções, você pode filtrar suas viagens para ver  trajetos, gráficos e comparações.</p>
-        </div>
-        <hr>
-        <button class="dropdown-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-            </svg>
-            Como eu faço para interagir da melhor forma com o site?</button>
-        <div class="dropdown-content">
-            <p>
-            
-            Para interagir com o site da melhor forma, leia com calma as instruções de utilização das ferramentas de análise e, caso tenha dúvidas durante a navegação pela plataforma, clique no botão ajuda (?), que se encontra no canto superior direito das páginas..</p>
-        </div>
-        <hr>
-        <button class="dropdown-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-            </svg>
-            O que significa cada opção que encontro nos filtros de viagem, tipo de vagão e de choque?</button>
-        <div class="dropdown-content">
-            <p>
-            *ainda não sabemos a resposta, perguntaremos os detalhes nas próximas sprint reviews*
-            </p>
-        </div>
-        <hr>
+            <hr>
+            <button class="dropdown-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>
+                Onde eu posso encontrar as informações que preciso?</button>
+            <div class="dropdown-content">
+                <p>
+                    Todas as informações que você precisa para analisar o desempenho de suas viagens se encontram nas
+                    seções “Análises” e “Relatórios”. Navegando por essas seções, você pode filtrar suas viagens para
+                    ver trajetos, gráficos e comparações.</p>
+            </div>
+            <hr>
+            <button class="dropdown-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>
+                Como eu faço para interagir da melhor forma com o site?</button>
+            <div class="dropdown-content">
+                <p>
+
+                    Para interagir com o site da melhor forma, leia com calma as instruções de utilização das
+                    ferramentas de análise e, caso tenha dúvidas durante a navegação pela plataforma, clique no botão
+                    ajuda (?), que se encontra no canto superior direito das páginas..</p>
+            </div>
+            <hr>
+            <button class="dropdown-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFFFF" class="bi bi-chevron-down"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>
+                O que significa cada opção que encontro nos filtros de viagem, tipo de vagão e de choque?</button>
+            <div class="dropdown-content">
+                <p>
+                    *ainda não sabemos a resposta, perguntaremos os detalhes nas próximas sprint reviews*
+                </p>
+            </div>
+            <hr>
         </nav>
 
         <div class="contato">
+<<<<<<< Updated upstream
             <a href="#" onclick="contato()" style="color:white">Entrar em Contato</a>
         </div>    
   </aside>
+=======
+            <a href="./home?scroll=true" style="color: white;">Entrar em contato</a>
+        </div>
+    </aside>
+>>>>>>> Stashed changes
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-     <script>
+    <script>
         const dropdownBtns = document.querySelectorAll('.dropdown-btn');
 
         dropdownBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('active');
             });
         })
 
         function abrirajuda() {
-        document.getElementById("sidebar").style.width = "300px";
-        document.getElementById("sidebar").style.display = "block";
+            document.getElementById("sidebar").style.width = "300px";
+            document.getElementById("sidebar").style.display = "block";
         }
 
         function sairajuda() {
             $("#sidebar").hide();
         }
 
-        function contato(){
+        function contato() {
             event.preventDefault();
-        window.location.href = "../homepage/homepage.html#contato"
+            window.location.href = "../homepage/homepage.html#contato"
         }
 
-        
+
         let viagemFilter = null;
         let engateFilter = null;
         let tipoChoqueFilter = null;
@@ -215,6 +330,7 @@
             }
         }
 
+<<<<<<< Updated upstream
         google.charts.load('current', { packages: ['corechart'] });
         google.charts.setOnLoadCallback(drawChart);
 
@@ -236,9 +352,10 @@
             document.getElementById('overlay').style.display = 'block';
         }
 
+=======
+>>>>>>> Stashed changes
     </script>
-    <script src="public/telaAnaliseWidgets.js"></script>
+    <script src="public/utils/sqlWidgets.js"></script>
 </body>
-</html>
 
-    
+</html>
