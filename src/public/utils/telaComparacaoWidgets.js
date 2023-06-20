@@ -1,4 +1,4 @@
-// Define an empty array to store the fetched data
+// Define uma lista vazia para armazenar dados extraídos do banco
 let filteredChoques = [];
 
 const southWest = L.latLng(-26.731977, -72.581414);
@@ -29,7 +29,7 @@ const tiles2 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 function applyFilters() {
-    // Get the selected filter values
+    // Recupera os valores dos filtros da página HTML (viagens 1 e 2)
     const viagemFilter = document.getElementById('dropdownViagem').textContent;
     const engateFilter = document.getElementById('dropdownEngate').textContent;
     const tipoChoqueFilter = document.getElementById('dropdownTipoChoque').textContent;
@@ -38,13 +38,13 @@ function applyFilters() {
     const engateFilter2 = document.getElementById('dropdownEngate2').textContent;
     const tipoChoqueFilter2 = document.getElementById('dropdownTipoChoque2').textContent;
 
-    // Call the fetchData function with the filter values
+    // Chama a função fetchData com os valores dos filtros
     fetchData(viagemFilter, engateFilter, tipoChoqueFilter);
     fetchData2(viagemFilter2, engateFilter2, tipoChoqueFilter2);
 }
 
 function clearFilters() {
-  // Reset the dropdown values to their initial text
+  // Limpa os valores dos filtros para seu texto inicial
   document.getElementById('dropdownViagem').innerHTML = 'Viagem<i class="bi bi-caret-down-fill"></i>';
   document.getElementById('dropdownEngate').innerHTML = 'Engate<i class="bi bi-caret-down-fill"></i>';
   document.getElementById('dropdownTipoChoque').innerHTML = 'Tipo de Choque<i class="bi bi-caret-down-fill"></i>';
@@ -53,19 +53,19 @@ function clearFilters() {
   document.getElementById('dropdownEngate2').innerHTML = 'Engate<i class="bi bi-caret-down-fill"></i>';
   document.getElementById('dropdownTipoChoque2').innerHTML = 'Tipo de Choque<i class="bi bi-caret-down-fill"></i>';
 
-  // Call the function to apply the filters (passing null to indicate no filters are selected)
+  // Chama a função para aplicar os filtros (sendo nulo para indicar que não há filtros aplicados)
   applyFilters();
 }
 
-// Function to fetch data from the backend
+// Função para recuperar dados do backend para os dados 1
 async function fetchData(viagemSelected, engateSelected, tipoChoqueSelected) {
     try {
-        // Get the selected filter values
+        // Importa os valores dos filtros
         const viagemFilter = viagemSelected;
         const engateFilter = engateSelected;
         const tipoChoqueFilter = tipoChoqueSelected;
 
-        // Construct the URL based on the selected filter values
+        // Constrói a URL de acordo com os valores dos filtros
         let url = '/get-choques?';
         if (viagemFilter && viagemFilter != 'Viagem') {
             url += `id_viagem=${viagemFilter}&`;
@@ -77,20 +77,15 @@ async function fetchData(viagemSelected, engateSelected, tipoChoqueSelected) {
             url += `tipo_choque=${tipoChoqueFilter}&`;
         }
         
-        // Remove the trailing '&' character from the URL
         url = url.slice(0, -1);
         console.log(url);
-        
-        // Make an asynchronous request to the backend route
         const response = await fetch(url);
         
-        // Parse the response JSON
+        // Analisa os dados do banco
         const data = await response.json();
-        
-        // Update the data arrays with the fetched data
         filteredChoques = data;
         
-        // Call the function to update the widgets with the new data
+        // Chama a função para atualizar os mapas e gráficos
         updateMap(filteredChoques);
         updateHist(filteredChoques);
         
@@ -99,15 +94,14 @@ async function fetchData(viagemSelected, engateSelected, tipoChoqueSelected) {
     }
 }
 
-// Function to fetch data from the backend
+// Função que busca dados no backend para os dados 2 
 async function fetchData2(viagemSelected, engateSelected, tipoChoqueSelected) {
   try {
-      // Get the selected filter values
+      // Importa os valores dos filtros aplicados
       const viagemFilter = viagemSelected;
       const engateFilter = engateSelected;
       const tipoChoqueFilter = tipoChoqueSelected;
 
-      // Construct the URL based on the selected filter values
       let url = '/get-choques?';
       if (viagemFilter && viagemFilter != 'Viagem') {
           url += `id_viagem=${viagemFilter}&`;
@@ -119,20 +113,15 @@ async function fetchData2(viagemSelected, engateSelected, tipoChoqueSelected) {
           url += `tipo_choque=${tipoChoqueFilter}&`;
       }
       
-      // Remove the trailing '&' character from the URL
       url = url.slice(0, -1);
       console.log(url);
-      
-      // Make an asynchronous request to the backend route
       const response = await fetch(url);
       
-      // Parse the response JSON
+      // Analisa os dados do banco
       const data = await response.json();
-      
-      // Update the data arrays with the fetched data
       filteredChoques = data;
       
-      // Call the function to update the widgets with the new data
+      // Chama a função para atualizar os mapas e gráficos
       updateMap2(filteredChoques);
       updateHist2(filteredChoques);
       
@@ -142,16 +131,16 @@ async function fetchData2(viagemSelected, engateSelected, tipoChoqueSelected) {
 }
 
 
-// Function to update the map with the updated data
+// Função para atualizar o mapa 1
 function updateMap(data) {
-    // Clear existing markers from the map (if any)
+  //Limpa o mapa caso esteja com pontos marcados
     map.eachLayer(function (layer) {
         if (layer instanceof L.Marker) {
             map.removeLayer(layer);
         }
     });
 
-    // Add markers for each data point in data
+    // Adiciona marcadores para cada ponto com dados no mapa
     for (let i = 0; i < data.length; i++) {
         const choque = data[i];
         const latitude = parseFloat(choque.latitude_choque.replace(',', '.'));
@@ -160,15 +149,16 @@ function updateMap(data) {
     }
 }
 
+// Função para atualizar o mapa 2
 function updateMap2(data) {
-  // Clear existing markers from the map (if any)
+  //Limpa o mapa caso esteja com pontos marcados
   map2.eachLayer(function (layer) {
       if (layer instanceof L.Marker) {
           map2.removeLayer(layer);
       }
   });
 
-  // Add markers for each data point in data
+  // Adiciona marcadores para cada ponto com dados no mapa
   for (let i = 0; i < data.length; i++) {
       const choque = data[i];
       const latitude = parseFloat(choque.latitude_choque.replace(',', '.'));
@@ -178,27 +168,27 @@ function updateMap2(data) {
 }
 
 function updateHist(data) {
-    // Create an array to store histogram data
+    // Constante para armazenar dados do histograma
     const histogramData = [
       ['Choque', 'Força Máxima']
     ];
   
-    // Iterate over the data array and extract label and value
+    // Extrai o nome e valores dos dados
     data.forEach(item => {
       const label = `Trecho: ${item.trecho_choque} Posição: ${item.posicao_choque}`;
       const value = parseFloat(item.forca_maxima_choque);
       histogramData.push([label, value]);
     });
   
-    // Load Google Charts and call the drawChart function
+    // Carrega Google Charts e chama a função de criar gráficos
     google.charts.load('current', { packages: ['corechart'] });
     google.charts.setOnLoadCallback(drawChart);
   
-    // Define the drawChart function
+    // Define a função drawChart 
     function drawChart() {
       var data = google.visualization.arrayToDataTable(histogramData);
   
-      // Set the options for the histogram
+     
       var options = {
         title: 'Histograma Força Máxima',
         legend: 'left',
@@ -206,7 +196,7 @@ function updateHist(data) {
         width: 1050,
       };
   
-      // Create a histogram chart
+      //Cria o gráfico de histograma
       var chart = new google.visualization.Histogram(document.getElementById('histogram-chart'));
       chart.draw(data, options);
 
@@ -215,27 +205,26 @@ function updateHist(data) {
 }
 
 function updateHist2(data) {
-  // Create an array to store histogram data
+  // Constante para armazenar dados do histograma
   const histogramData = [
     ['Choque', 'Força Máxima']
   ];
 
-  // Iterate over the data array and extract label and value
+  // Extrai o nome e valores dos dados
   data.forEach(item => {
     const label = `Trecho: ${item.trecho_choque} Posição: ${item.posicao_choque}`;
     const value = parseFloat(item.forca_maxima_choque);
     histogramData.push([label, value]);
   });
 
-  // Load Google Charts and call the drawChart function
+  // Carrega Google Charts e chama a função de criar gráficos
   google.charts.load('current', { packages: ['corechart'] });
   google.charts.setOnLoadCallback(drawChart);
 
-  // Define the drawChart function
+    // Define a função drawChart 
   function drawChart() {
     var data = google.visualization.arrayToDataTable(histogramData);
 
-    // Set the options for the histogram
     var options = {
       title: 'Histograma Força Máxima',
       legend: 'left',
@@ -243,7 +232,7 @@ function updateHist2(data) {
       width: 1050,
     };
 
-    // Create a histogram chart
+      //Cria o gráfico de histograma
     var chart = new google.visualization.Histogram(document.getElementById('histogram-chart2'));
     chart.draw(data, options);
 
@@ -257,7 +246,7 @@ google.charts.setOnLoadCallback(updateTable);
 function updateTable(data) {
   var tableData = [];
 
-  // Convert the data into the required format for the table
+  // Converte os dados para o formato pré-definido da tabela
   data.forEach(item => {
     var row = [
       item.id_choque,
@@ -307,13 +296,13 @@ function updateTable(data) {
       showRowNumber: true,
       width: '100%',
       height: '100%',
-      page: 'enable', // Enable pagination
-      pageSize: 30, // Number of rows to display per page
+      page: 'enable', 
+      pageSize: 30, // Número de linhas por página
     };
 
     console.log(tabelaChoques);
 
-    // Create the table
+    // Cria a tabela
     var table = new google.visualization.Table(document.getElementById('table-div'));
     table.draw(tabelaChoques, options);
   }
@@ -326,10 +315,9 @@ google.charts.setOnLoadCallback(updatePizza);
 
 function updatePizza(data) {
   console.log("pizaaaaaa");
-  // Create an object to store track counts
   const trackCounts = {};
 
-  // Count the occurrences of each track name
+  // Conta as ocorrências de choques em cada trecho
   data.forEach(item => {
     const trackName = item.trecho_choque;
     if (trackCounts.hasOwnProperty(trackName)) {
@@ -339,12 +327,12 @@ function updatePizza(data) {
     }
   });
 
-  // Create an array to store pizza data
+  // Constante para armazenar os dados do gráfico
   const pizzaData = [
     ['Trecho', 'Numero de Choques']
   ];
 
-  // Iterate over the track counts object and populate the pizza data array
+
   for (const trackName in trackCounts) {
     if (trackCounts.hasOwnProperty(trackName)) {
       pizzaData.push([trackName, trackCounts[trackName]]);
@@ -353,7 +341,7 @@ function updatePizza(data) {
 
     var data = google.visualization.arrayToDataTable(pizzaData);
 
-    // Set the options for the pie chart
+    // Opções do gráfico de pizza
     var options = {
       title: 'Numero de Choques por Trecho',
       legend: 'left',
@@ -362,18 +350,18 @@ function updatePizza(data) {
       width: 750,
     };
 
-    // Create a pie chart
+    // Cria o gráfico de pizza
     var chart = new google.visualization.PieChart(document.getElementById('pizza'));
     chart.draw(data, options);
   
 }
 
-// Function to handle the filter change event
+// Função que lida com a alteração dos filtros
 function handleFilterChange() {
     fetchData();
 }
 
-// Attach event listeners to the filter dropdowns
+// Adiciona event listeners nos filtros dropdowns
 const dropdowns = document.querySelectorAll('.dropdown-select');
 dropdowns.forEach((dropdown) => {
     dropdown.addEventListener('change', handleFilterChange);
