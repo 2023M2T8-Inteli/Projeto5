@@ -180,6 +180,7 @@ h2{
   }
   
   .dropdown-content p {
+    font-size: 22px;
     margin: 0;
     color: #FFFFFF;
     text-align: center;
@@ -213,8 +214,6 @@ h2{
     height: 2rem;
     border: 2px solid #FFFFFF;
     align-items: center;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
 }
   
   .sairajuda {

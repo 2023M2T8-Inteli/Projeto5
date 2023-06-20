@@ -242,6 +242,7 @@ section {
 }
 
 .dropdown-content p {
+  font-size: 22px;
   margin: 0;
   color: #FFFFFF;
   transition: display 3s ease-in-out;
