@@ -140,16 +140,29 @@ function updateMap(data) {
         }
     });
 
+    var latMed = 0;
+    var longMed = 0;
+
     // Adiciona marcadores para cada ponto com dados no mapa
     for (let i = 0; i < data.length; i++) {
         const choque = data[i];
         const latitude = parseFloat(choque.latitude_choque.replace(',', '.'));
         const longitude = parseFloat(choque.longitude_choque.replace(',', '.'));
+
+        latMed += latitude;
+        longMed += longitude;
+
         const dia = choque.data_choque;
         const hora = choque.hora_choque;
         const forca = Math.round(parseFloat(choque.forca_maxima_choque));
         L.marker([latitude, longitude]).addTo(map).bindPopup(`<b>Dia: ${dia}</b><br><b>Hora: ${hora}</b><br><b>Força: ${forca} tf</b>`);
     }
+
+    latMed = latMed / data.length;
+    longMed = longMed / data.length;
+
+    map.setView([latMed, longMed], 6);
+
 }
 
 // Função para atualizar o mapa 2
@@ -161,16 +174,29 @@ function updateMap2(data) {
       }
   });
 
+  var latMed = 0;
+  var longMed = 0;
+
   // Adiciona marcadores para cada ponto com dados no mapa
   for (let i = 0; i < data.length; i++) {
       const choque = data[i];
       const latitude = parseFloat(choque.latitude_choque.replace(',', '.'));
       const longitude = parseFloat(choque.longitude_choque.replace(',', '.'));
+
+      latMed += latitude;
+      longMed += longitude;
+
       const dia = choque.data_choque;
       const hora = choque.hora_choque;
       const forca = Math.round(parseFloat(choque.forca_maxima_choque));
       L.marker([latitude, longitude]).addTo(map2).bindPopup(`<b>Dia: ${dia}</b><br><b>Hora: ${hora}</b><br><b>Força: ${forca} tf</b>`);
   }
+
+  latMed = latMed / data.length;
+  longMed = longMed / data.length;
+
+  map.setView([latMed, longMed], 6);
+
 }
 
 function updateHist(data) {
@@ -199,7 +225,13 @@ function updateHist(data) {
         title: 'Histograma Força Máxima',
         legend: 'left',
         height: 570,
-        width: 1050,
+        width: 950,
+        vAxis: {
+          title: 'Número de Ocorrências'
+        },
+        hAxis: {
+          title: 'Força Máxima (tf)'
+        }
       };
   
       //Cria o gráfico de histograma
@@ -235,7 +267,13 @@ function updateHist2(data) {
       title: 'Histograma Força Máxima',
       legend: 'left',
       height: 570,
-      width: 1050,
+      width: 950,
+      vAxis: {
+        title: 'Número de Ocorrências'
+      },
+      hAxis: {
+        title: 'Força Máxima (tf)'
+      }
     };
 
       //Cria o gráfico de histograma
@@ -249,118 +287,120 @@ function updateHist2(data) {
 google.charts.load('current', { 'packages': ['table'] });
 google.charts.setOnLoadCallback(updateTable);
 
-function updateTable(data) {
-  var tableData = [];
+// *** CÓDIGO COMENTADO - Para expansão futura *** \\\
 
-  // Converte os dados para o formato pré-definido da tabela
-  data.forEach(item => {
-    var row = [
-      item.id_choque,
-      item.tipo_choque,
-      item.data_choque,
-      item.hora_choque,
-      item.latitude_choque,
-      item.longitude_choque,
-      item.velocidade_choque,
-      item.posicao_choque,
-      item.trecho_choque,
-      item.forca_maxima_choque,
-      item.ACT_choque,
-      item.PEG_choque,
-      item.id_vagao,
-      item.id_viagem,
-      item.tipo_engate
-    ];
-    tableData.push(row);
-  });
+// function updateTable(data) {
+//   var tableData = [];
 
-  console.log(tableData);
+//   // Converte os dados para o formato pré-definido da tabela
+//   data.forEach(item => {
+//     var row = [
+//       item.id_choque,
+//       item.tipo_choque,
+//       item.data_choque,
+//       item.hora_choque,
+//       item.latitude_choque,
+//       item.longitude_choque,
+//       item.velocidade_choque,
+//       item.posicao_choque,
+//       item.trecho_choque,
+//       item.forca_maxima_choque,
+//       item.ACT_choque,
+//       item.PEG_choque,
+//       item.id_vagao,
+//       item.id_viagem,
+//       item.tipo_engate
+//     ];
+//     tableData.push(row);
+//   });
 
-  function drawTable() {
-    var tabelaChoques = new google.visualization.DataTable();
+//   console.log(tableData);
 
-    tabelaChoques.addColumn('number', 'ID Choque');
-    tabelaChoques.addColumn('number', 'Tipo');
-    tabelaChoques.addColumn('string', 'Data');
-    tabelaChoques.addColumn('string', 'Hora');
-    tabelaChoques.addColumn('string', 'Latitude');
-    tabelaChoques.addColumn('string', 'Longitude');
-    tabelaChoques.addColumn('number', 'Velocidade');
-    tabelaChoques.addColumn('number', 'Posição');
-    tabelaChoques.addColumn('string', 'Trecho');
-    tabelaChoques.addColumn('number', 'Força Máxima');
-    tabelaChoques.addColumn('number', 'ACT');
-    tabelaChoques.addColumn('number', 'PEG');
-    tabelaChoques.addColumn('number', 'ID Vagão');
-    tabelaChoques.addColumn('number', 'ID Viagem');
-    tabelaChoques.addColumn('string', 'Tipo Engate');
+//   function drawTable() {
+//     var tabelaChoques = new google.visualization.DataTable();
 
-    tabelaChoques.addRows(tableData);
+//     tabelaChoques.addColumn('number', 'ID Choque');
+//     tabelaChoques.addColumn('number', 'Tipo');
+//     tabelaChoques.addColumn('string', 'Data');
+//     tabelaChoques.addColumn('string', 'Hora');
+//     tabelaChoques.addColumn('string', 'Latitude');
+//     tabelaChoques.addColumn('string', 'Longitude');
+//     tabelaChoques.addColumn('number', 'Velocidade');
+//     tabelaChoques.addColumn('number', 'Posição');
+//     tabelaChoques.addColumn('string', 'Trecho');
+//     tabelaChoques.addColumn('number', 'Força Máxima');
+//     tabelaChoques.addColumn('number', 'ACT');
+//     tabelaChoques.addColumn('number', 'PEG');
+//     tabelaChoques.addColumn('number', 'ID Vagão');
+//     tabelaChoques.addColumn('number', 'ID Viagem');
+//     tabelaChoques.addColumn('string', 'Tipo Engate');
 
-    var options = {
-      title: 'Tabela de Choques',
-      showRowNumber: true,
-      width: '100%',
-      height: '100%',
-      page: 'enable', 
-      pageSize: 30, // Número de linhas por página
-    };
+//     tabelaChoques.addRows(tableData);
 
-    console.log(tabelaChoques);
+//     var options = {
+//       title: 'Tabela de Choques',
+//       showRowNumber: true,
+//       width: '100%',
+//       height: '100%',
+//       page: 'enable', 
+//       pageSize: 30, // Número de linhas por página
+//     };
 
-    // Cria a tabela
-    var table = new google.visualization.Table(document.getElementById('table-div'));
-    table.draw(tabelaChoques, options);
-  }
+//     console.log(tabelaChoques);
 
-  drawTable();
-}
+//     // Cria a tabela
+//     var table = new google.visualization.Table(document.getElementById('table-div'));
+//     table.draw(tabelaChoques, options);
+//   }
 
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(updatePizza);
+//   drawTable();
+// }
 
-function updatePizza(data) {
-  console.log("pizaaaaaa");
-  const trackCounts = {};
+// google.charts.load('current', {'packages':['corechart']});
+// google.charts.setOnLoadCallback(updatePizza);
 
-  // Conta as ocorrências de choques em cada trecho
-  data.forEach(item => {
-    const trackName = item.trecho_choque;
-    if (trackCounts.hasOwnProperty(trackName)) {
-      trackCounts[trackName]++;
-    } else {
-      trackCounts[trackName] = 1;
-    }
-  });
+// function updatePizza(data) {
+//   console.log("pizaaaaaa");
+//   const trackCounts = {};
 
-  // Constante para armazenar os dados do gráfico
-  const pizzaData = [
-    ['Trecho', 'Numero de Choques']
-  ];
+//   // Conta as ocorrências de choques em cada trecho
+//   data.forEach(item => {
+//     const trackName = item.trecho_choque;
+//     if (trackCounts.hasOwnProperty(trackName)) {
+//       trackCounts[trackName]++;
+//     } else {
+//       trackCounts[trackName] = 1;
+//     }
+//   });
+
+//   // Constante para armazenar os dados do gráfico
+//   const pizzaData = [
+//     ['Trecho', 'Numero de Choques']
+//   ];
 
 
-  for (const trackName in trackCounts) {
-    if (trackCounts.hasOwnProperty(trackName)) {
-      pizzaData.push([trackName, trackCounts[trackName]]);
-    }
-  }
+//   for (const trackName in trackCounts) {
+//     if (trackCounts.hasOwnProperty(trackName)) {
+//       pizzaData.push([trackName, trackCounts[trackName]]);
+//     }
+//   }
 
-    var data = google.visualization.arrayToDataTable(pizzaData);
+//     var data = google.visualization.arrayToDataTable(pizzaData);
 
-    // Opções do gráfico de pizza
-    var options = {
-      title: 'Numero de Choques por Trecho',
-      legend: 'left',
-      is3D: true,
-      height: 700,
-      width: 750,
-    };
+//     // Opções do gráfico de pizza
+//     var options = {
+//       title: 'Numero de Choques por Trecho',
+//       legend: 'left',
+//       is3D: true,
+//       height: 700,
+//       width: 750,
+//     };
 
-    // Cria o gráfico de pizza
-    var chart = new google.visualization.PieChart(document.getElementById('pizza'));
-    chart.draw(data, options);
+//     // Cria o gráfico de pizza
+//     var chart = new google.visualization.PieChart(document.getElementById('pizza'));
+//     chart.draw(data, options);
   
-}
+// }
 
 // Função que lida com a alteração dos filtros
 function handleFilterChange() {

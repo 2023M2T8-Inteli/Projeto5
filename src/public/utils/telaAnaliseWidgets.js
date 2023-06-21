@@ -85,16 +85,29 @@ function updateMap(data) {
         }
     });
 
+    var latMed = 0;
+    var longMed = 0;
+
     // Adiciona marcadores para cada ponto com dados no mapa
     for (let i = 0; i < data.length; i++) {
         const choque = data[i];
         const latitude = parseFloat(choque.latitude_choque.replace(',', '.'));
         const longitude = parseFloat(choque.longitude_choque.replace(',', '.'));
+
+        latMed += latitude;
+        longMed += longitude;
+
         const dia = choque.data_choque;
         const hora = choque.hora_choque;
         const forca = Math.round(parseFloat(choque.forca_maxima_choque));
         L.marker([latitude, longitude]).addTo(map).bindPopup(`<b>Dia: ${dia}</b><br><b>Hora: ${hora}</b><br><b>Força: ${forca} tf</b>`);
     }
+
+    latMed = latMed / data.length;
+    longMed = longMed / data.length;
+
+    map.setView([latMed, longMed], 6);
+
 }
 
 function updateHist(data) {
@@ -122,7 +135,13 @@ function updateHist(data) {
         title: 'Histograma Força Máxima',
         legend: 'left',
         height: 570,
-        width: 1050,
+        width: 950,
+        vAxis: {
+          title: 'Número de Ocorrências'
+        },
+        hAxis: {
+          title: 'Força Máxima (tf)'
+        }
       };
   
       //Cria o gráfico de histograma
