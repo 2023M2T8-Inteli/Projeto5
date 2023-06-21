@@ -195,7 +195,7 @@ function updateMap2(data) {
   latMed = latMed / data.length;
   longMed = longMed / data.length;
 
-  map.setView([latMed, longMed], 6);
+  map2.setView([latMed, longMed], 6);
 
 }
 
