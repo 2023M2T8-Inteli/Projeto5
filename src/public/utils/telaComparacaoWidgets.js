@@ -145,7 +145,10 @@ function updateMap(data) {
         const choque = data[i];
         const latitude = parseFloat(choque.latitude_choque.replace(',', '.'));
         const longitude = parseFloat(choque.longitude_choque.replace(',', '.'));
-        L.marker([latitude, longitude]).addTo(map).bindPopup(`<b>Lat: ${latitude}</b><br><b>Long: ${longitude}</b>.`);
+        const dia = choque.data_choque;
+        const hora = choque.hora_choque;
+        const forca = Math.round(parseFloat(choque.forca_maxima_choque));
+        L.marker([latitude, longitude]).addTo(map).bindPopup(`<b>Dia: ${dia}</b><br><b>Hora: ${hora}</b><br><b>Força: ${forca} tf</b>`);
     }
 }
 
@@ -163,19 +166,22 @@ function updateMap2(data) {
       const choque = data[i];
       const latitude = parseFloat(choque.latitude_choque.replace(',', '.'));
       const longitude = parseFloat(choque.longitude_choque.replace(',', '.'));
-      L.marker([latitude, longitude]).addTo(map2).bindPopup(`<b>Lat: ${latitude}</b><br><b>Long: ${longitude}</b>.`);
+      const dia = choque.data_choque;
+      const hora = choque.hora_choque;
+      const forca = Math.round(parseFloat(choque.forca_maxima_choque));
+      L.marker([latitude, longitude]).addTo(map2).bindPopup(`<b>Dia: ${dia}</b><br><b>Hora: ${hora}</b><br><b>Força: ${forca} tf</b>`);
   }
 }
 
 function updateHist(data) {
     // Constante para armazenar dados do histograma
     const histogramData = [
-      ['Choque', 'Força Máxima']
+      ['Choque', 'Força Máxima (tf) ']
     ];
   
     // Extrai o nome e valores dos dados
     data.forEach(item => {
-      const label = `Trecho: ${item.trecho_choque} Posição: ${item.posicao_choque}`;
+      const label = `Trecho: ${item.trecho_choque} | Posição: ${item.posicao_choque}`;
       const value = parseFloat(item.forca_maxima_choque);
       histogramData.push([label, value]);
     });
