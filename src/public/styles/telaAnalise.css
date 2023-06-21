@@ -242,6 +242,7 @@ section {
 }
 
 .dropdown-content p {
+  font-size: 22px;
   margin: 0;
   color: #FFFFFF;
   transition: display 3s ease-in-out;
@@ -279,9 +280,7 @@ hr{
 }
 
 #sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
+    position: absolute;
     background-color: #4A67F0;
     margin-top: 1rem;
     margin-bottom: 2rem;
