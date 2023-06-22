@@ -33,15 +33,14 @@ A Lumi é uma aplicação web que vem com o propósito de dinamizar a exibição
 &emsp;| T08*G05_V4.1.1_Web_application_document.pdf *(Esta é versão atual do WAD da equipe)_<br>
 |--> imagens _(Aqui ficam as imagens que usamos para ilustrar esse arquivo README)_<br>
 |--> src<br>
-&emsp;|--> Servidor<br>
-&emsp; &emsp;|--> Backend<br>
-&emsp; &emsp; &emsp;|--> database _(Aqui ficam os arquivos de banco de dados utilizado no projeto e sql para a criação do respectivo banco)_<br>
-&emsp; &emsp; &emsp;|--> routes _(Aqui ficam os arquivos javascript que serão utilizados pelo Express como rotas de consulta ao banco de dados)_<br>
-&emsp; &emsp; &emsp;|--> sql_functions _(Aqui ficam os arquivos javascript que se comunicam com o banco de dados)_<br>
-&emsp; &emsp; &emsp;|--> utils _(Aqui ficam arquivos javascript que contém funções que são utilizadas em várias partes do código)_<br>
-&emsp; &emsp;|--> Frontend<br>
-&emsp; &emsp; &emsp;|--> paginas _(Aqui ficam os arquivos HTML com a marcação do conteúdo de cada uma das páginas)_<br>
-&emsp; &emsp; &emsp;|--> public _(Aqui ficam os arquivos estáticos que serão utilizados pelo Express)\_<br>
+&emsp;|--> Backend<br>
+&emsp; &emsp;|--> database _(Aqui ficam os arquivos de banco de dados utilizado no projeto e sql para a criação do respectivo banco)_<br>
+&emsp; &emsp;|--> routes _(Aqui ficam os arquivos javascript que serão utilizados pelo Express como rotas de consulta ao banco de dados)_<br>
+&emsp; &emsp;|--> sql_functions _(Aqui ficam os arquivos javascript que se comunicam com o banco de dados)_<br>
+&emsp; &emsp;|--> utils _(Aqui ficam arquivos javascript que contém funções que são utilizadas em várias partes do código)_<br>
+&emsp;|--> Frontend<br>
+&emsp; &emsp;|--> paginas _(Aqui ficam os arquivos HTML com a marcação do conteúdo de cada uma das páginas)_<br>
+&emsp; &emsp;|--> public _(Aqui ficam os arquivos estáticos que serão utilizados pelo Express)\_<br>
 &emsp;|app.js<br>
 &emsp;|package-lock.json<br>
 &emsp;|packaje.json<br>
