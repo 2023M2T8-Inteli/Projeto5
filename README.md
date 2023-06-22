@@ -65,7 +65,7 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 
 Aqui encontram-se todas as instruções necessárias para a instalação de todos os programas, bibliotecas e ferramentas imprescindíveis para a configuração do ambiente de desenvolvimento.
 
-1.  Baixar e instalar o node.js: [https://nodejs.org/pt-br/](https://nodejs.org/pt-br/) (versão 16.15.1 LTS)
+1.  Baixar e instalar o node.js: [https://nodejs.org/pt-br/](https://nodejs.org/pt-br/) (versão 20.0.0 Current - Ou superior)
 2.  Clone o repositório em questão.
 3.  No modo administrador, abra o "prompt de comando" ou o "terminal" e, após, abra a pasta "src/Servidor/backend" no diretório raiz do repositório clonado e digite o segundo comando:
 
