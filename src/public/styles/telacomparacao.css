@@ -4,6 +4,10 @@ header{
   width: 100%;
 }
 
+main{
+  padding: 0 2%;
+}
+
 .topo{
   width: 100%;
   display: flex;
@@ -203,40 +207,55 @@ body {
 
 
 #sidebar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #4A67F0;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    border-radius: 1rem;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    transition: all 3s; /* You can use "all" to transition all properties */
-  }
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #4A67F0;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  transition: all 3s; /* You can use "all" to transition all properties */
+}
 
 .sairajuda {
-    position: absolute;
-    top: 1rem;
-    margin-left: 1rem;
-    background-color: #4A67F0;
-    color: white;
-    align-items: center;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 2rem;
-  }
-  
-  .contato{
-    text-align: center;
-    color: #FFFFFF;
-  }
+  position: absolute;
+  top: 1rem;
+  margin-left: 1rem;
+  background-color: #4A67F0;
+  color: white;
+  align-items: center;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem;
+}
 
-  .contato-link {
-    text-align: center;
-    color: #FFFFFF;
-    margin-top: auto;
-  }
+.contato{
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.contato-link {
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: auto;
+}
+
+#btnfiltros{
+  margin: 0;
+  background-color: #52B7E3;
+  width: 6rem;
+}
+
+.objects-border{
+  border: 3px solid #4A67F0;
+  border-radius: 10px;
+}
+
+#mapa, #mapa2{
+  margin-bottom: 30px;
+}
