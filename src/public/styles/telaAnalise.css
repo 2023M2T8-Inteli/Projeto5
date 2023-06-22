@@ -20,6 +20,10 @@ header .topo .logo img {
     cursor: pointer;
 }
 
+h1{
+  margin-top: 30px;
+}
+
 #dropdownViagem, #dropdownEngate, #dropdownTipoChoque, #btnfiltros{
     background-color: #A1B3B3;
     width: 12rem;
@@ -35,7 +39,13 @@ header .topo .logo img {
 }
 
 #btnfiltros{
+  background-color: #52B7E3;
   width: 6rem;
+}
+
+h3{
+  position: inherit;
+  text-align: center;
 }
 
 nav{
@@ -118,7 +128,7 @@ button{
 
 #histograma-container {
   display: flex;
-  flex-direction: column;
+  background-color: red;
 }
 
 .histograma {
@@ -208,15 +218,16 @@ section {
     color: black;
     border: none;
     border-radius: 16px;
-    font-size: 35px;
+    font-size: 1.5rem;
     font-weight: 600;
     cursor: pointer;
-    width: 44rem;
-    height: 6rem;
+    width: 40%;
+    padding: 10px 0;
   }
   
   button.compare-viagens:hover {
-    background-color: #A1B3B3;
+    background-color: #4A67F0;
+    color: #FFF;
   }  
 
   @import url(https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap);
@@ -292,33 +303,72 @@ hr{
   }
 
 .sairajuda {
-    position: absolute;
-    top: 1rem;
-    margin-left: 1rem;
-    background-color: #4A67F0;
-    color: white;
-    align-items: center;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 2rem;
-  }
-  
-  .contato{
-    text-align: center;
-    color: #FFFFFF;
-  }
+  position: absolute;
+  top: 1rem;
+  margin-left: 1rem;
+  background-color: #4A67F0;
+  color: white;
+  align-items: center;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem;
+}
 
-  .contato-link {
-    text-align: center;
-    color: #FFFFFF;
-    margin-top: auto;
-  }
+.contato{
+  text-align: center;
+  color: #FFFFFF;
+}
 
-  .selecionar{
-    position: relative;
-    left: 49rem;
-    font-size: 22px;
-    font-weight: 400;
-  }
+.contato-link {
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: auto;
+}
+
+.selecionar{
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+#first-line{
+  width: 100%;
+  display: flex;
+}
+
+#first-line .esquerda, #first-line .direita{
+  margin: 0;
+  width: 50%;
+  display: flex;
+}
+
+#histograma-container{
+  width: 100%;
+}
+
+#acessar-comparacao{
+text-align: center;
+}
+
+#second-line{
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#markov{
+  height: 450px;
+}
+
+#second-line .esquerda, #second-line .direita{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.objects-border{
+  border: 3px solid #4A67F0;
+  border-radius: 10px;
+}

@@ -92,17 +92,28 @@
             <button class="btn btn-secondary ms-3" onclick="clearFilters()" id="btnfiltros">Limpar</button>
         </div>
     </div>
-    <section>
+    <section id="first-line">
         <div class="esquerda">
             <div id="histograma-container">
-                <div class="histograma" id="overlay" style="width: 700px; height: 450px;">
+                <div class="histograma" id="overlay" style="height: 300px;">
                     <p class="aviso">SELECIONE OS FILTROS PARA VISUALIZAR DADOS</p>
                 </div>
-                <div class="histograma" id="histogram-chart" style="width: 700px; height: 450px;"></div>
-
+                <div class="histograma" id="histogram-chart" style="height: 450px;"></div>
             </div>
             <div id="imageContainer"></div>
-            <img src="public/assets/markov.bmp" alt="Markov"> 
+        </div>
+        <div class="direita">
+            <div id="mapa-contanier" style="width: 100%; display: flex; justify-content: center;">
+                <div class="objects-border" id="mapa" style="width: 90%; height: 450px; margin: 0;"></div>
+            </div>
+        </div>
+    </section>
+    <div id="acessar-comparacao">
+        <button class="compare-viagens" onclick="window.location.href ='./comparacao'">Compare duas viagens</button>
+    </div>
+    <section id="second-line">
+        <div class="esquerda">
+            <img id="markov" src="public/assets/markov.bmp" alt="Markov"> 
             <script>/*
                 fetch('http://localhost:3000/get-grafico-de-markov-by-vagao-id?id_vagao=1')
                     .then(response => response.json())
@@ -131,24 +142,18 @@
             </script>
         </div>
         <div class="direita">
-            <div id="mapa-contanier">
-                <div id="mapa" style="width: 700px; height: 450px;"></div>
-            </div>
-            <button id='acessar-comparacao' class="compare-viagens"
-                onclick="window.location.href ='./comparacao'">Compare duas viagens</button>
             <div id="pizza-container">
-                <div id="pizza" style="width: 900px; height: 450px;"></div>
+                <div id="pizza"></div>
             </div>
         </div>
-
     </section>
-    <section class="tabela-section">
+    <!-- <section class="tabela-section">
         <div class="tabela">
             <div id="table-container">
                 <div id="table-div" style="width: 100%; height: 100%;"></div>
             </div>
         </div>
-    </section>
+    </section> -->
 <aside id="sidebar" style="display: none; top: 0; right: 0;">
     <button class="sairajuda" onclick="sairajuda()">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" class="bi bi-x-lg" viewBox="0 0 16 16">
