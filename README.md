@@ -93,6 +93,11 @@ npm start
   - Versão final do Front-End
   - Integração entre front e back para consulstar pontos críticos no mapa
   - Inclusão dos registros de testes de usabilidades no WAD
+- 5.1.1 - 22/06/2023
+  - Versão final do MVP
+  - Páginas responsivas
+  - Comparação de pontos críticos entre viagens distintas
+  - Correções gramaticais e de formação no WAD
 
 ## 📋 Licença/License
 
