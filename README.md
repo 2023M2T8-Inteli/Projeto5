@@ -38,8 +38,8 @@ A Lumi é uma aplicação web que vem com o propósito de dinamizar a exibição
 &emsp;| --> Outros <br>
 &emsp; &emsp;| --> Dados _(Aqui ficam as planilhas com os dados do cliente)_ <br>
 &emsp; &emsp;| --> Versões antigas _(Aqui ficam as versões anteriores do WAD da Equipe)_ <br>
-&emsp;| T08*G05_V4.1.1_Web_application_document.docx \*(Esta é versão atual do WAD da equipe)*<br>
-&emsp;| T08*G05_V4.1.1_Web_application_document.pdf *(Esta é versão atual do WAD da equipe)_<br>
+&emsp;| T08*G05_V5.1.5_Web_application_document.docx \*(Esta é versão atual do WAD da equipe)*<br>
+&emsp;| T08*G05_V5.1.5_Web_application_document.pdf *(Esta é versão atual do WAD da equipe)_<br>
 |--> imagens _(Aqui ficam as imagens que usamos para ilustrar esse arquivo README)_<br>
 |--> src<br>
 &emsp;|--> Backend<br>
@@ -63,6 +63,8 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 - <b>LICENSE.txt</b>: arquivo que contém a licença do projeto.
 
 ## 🌐 Demonstração
+
+Veja como usar a nossa aplicação <a href="https://www.youtube.com/watch?v=xlRbneDEUp0" targer="_blank">neste vídeo</a>. <br>
 
 Para ver a aplicação funcionando no seu dispositivo, <a href="https://5mfdk2-3000.csb.app/" targer="_blank">clique aqui</a>. <br>
 
