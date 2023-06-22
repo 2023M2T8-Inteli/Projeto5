@@ -61,6 +61,10 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 
 - <b>LICENSE.txt</b>: arquivo que contém a licença do projeto.
 
+## 🌐 Demonstração
+
+Para ver a aplicação funcionando no seu dispositivo, <a href="https://5mfdk2-3000.csb.app/">clique aqui</a>. <br>
+
 ## 💻 Configuração para desenvolvimento
 
 Aqui encontram-se todas as instruções necessárias para a instalação de todos os programas, bibliotecas e ferramentas imprescindíveis para a configuração do ambiente de desenvolvimento.
