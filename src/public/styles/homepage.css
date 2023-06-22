@@ -70,6 +70,10 @@ nav ul li a:hover{
     text-decoration: underline
 }
 
+#menu-hamburger{
+    display: none;
+}
+
 header .topo .icone-logout{
     cursor: pointer;
 }
@@ -416,16 +420,115 @@ hr{
     font-size: 2rem;
   }
   
-  .contato{
+.contato{
     text-align: center;
     color: #FFFFFF;
-  }
+}
 
-  .contato-link {
+.contato-link {
     text-align: center;
     color: #FFFFFF;
     margin-top: auto;
-  }
-  .contato_cursor{
+}
+.contato_cursor{
     cursor: pointer;
-  }
+}
+
+@media only screen and (max-width: 620px) {
+    header{
+        background: url("./../assets/home_background_header_mobile.png");
+        height: auto;
+    }
+
+    header .headline h1{
+        font-size: 1.5rem;
+    }
+
+    header .topo nav{
+        display: none;
+    }
+
+    main .apresentacao .lado-esquerdo{
+        width: 90%;
+    }
+
+    main .apresentacao .lado-esquerdo p{
+        text-align: center;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .apresentacao .lado-esquerdo .logo{
+        text-align: center;
+    }
+
+    main .apresentacao .lado-direito{
+        display: none;
+    }
+
+    section{
+        margin-bottom: 50px !important;
+    }
+
+    .servicos{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .servico{
+        width: 90%;
+    }
+
+    .o-que-nos-oferecemos .informacoes{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .o-que-nos-oferecemos .informacoes p{
+        text-align: center;
+        width: 90%;
+    }
+
+    .compare-viagens p{
+        text-align: center;
+        width: 100%;
+    }
+
+    .compare-viagens .informacoes{
+        width: 100%;
+        text-align: center;
+    }
+
+    .compare-viagens a button{
+        width: 50%;
+    }
+    
+    .o-que-nos-oferecemos .informacoes a{
+        width: 50%;
+        text-align: center;
+    }
+
+    .entre-em-contato{
+        flex-wrap: wrap;
+    }
+    .entre-em-contato .lado-esquerdo img{
+        margin-bottom: 30px;
+    }
+    
+    .entre-em-contato .lado-esquerdo, .entre-em-contato .lado-direito{
+        width: 100%;
+    }
+
+    #menu-hamburger{
+        display: block;
+        width: 38px;
+    }
+
+    .icone-logout, .abreajuda{
+        display: none !important;
+    }
+
+    header .topo .logo{
+        width: 30%;
+    }
+}
