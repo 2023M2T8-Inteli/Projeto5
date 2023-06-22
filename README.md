@@ -67,7 +67,7 @@ Aqui encontram-se todas as instruções necessárias para a instalação de todo
 
 1.  Baixar e instalar o node.js: [https://nodejs.org/pt-br/](https://nodejs.org/pt-br/) (versão 20.0.0 Current - Ou superior)
 2.  Clone o repositório em questão.
-3.  No modo administrador, abra o "prompt de comando" ou o "terminal" e, após, abra a pasta "src/Servidor/backend" no diretório raiz do repositório clonado e digite o segundo comando:
+3.  No modo administrador, abra o "prompt de comando" ou o "terminal" e, após, abra a pasta "src" no diretório raiz do repositório clonado e digite o segundo comando:
 
 ```sh
 npm install
@@ -116,3 +116,4 @@ npm start
 Aqui estão as referências usadas no projeto:
 
 1. <https://creativecommons.org/share-your-work/>
+2. <https://www.ipt.br/institucional>
