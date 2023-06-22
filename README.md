@@ -64,7 +64,7 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 
 ## 🌐 Demonstração
 
-Para ver a aplicação funcionando no seu dispositivo, <a href="https://5mfdk2-3000.csb.app/">clique aqui</a>. <br>
+Para ver a aplicação funcionando no seu dispositivo, <a href="https://5mfdk2-3000.csb.app/" targer="_blank">clique aqui</a>. <br>
 
 ## 💻 Configuração para desenvolvimento
 
