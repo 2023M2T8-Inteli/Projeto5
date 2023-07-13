@@ -25,7 +25,7 @@
 - <a href="https://www.linkedin.com/in/marcelo-gon%C3%A7alves-phd-a550652/">🧭 Marcelo Gonçalves - Professor Orientador</a>
 - <a href="https://www.linkedin.com/in/fatima-toledo/">📈 Fatima Toledo - Professora de Business</a>
 - <a href="https://www.linkedin.com/in/victorbarq/">👨‍💻 Victor Quiroz - Professor de Programação</a>
-- <a href="https://www.linkedin.com/in/henrique-mohallem-paiva-6854b460/">🧮 Henrique Paiva - Professor de Business</a>
+- <a href="https://www.linkedin.com/in/henrique-mohallem-paiva-6854b460/">🧮 Henrique Paiva - Professor de Matemática</a>
 - <a href="https://www.linkedin.com/in/francisco-escobar/">🎨 Francisco Escobar - Professor de UX/UI Design</a>
 
 ## 📝 Descrição
